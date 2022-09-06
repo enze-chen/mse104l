@@ -1,0 +1,42 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/en/stable/structure/toc.html
+format              : jb-book 
+root                : intro
+
+chapters:
+- file              : lab1/lab1
+  title             : Lab 1️⃣
+  sections:
+    - file          : lab1/intro_python_jupyter_blank
+      title         : Intro to Python 🚀
+    - file          : lab1/intro_plotting_blank
+      title         : Intro to plots 🚀
+    - file          : lab1/lab1_exercises_blank
+      title         : Your turn! 🚀
+
+
+###################################################################
+- file              : lab2/lab2
+  title             : Lab 2️⃣
+  sections:
+    - file          : lab2/intro_tabular_blank
+      title         : Intro to tabular data 🚀
+    - file          : lab2/lab2_exercises_blank
+      title         : Your turn! 🚀
+
+
+###################################################################
+- file              : lab3/lab3
+  title             : Lab 3️⃣
+  sections:
+    - file          : lab3/lab3_exercises_blank
+      title         : Your turn! 🚀
+
+
+###################################################################
+- file              : lab4/lab4
+  title             : Lab 4️⃣
+
+
+###################################################################
+- file              : acknowl

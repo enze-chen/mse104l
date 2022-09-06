@@ -1,0 +1,12 @@
+# Jupyter book
+_build/
+
+# Jupyter notebook
+__pycache__
+**.egg-info
+**.ipynb_checkpoints
+.DS_Store
+**_master.ipynb
+
+# Other
+my_work/
