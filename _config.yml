@@ -49,7 +49,7 @@ launch_buttons:
 repository:
   url                       : https://github.com/enze-chen/mse104l
   path_to_book              : ""
-  branch                    : master  # source branch
+  branch                    : main  # source branch
 
 
 
