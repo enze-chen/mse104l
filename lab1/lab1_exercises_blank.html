@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction to Python and Jupyter notebooks &#8212; MSE 104L Data Analysis</title>
+    <title>MSE 104L laboratory 1 exercises &#8212; MSE 104L Data Analysis</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,13 +51,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/mse104l/lab1/lab1_exercises_blank.html" />
     <link rel="shortcut icon" href="../_static/mse_ucb.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lab 2: Powder X-ray Diffraction" href="../lab2/lab2.html" />
-    <link rel="prev" title="Introduction to Python and Jupyter notebooks" href="intro_plotting_blank.html" />
+    <link rel="prev" title="Introduction to data visualization in Python" href="intro_plotting_blank.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -102,6 +104,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../jbook_usage.html">
+   How to use Jupyter Book 🚀
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="lab1.html">
    Lab 1️⃣
@@ -171,6 +178,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../lab4/lab4.html">
    Lab 4️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab5/lab5.html">
+   Lab 5️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab6/lab6.html">
+   Lab 6️⃣
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,6 +301,46 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-python-packages">
+   Import Python packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-an-emission-spectra">
+   Visualizing an emission spectra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-spectra-different-filter-elements">
+   Multiple spectra - different filter elements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-spectra-different-filter-thicknesses">
+   Multiple spectra - different filter thicknesses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scatterplot-and-line-of-best-fit">
+     Scatterplot and line of best fit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -291,20 +348,208 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction to Python and Jupyter notebooks</h1>
+                <h1>MSE 104L laboratory 1 exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-python-packages">
+   Import Python packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualizing-an-emission-spectra">
+   Visualizing an emission spectra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-spectra-different-filter-elements">
+   Multiple spectra - different filter elements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-spectra-different-filter-thicknesses">
+   Multiple spectra - different filter thicknesses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scatterplot-and-line-of-best-fit">
+     Scatterplot and line of best fit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-python-and-jupyter-notebooks">
-<h1>Introduction to Python and Jupyter notebooks<a class="headerlink" href="#introduction-to-python-and-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="mse-104l-laboratory-1-exercises">
+<h1>MSE 104L laboratory 1 exercises<a class="headerlink" href="#mse-104l-laboratory-1-exercises" title="Permalink to this headline">¶</a></h1>
 <p><em>Authors: Enze Chen and Andrew Minor (University of California, Berkeley)</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
+</div>
+<p>This notebook contains a series of exercises to help you process your data from Lab 1.
+It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report.
+We certainly believe it will lead to a higher grade!</p>
+<p>We tried to stagger the guidance such that each exercise only introduces 1-2 new ideas at a time.
+These new ideas are marked with a ⭐.</p>
+<div class="section" id="import-python-packages">
+<h2>Import Python packages<a class="headerlink" href="#import-python-packages" title="Permalink to this headline">¶</a></h2>
+<p>It can be pretty helpful to import all required packages at the top of the notebook.
+We went ahead and did this step for you, but you can import more if you want.
+We even changed some of the default settings!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We went ahead and did this step for you.</span>
+<span class="c1"># You can import other packages if you want, but you don&#39;t have to.</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>   <span class="c1"># You might want to change this to be wider for spectra!! </span>
+    <span class="s1">&#39;font.size&#39;</span><span class="p">:</span>         <span class="mi">20</span><span class="p">,</span>
+    <span class="s1">&#39;lines.linewidth&#39;</span><span class="p">:</span>    <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">&#39;lines.markersize&#39;</span><span class="p">:</span>  <span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;axes.linewidth&#39;</span><span class="p">:</span>     <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;xtick.major.size&#39;</span><span class="p">:</span>   <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;xtick.major.width&#39;</span><span class="p">:</span>  <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;ytick.major.size&#39;</span><span class="p">:</span>   <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;ytick.major.width&#39;</span><span class="p">:</span>  <span class="mi">2</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualizing-an-emission-spectra">
+<h2>Visualizing an emission spectra<a class="headerlink" href="#visualizing-an-emission-spectra" title="Permalink to this headline">¶</a></h2>
+<p>Since you went through all that trouble to obtain a Cu emission spectra, let’s now plot it!</p>
+<ol class="simple">
+<li><p>First, you’ll want to <strong>upload</strong> the data to this folder in JupyterHub (📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>).</p></li>
+<li><p>Then you can load it into a NumPy array with <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a> and plot it with Matplotlib (<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a>).</p></li>
+<li><p>❗Don’t forget styling elements like axis labels! Here’s the character for theta: θ</p></li>
+<li><p><strong>Download the saved figure</strong> and paste it into your lab writeup.</p></li>
+</ol>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+<span class="n">bare_data</span> <span class="o">=</span> <span class="s1">&#39;path/to/file.txt&#39;</span>   <span class="c1"># replace this</span>
+
+<span class="n">Cu_bare</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">bare_data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>   <span class="c1"># create and style a plot below</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Cu_bare.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-spectra-different-filter-elements">
+<h2>Multiple spectra - different filter elements<a class="headerlink" href="#multiple-spectra-different-filter-elements" title="Permalink to this headline">¶</a></h2>
+<p>Part of the lab asks you to identify the absorption edges of different metal elements used in the filters.
+While this is possible to do by inspecting each individual spectra, it might be easier if you had plots that overlaid each element’s spectra with the bare Cu spectra so you can more easily spot the differences.
+To do so:</p>
+<ol class="simple">
+<li><p>Copy the code from above and add another <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> call to add a second spectra featuring one of the absorbers.</p>
+<ul class="simple">
+<li><p>We recommend adding a <code class="docutils literal notranslate"><span class="pre">label</span></code> to each spectra and calling <code class="docutils literal notranslate"><span class="pre">ax.legend()</span></code> to help distinguish them.</p></li>
+<li><p>⭐ We recommend making the <strong>colors</strong> for each filter consistent; that is, different filters should be different colors. You can choose the color <a class="reference external" href="https://matplotlib.org/stable/gallery/color/named_colors.html">from these lists</a> and set it using the <code class="docutils literal notranslate"><span class="pre">c</span></code> parameter: <code class="docutils literal notranslate"><span class="pre">ax.plot(x,</span> <span class="pre">y,</span> <span class="pre">c='my_color_name')</span></code>.</p></li>
+<li><p>We <em>do not</em> recommend plotting all filters onto the same plot.</p></li>
+</ul>
+</li>
+<li><p>⭐ To help reveal the absorption edge, we recommend changing the <span class="math notranslate nohighlight">\(y\)</span>-axis to be log scale. You can do so by adding another parameter, <code class="docutils literal notranslate"><span class="pre">yscale='log'</span></code>, to the <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> method.</p></li>
+<li><p>Don’t forget to save and download your figures!</p></li>
+</ol>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-spectra-different-filter-thicknesses">
+<h2>Multiple spectra - different filter thicknesses<a class="headerlink" href="#multiple-spectra-different-filter-thicknesses" title="Permalink to this headline">¶</a></h2>
+<p>Another part of the lab asks you to observe how the absorption spectra changes with respect to Ni filters of different thicknesses.
+There are two plots that are helpful here.</p>
+<p>The first plot is similar to the ones before where you should plot the bare Cu spectra and the four different Ni spectra on the same plot.
+This allows you to see how the filters progressively change the intensity.</p>
+<ul class="simple">
+<li><p>⭐ To <strong>zoom in</strong> on the region (peak) of interest, you can change the <span class="math notranslate nohighlight">\(x\)</span>-axis limits with a <code class="docutils literal notranslate"><span class="pre">xlim=(start,end)</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> method. We recommend singling out one of the <span class="math notranslate nohighlight">\(K\)</span> peaks! (which one?)</p></li>
+<li><p>⭐ To <strong>subtract the baseline</strong> value from each spectra, you can select the appropriate column and subtract a scalar, e.g., <code class="docutils literal notranslate"><span class="pre">arr[:,</span> <span class="pre">col_index]</span> <span class="pre">-=</span> <span class="pre">base_value</span></code>, which subtracts that value from every element in the column.
+You have to figure out the appropriate index and what the baseline intensity is for each spectra.</p></li>
+<li><p>Make sure you <strong>clearly label</strong> all of your plots.
+It’s handy that Matplotlib automatically cycles through different colors.</p></li>
+<li><p>Linear scaling on the <span class="math notranslate nohighlight">\(y\)</span>-axis is fine.</p></li>
+<li><p>You may want to reset some of your Pyplot settings.
+You can begin the cell below with another <code class="docutils literal notranslate"><span class="pre">plt.rcParams.update()</span></code> call and update <code class="docutils literal notranslate"><span class="pre">figure.figsize</span></code> and <code class="docutils literal notranslate"><span class="pre">font.size</span></code>.</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({})</span>   <span class="c1"># add key:value pairs here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="scatterplot-and-line-of-best-fit">
+<h3>Scatterplot and line of best fit<a class="headerlink" href="#scatterplot-and-line-of-best-fit" title="Permalink to this headline">¶</a></h3>
+<p>The second plot is regarding the mass absorption coefficient, <span class="math notranslate nohighlight">\(\mu/\rho\)</span>, given by the equation:</p>
+<div class="math notranslate nohighlight">
+\[ I_x = I_0 \exp \left[ -\left( \frac{\mu}{\rho} \right) \rho x \right] \]</div>
+<p>where <span class="math notranslate nohighlight">\(I_0\)</span> and <span class="math notranslate nohighlight">\(I_x\)</span> are the incident and transmitted intensities, respectively, with the filters, <span class="math notranslate nohighlight">\(\rho\)</span> is the density, and <span class="math notranslate nohighlight">\(x\)</span> is the distance traveled (i.e. thickness of the filter).
+You have collected the values of <span class="math notranslate nohighlight">\(I_0\)</span> and <span class="math notranslate nohighlight">\(I_x\)</span>, you’ve been told <span class="math notranslate nohighlight">\(x\)</span> for the filters, and you can look up tabulated values of <span class="math notranslate nohighlight">\(\rho\)</span>.
+This means that once you linearize the above equation and compute a line of best fit, you can extract the mass absorption coefficient!</p>
+<p>Here are some more hints:</p>
+<ul class="simple">
+<li><p>You can manually create arrays for the <span class="math notranslate nohighlight">\(x\)</span> values and intensity ratios.</p></li>
+<li><p>⭐ To take the <strong>natural logarithm</strong> of an array, use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.log.html"><code class="docutils literal notranslate"><span class="pre">np.log(arr)</span></code></a>.</p></li>
+<li><p>⭐ To calculate a <strong>line of best fit</strong>, you can use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> command as follows:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> hold your values and <code class="docutils literal notranslate"><span class="pre">1</span></code> specifies a degree 1 polynomial (line).
+The resulting slope and <span class="math notranslate nohighlight">\(y\)</span>-intercept are stored in <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, respectively.</p>
+<ul class="simple">
+<li><p>❗Beware of units!</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This concludes the plotting exercises for Lab 1.
+Congratulations!
+We hope you’re proud of the plots that you generated and wish you luck with the lab writeup. 📝</p>
+<p>Note that the plot for Moseley’s relation, while not discussed explicitly, follows the last exercise closely.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -336,7 +581,7 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction to Python and Jupyter notebooks</p>
+            <p class="prev-next-title">Introduction to data visualization in Python</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../lab2/lab2.html" title="next page">

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction to Python and Jupyter notebooks &#8212; MSE 104L Data Analysis</title>
+    <title>MSE 104L laboratory 2 exercises &#8212; MSE 104L Data Analysis</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,13 +51,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/mse104l/lab2/lab2_exercises_blank.html" />
     <link rel="shortcut icon" href="../_static/mse_ucb.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lab 3: Precision X-ray Diffractometry" href="../lab3/lab3.html" />
-    <link rel="prev" title="Introduction to Python and Jupyter notebooks" href="intro_tabular_blank.html" />
+    <link rel="prev" title="Introduction to tabular data in Python" href="intro_tabular_blank.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -102,6 +104,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../jbook_usage.html">
+   How to use Jupyter Book 🚀
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lab1/lab1.html">
    Lab 1️⃣
@@ -171,6 +178,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../lab4/lab4.html">
    Lab 4️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab5/lab5.html">
+   Lab 5️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab6/lab6.html">
+   Lab 6️⃣
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,6 +301,34 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-python-packages">
+   Import Python packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-a-spectra-as-a-sanity-check">
+   Plot a spectra as a sanity check
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lattice-constant-calculations">
+   Lattice constant calculations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nelson-riley-plots">
+   Nelson-Riley plots
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -291,20 +336,104 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction to Python and Jupyter notebooks</h1>
+                <h1>MSE 104L laboratory 2 exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-python-packages">
+   Import Python packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-a-spectra-as-a-sanity-check">
+   Plot a spectra as a sanity check
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lattice-constant-calculations">
+   Lattice constant calculations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nelson-riley-plots">
+   Nelson-Riley plots
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-python-and-jupyter-notebooks">
-<h1>Introduction to Python and Jupyter notebooks<a class="headerlink" href="#introduction-to-python-and-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="mse-104l-laboratory-2-exercises">
+<h1>MSE 104L laboratory 2 exercises<a class="headerlink" href="#mse-104l-laboratory-2-exercises" title="Permalink to this headline">¶</a></h1>
 <p><em>Authors: Enze Chen and Andrew Minor (University of California, Berkeley)</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
+</div>
+<p>This notebook contains a series of exercises to help you process your data from Lab 2.
+It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report.
+We certainly believe it will lead to a higher grade!</p>
+<p>We tried to stagger the guidance such that each exercise only introduces 1-2 new ideas at a time.
+These new ideas are marked with a ⭐.</p>
+<div class="section" id="import-python-packages">
+<h2>Import Python packages<a class="headerlink" href="#import-python-packages" title="Permalink to this headline">¶</a></h2>
+<p>It can be pretty helpful to import all required packages at the top of the notebook.
+We’ve imported a few for you, and we’ll let you figure out what else you might need. ⭐</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-a-spectra-as-a-sanity-check">
+<h2>Plot a spectra as a sanity check<a class="headerlink" href="#plot-a-spectra-as-a-sanity-check" title="Permalink to this headline">¶</a></h2>
+<p>Since you’re working with more powder XRD spectra in this lab, it’s a good idea to just visualize the spectra and create a clean figure for each of your unknown samples.
+You should be quite proficient at this by now!</p>
+<p>Remember the general steps are:</p>
+<ol class="simple">
+<li><p>Upload your data to JupyterHub in the <code class="docutils literal notranslate"><span class="pre">lab2</span></code> folder.</p></li>
+<li><p>Write code below to process and plot the data.</p></li>
+<li><p>Save the figure and download it to your computer.</p></li>
+</ol>
+<p>If you don’t remember what you did in lab 1, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lattice-constant-calculations">
+<h2>Lattice constant calculations<a class="headerlink" href="#lattice-constant-calculations" title="Permalink to this headline">¶</a></h2>
+<p>Recall that for a cubic system the interplanar spacing between <span class="math notranslate nohighlight">\((hkl)\)</span> planes is given by:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{d_{hkl}^2} = \frac{h^2 + k^2 + l^2}{a^2} \]</div>
+<p>The equation for other systems can be found in your textbook (Table 4.1.2 in <a class="reference external" href="https://academic.oup.com/book/43510">Krishnan</a>).</p>
+</div>
+<div class="section" id="nelson-riley-plots">
+<h2>Nelson-Riley plots<a class="headerlink" href="#nelson-riley-plots" title="Permalink to this headline">¶</a></h2>
+<p>Recall that the Nelson-Riley function is used for cubic systems to get a more accurate measurement of the lattice constant.
+The Nelson-Riley function is</p>
+<div class="math notranslate nohighlight">
+\[ \text{NR} = \frac{\cos^{2} \theta}{\sin \theta} + \frac{\cos^2 \theta}{\theta} \]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -336,7 +465,7 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction to Python and Jupyter notebooks</p>
+            <p class="prev-next-title">Introduction to tabular data in Python</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../lab3/lab3.html" title="next page">

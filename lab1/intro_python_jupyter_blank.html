@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction to Python and Jupyter notebooks &#8212; MSE 104L Data Analysis</title>
+    <title>Introduction to Python &#8212; MSE 104L Data Analysis</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,12 +51,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/mse104l/lab1/intro_python_jupyter_blank.html" />
     <link rel="shortcut icon" href="../_static/mse_ucb.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Python and Jupyter notebooks" href="intro_plotting_blank.html" />
+    <link rel="next" title="Introduction to data visualization in Python" href="intro_plotting_blank.html" />
     <link rel="prev" title="Lab 1: X-ray emission and absorption" href="lab1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -102,6 +104,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../jbook_usage.html">
+   How to use Jupyter Book 🚀
+  </a>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="lab1.html">
    Lab 1️⃣
@@ -171,6 +178,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../lab4/lab4.html">
    Lab 4️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab5/lab5.html">
+   Lab 5️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab6/lab6.html">
+   Lab 6️⃣
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,6 +301,207 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-python">
+   General Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-compute-2-raised-to-the-power-of-3">
+     Quick exercise: compute 2 raised to the power of 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types">
+     Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings">
+     Strings 🧵
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow">
+   Control flow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-elif-else">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     /
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       elif
+      </span>
+     </code>
+     /
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       else
+      </span>
+     </code>
+     🔀
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-loops">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loops 🔁
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-your-own-function">
+     Writing your own function
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-name-all-the-data-types-classes-of-the-elements-in-the-list-named-mixed-above">
+     Quick exercise: Name all the data types/classes of the elements in the list named
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mixed
+      </span>
+     </code>
+     above
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-below-print-the-length-of-the-list-mixed">
+     Quick exercise: Below, print the length of the list
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mixed
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accessing-list-elements">
+     Accessing list elements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-write-a-for-each-loop-to-print-out-each-courses-number">
+     Quick exercise: write a for-each loop to print out each course’s number
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-functions-and-methods">
+     List functions and methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries">
+   Dictionaries
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-entries">
+     Access entries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-new-entries">
+     Adding new entries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-numpy-package">
+   The NumPy package
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-numpy">
+     Import NumPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-arrays">
+     NumPy arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-given-num-below-create-a-2d-numpy-array-print-the-array-to-observe-the-formatting">
+     Quick exercise: given
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       num
+      </span>
+     </code>
+     below, create a 2D NumPy array. Print the array to observe the formatting.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-numpy-arrays">
+     Creating NumPy arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-create-the-following-1d-arrays">
+     Quick exercise: create the following 1D arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-an-array-from-a-text-file">
+     Creating an array from a text file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -291,20 +509,825 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction to Python and Jupyter notebooks</h1>
+                <h1>Introduction to Python</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-python">
+   General Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-compute-2-raised-to-the-power-of-3">
+     Quick exercise: compute 2 raised to the power of 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables">
+   Variables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types">
+     Types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings">
+     Strings 🧵
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-flow">
+   Control flow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-elif-else">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     /
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       elif
+      </span>
+     </code>
+     /
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       else
+      </span>
+     </code>
+     🔀
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-loops">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loops 🔁
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-your-own-function">
+     Writing your own function
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-name-all-the-data-types-classes-of-the-elements-in-the-list-named-mixed-above">
+     Quick exercise: Name all the data types/classes of the elements in the list named
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mixed
+      </span>
+     </code>
+     above
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-below-print-the-length-of-the-list-mixed">
+     Quick exercise: Below, print the length of the list
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mixed
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accessing-list-elements">
+     Accessing list elements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-write-a-for-each-loop-to-print-out-each-courses-number">
+     Quick exercise: write a for-each loop to print out each course’s number
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-functions-and-methods">
+     List functions and methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries">
+   Dictionaries
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-entries">
+     Access entries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-new-entries">
+     Adding new entries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-numpy-package">
+   The NumPy package
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-numpy">
+     Import NumPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-arrays">
+     NumPy arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-given-num-below-create-a-2d-numpy-array-print-the-array-to-observe-the-formatting">
+     Quick exercise: given
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       num
+      </span>
+     </code>
+     below, create a 2D NumPy array. Print the array to observe the formatting.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-numpy-arrays">
+     Creating NumPy arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-exercise-create-the-following-1d-arrays">
+     Quick exercise: create the following 1D arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-an-array-from-a-text-file">
+     Creating an array from a text file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-python-and-jupyter-notebooks">
-<h1>Introduction to Python and Jupyter notebooks<a class="headerlink" href="#introduction-to-python-and-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-python">
+<h1>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h1>
 <p><em>Authors: Enze Chen and Andrew Minor (University of California, Berkeley)</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
+</div>
+<p>This notebook contains a series of exercises that are <strong>intended for people who are new to Python</strong>.
+It does assume some programming familiarity (maybe in another language) so not all computing concepts are discussed; the focus is largely on Python syntax.
+It is also targeted towards what you’ll need to finish the laboratory exercises, so we won’t discuss all of the details of Python.
+We suggest you go through the notebook from top to bottom; however, if you find that you already know a lot of this information, feel free to skip around.</p>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="#General-Python">General Python</a></p></li>
+<li><p><a class="reference external" href="#Variables">Variables</a></p></li>
+<li><p><a class="reference external" href="#Control-flow">Control flow</a></p></li>
+<li><p><a class="reference external" href="#Functions">Functions</a></p></li>
+<li><p><a class="reference external" href="#Lists">Lists</a></p></li>
+<li><p><a class="reference external" href="#Dictionaries">Dictionaries</a></p></li>
+<li><p><a class="reference external" href="#The-NumPy-package">NumPy</a></p></li>
+</ol>
+</div>
+<div class="section" id="general-python">
+<h2>General Python<a class="headerlink" href="#general-python" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>One of the simplest things to try in Python is to use it as a “calculator” to evaluate mathematical expressions.
+This is pretty much identical to the MATLAB command line.
+We can directly type the expression into a code cell and evaluate it (remember: <kbd>Shift</kbd>+<kbd>Enter</kbd>!) to get a result, such as:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2021</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If it troubles you that the output from the last line is automatically displayed, you can explicitly call it (or any other line) with the built-in <code class="docutils literal notranslate"><span class="pre">print()</span></code> <strong>function</strong> like so:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2021</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2021</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can perform arithmetic using the following <strong>operators</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> for addition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> for subtraction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> for multiplication</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> for division</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> for exponentiation (<strong>not</strong> <code class="docutils literal notranslate"><span class="pre">^</span></code>)</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">3.1415</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="quick-exercise-compute-2-raised-to-the-power-of-3">
+<h3>Quick exercise: compute 2 raised to the power of 3<a class="headerlink" href="#quick-exercise-compute-2-raised-to-the-power-of-3" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Notice that after we execute the above expressions, the value is displayed, but “lost” in the sense that we cannot use it for future computations (without typing the whole expression again).
+This calls for <strong>variables</strong>, which are used to store values for future use and to improve code readability.
+All Python variables have three components:</p>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">name</span></code> that you assign.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">value</span></code> that is the data it holds.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">type</span></code> for the data type.</p></li>
+</ul>
+<p>Typically variables are created using the syntax <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">value</span></code>, where <code class="docutils literal notranslate"><span class="pre">=</span></code> is the <strong>assignment operator</strong> that assigns the value on the <em>right-hand side</em> to the variable name on the <em>left-hand side</em>.
+For the name, it should be <em>descriptive</em> (explains what quantity it represents) but short.</p>
+<p>Below, we create the <code class="docutils literal notranslate"><span class="pre">year</span></code> variable and assign it a value of <code class="docutils literal notranslate"><span class="pre">2021</span></code>.
+Now when we want to print its value, we can reference the variable instead of the numerical expression.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2022</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="types">
+<h3>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h3>
+<p>When we say “data type,” we’re describing what sort of data the variable contains.
+You’ve already seen two data types in the previous examples, namely <code class="docutils literal notranslate"><span class="pre">int</span></code> (for integer) and <code class="docutils literal notranslate"><span class="pre">float</span></code> (for decimals).</p>
+<p>Python also has a <strong>built-in function</strong> <code class="docutils literal notranslate"><span class="pre">type()</span></code> that will return the type of a variable.
+For example:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>   <span class="c1"># notice how we can reference variables and data from previously-run cells!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Two more common data types that you will see are <code class="docutils literal notranslate"><span class="pre">string</span></code> (for text) and <code class="docutils literal notranslate"><span class="pre">bool</span></code> (for logical <code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+</div>
+<div class="section" id="strings">
+<h3>Strings 🧵<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
+<p>Strings in Python are created using single quotes (<code class="docutils literal notranslate"><span class="pre">'</span></code>) or double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>), and you can take your pick, <em>as long as you’re consistent</em>.
+Generally it doesn’t matter, except when the text you’re enclosing has a single (or double) quotation mark, in which case you will want to surround your whole string with the other one.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;band gaps&#39;</span>     <span class="c1"># single quotes on both sides</span>
+<span class="s2">&quot;1337&quot;</span>          <span class="c1"># double quotes, just as good. Note how this is still a string, not an integer!</span>
+<span class="s2">&quot;That&#39;s cool!&quot;</span>  <span class="c1"># here we have to use double quotes for the string since &quot;That&#39;s&quot; has an apostrophe</span>
+</pre></div>
+</div>
+<p>Just to re-emphasize: Even if the characters in a string are numbers, the whole expression inside the quotes is <em>still a string</em>.
+If we want to change the second line from <code class="docutils literal notranslate"><span class="pre">str</span></code> to <code class="docutils literal notranslate"><span class="pre">int</span></code>, we would have to <strong>cast</strong> the value using the built-in <code class="docutils literal notranslate"><span class="pre">int(...)</span></code> function.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1337</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;1337&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>        <span class="c1"># The == operator checks for equality; see next section!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>   <span class="c1"># we cast b to int type</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># we cast a to str type</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Did you know that you can join two strings together with the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator?
+It’s pretty cool.
+Run the next cell to check it out.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first</span> <span class="o">=</span> <span class="s1">&#39;UC Berkeley &#39;</span>  <span class="c1"># note the trailing space!</span>
+<span class="n">second</span> <span class="o">=</span> <span class="s1">&#39;is the best!&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="control-flow">
+<h2>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Now that we’ve covered logic, we can move onto some more exciting content: control flow!
+These are syntactic structures that modify the execution of your Python code .
+We’ll discuss two control flow structures here that you might find helpful and have probably seen in other programming languages.</p>
+<div class="section" id="if-elif-else">
+<h3><code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> 🔀<a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h3>
+<p>These three keywords are used for <strong>conditionals</strong>, which is when your code has some branching logic that executes differently depending the conditions that are satisfied.
+Conditionals in Python have the following syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">[</span><span class="n">Boolean</span> <span class="n">expression</span><span class="p">]:</span>                        <span class="c1"># note the colon!</span>
+    <span class="c1"># do something if True                      # note the indentation by four spaces!</span>
+<span class="k">elif</span> <span class="p">[</span><span class="n">another</span> <span class="n">Boolean</span> <span class="n">expression</span><span class="p">]:</span>              <span class="c1"># optional; can also have multiple</span>
+    <span class="c1"># do something else if this part is True    # same amount of indentation</span>
+<span class="k">else</span><span class="p">:</span>                                           <span class="c1"># all other cases</span>
+    <span class="c1"># do something</span>
+</pre></div>
+</div>
+<p>A few things to point out:</p>
+<ul class="simple">
+<li><p>Conditionals end with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. This is just part of the syntax and is different from MATLAB, but also hopefully more clear.</p></li>
+<li><p>Another strange thing about Python is its reliance on <strong>whitespace</strong> and <strong>indentation</strong>.
+Note that the stuff “inside” each conditional statement is indented (by four spaces) from the beginning.</p>
+<ul>
+<li><p>It <strong>must be indented</strong>, although you can choose by how much.
+Just make sure your choice is <em>consistent</em>.</p></li>
+<li><p>This is how Python keeps track of everything underneath the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and whatever is not indented begins the next section (in this case, <code class="docutils literal notranslate"><span class="pre">elif</span></code>).</p></li>
+<li><p>There are <strong>no curly braces</strong> in Python, which is what you might be used to if you’re coming from Java/C++.</p></li>
+</ul>
+</li>
+<li><p><em>Protip</em>: If you want to indent several lines at once, highlight them all and press <kbd>Tab</kbd>.
+If you want to reduce the indentation (shift them all to the left), highlight them and press <kbd>Shift</kbd>+<kbd>Tab</kbd>.</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># You can change this and see what happens</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Even!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Odd!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="for-loops">
+<h3><code class="docutils literal notranslate"><span class="pre">for</span></code> loops 🔁<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h3>
+<p>The second topic that we will cover is the idea of <strong>loops</strong>, which is when you want to repeat a chunk of code to automate similar tasks.
+As you probably know from your previous experience, <code class="docutils literal notranslate"><span class="pre">for</span></code> loops are used when you <strong>know</strong> how many times you want to repeat a task.
+The syntax is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="c1"># do something</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">range(N)</span></code> is another built-in function that creates a collection of integers from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">N-1</span></code>, inclusive.
+Therefore, the body of the loop will execute <span class="math notranslate nohighlight">\(N\)</span> times, and each time, the variable <code class="docutils literal notranslate"><span class="pre">i</span></code> will take on a different value from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">N-1</span></code>.
+You can also start at a non-zero integer <code class="docutils literal notranslate"><span class="pre">M</span></code> if you specify it, such as <code class="docutils literal notranslate"><span class="pre">range(M,</span> <span class="pre">N)</span></code>.</p>
+<p>Note also that the body of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is <strong>indented</strong>.
+Everything that is indented will be part of the loop, and as soon as the indentation is removed, the remaining code is outside of the loop.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>   <span class="c1"># 0-indexed!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Just as variables are excellent at storing data for future, repeated use, <strong>functions</strong> are great at storing <em>commands</em> for future, repeated use.</p>
+<p>We’ve already seen a few examples of built-in functions above: <code class="docutils literal notranslate"><span class="pre">print()</span></code>, <code class="docutils literal notranslate"><span class="pre">type()</span></code>, <code class="docutils literal notranslate"><span class="pre">range(N)</span></code>.
+From these examples, you should notice that functions are called with their name followed by parentheses.
+Inside the parentheses, there <em>may or may not be</em> <strong>input arguments</strong>.
+These input arguments can have an implied order, or explicitly called out with keywords.
+As we go along, we’ll see more examples of functions that we can call to help us accomplish certain tasks in Python.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+    
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;there&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;there&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Specify an input arg, the delimiter, with newline character</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="writing-your-own-function">
+<h3>Writing your own function<a class="headerlink" href="#writing-your-own-function" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes, the function you need hasn’t yet been written by someone else, so you need to write your own.
+To define a new function in Python, we use the following syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+    <span class="c1"># function body; do something here, such as</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span>
+</pre></div>
+</div>
+<p>A couple things to point out:</p>
+<ul class="simple">
+<li><p>All function headers start with the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code> and a space.</p></li>
+<li><p>Then comes the name of the function, which like variable names, should be descriptive.</p></li>
+<li><p>Functions can have <strong>zero or more</strong> input arguments in parentheses that can then be used in the body of the function.</p></li>
+<li><p>Function headers end with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p></li>
+<li><p>The body (contents) of the function is <strong>indented</strong>.</p></li>
+<li><p>The function may or may not <code class="docutils literal notranslate"><span class="pre">return</span></code> a value.
+If you want to use the values computed by the caller of the function, you have to include a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement and save the returned value(s) inside variables.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Whew, believe it or not, the fun is just beginning! 😁
+So far we’ve covered variables, data types, control flow, and functions.
+A natural next question to ask is what should we do if we have several pieces of data?
+Do we create a variable for each one?
+Or is there somewhere we can <em>store</em> the collection of data for later access?
+This means it’s time to discuss <strong>data structures</strong>, and here we will cover <strong>lists</strong> (and a little bit more on strings) and <strong>dictionaries</strong>.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">list</span></code> is an <strong>ordered</strong> data structure that stores a sequence of values.
+The elements are contained within square brackets <code class="docutils literal notranslate"><span class="pre">[...]</span></code> and separated by commas <code class="docutils literal notranslate"><span class="pre">,</span></code>.
+The values in a <code class="docutils literal notranslate"><span class="pre">list</span></code> can have <em>different types</em>, and they can even be lists themselves.
+We’ll start by creating a few lists by hand.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">empty</span> <span class="o">=</span> <span class="p">[]</span>                                                <span class="c1"># an empty list (no elements)</span>
+<span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">123</span><span class="p">]</span>                                      <span class="c1"># a list of ints</span>
+<span class="n">materials</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;metals&#39;</span><span class="p">,</span> <span class="s1">&#39;semiconductors&#39;</span><span class="p">,</span> <span class="s1">&#39;insulators&#39;</span><span class="p">]</span>    <span class="c1"># a list of strings</span>
+<span class="n">mixed</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>                    <span class="c1"># a list of many DIFFERENT data types</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mixed</span><span class="p">)</span>                                              <span class="c1"># lists are printed as: [elem1, elem2, ...]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="quick-exercise-name-all-the-data-types-classes-of-the-elements-in-the-list-named-mixed-above">
+<h3>Quick exercise: Name all the data types/classes of the elements in the list named <code class="docutils literal notranslate"><span class="pre">mixed</span></code> above<a class="headerlink" href="#quick-exercise-name-all-the-data-types-classes-of-the-elements-in-the-list-named-mixed-above" title="Permalink to this headline">¶</a></h3>
+<p>There is yet another handy built-in function, <code class="docutils literal notranslate"><span class="pre">len()</span></code>, that returns the length of a list (number of elements in the list).
+We often use this number to figure out the size of our dataset, set the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function in a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, and perform arithmetic.</p>
+</div>
+<div class="section" id="quick-exercise-below-print-the-length-of-the-list-mixed">
+<h3>Quick exercise: Below, print the length of the list <code class="docutils literal notranslate"><span class="pre">mixed</span></code><a class="headerlink" href="#quick-exercise-below-print-the-length-of-the-list-mixed" title="Permalink to this headline">¶</a></h3>
+<p>Before you write the one line of code below, we ask you to think about it: <strong>Will the length be 5 or 6</strong>? Why?</p>
+<p>Also, you can directly use the <code class="docutils literal notranslate"><span class="pre">mixed</span></code> variable below, and it will have the same value as the <code class="docutils literal notranslate"><span class="pre">mixed</span></code> variable from above (you don’t have to initialize it again).
+Variables in code cells, after being executed, will persist and can be used in other code cells.
+Nice.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note</strong>: The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement above contains an <strong>f-string</strong>, which is very cool.
+It allows us to include other data types within strings, as long as we enclose that quantity inside <code class="docutils literal notranslate"><span class="pre">{}</span></code> and preface the string with an <code class="docutils literal notranslate"><span class="pre">f</span></code> character.
+Note that the quantity inside the <code class="docutils literal notranslate"><span class="pre">{}</span></code> can even be an expression that’s evaluated on-the-fly!</p>
+</div>
+<div class="section" id="accessing-list-elements">
+<h3>Accessing list elements<a class="headerlink" href="#accessing-list-elements" title="Permalink to this headline">¶</a></h3>
+<p>We can access the elements of a list by specifying the appropriate <strong>index</strong>, which must be an <code class="docutils literal notranslate"><span class="pre">int</span></code>.
+In Python, <code class="docutils literal notranslate"><span class="pre">list</span></code>s (and other data structures) are <strong>indexed starting at 0</strong>.
+This is like most other programming languages, but it <em>notably differs from MATLAB</em>, so beware!</p>
+<p>The syntax is as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>We can also index a list starting from the end if we use a negative index.
+But we cannot specify an index that is outside the “bounds” of the list.
+Examples include:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">core</span> <span class="o">=</span> <span class="p">[</span><span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">151</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The first course is </span><span class="si">{</span><span class="n">core</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The third course is </span><span class="si">{</span><span class="n">core</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The last course is </span><span class="si">{</span><span class="n">core</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The 9th student is </span><span class="si">{</span><span class="n">core</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>    <span class="c1"># error!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also take <strong>slices</strong> of a list, which is a subset of elements, using the following syntax:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:(</span><span class="n">every</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>The three input arguments (which are of <code class="docutils literal notranslate"><span class="pre">int</span></code> type) are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code>: The index to start the slice at. Inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code>: The index to stop the slice at. <em>Exclusive</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">every</span></code>: Optional number to specify the frequency of skipping elements. Default is <code class="docutils literal notranslate"><span class="pre">1</span></code> (don’t skip any).</p></li>
+</ul>
+<p>There are also some sneaky tricks if some of these are omitted, as shown below:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">core</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>   <span class="c1"># 3rd, 4th, 5th course; does not include index 5!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">core</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>    <span class="c1"># all courses from the 4th to the end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">core</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># all except the last course</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">core</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># skip every other course</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">core</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># reverse the list!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also access the elements of a <code class="docutils literal notranslate"><span class="pre">list</span></code> using a variant called a <strong>for-each</strong> loop.
+This actually has the exact same syntax as the regular <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, but instead of the index variable (e.g., <code class="docutils literal notranslate"><span class="pre">i</span></code>) taking on numerical values in a range (e.g., <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, …), the index variable tracks each value in the <code class="docutils literal notranslate"><span class="pre">list</span></code>.
+The syntax is as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="c1"># do something with each val</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quick-exercise-write-a-for-each-loop-to-print-out-each-courses-number">
+<h3>Quick exercise: write a for-each loop to print out each course’s number<a class="headerlink" href="#quick-exercise-write-a-for-each-loop-to-print-out-each-courses-number" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list-functions-and-methods">
+<h3>List functions and methods<a class="headerlink" href="#list-functions-and-methods" title="Permalink to this headline">¶</a></h3>
+<p>And the fun just doesn’t stop!
+Lists honestly are probably the most powerful data structures in Python.
+They have some <a class="reference external" href="https://www.softwaretestinghelp.com/python-list-functions/">pretty cool functions</a> and methods associated with them, and we only have time to discuss a few here.</p>
+<p>We’ve already seen one function which is <code class="docutils literal notranslate"><span class="pre">len()</span></code> that returns the number of elements in the list.
+Some other handy functions include <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code>, and <code class="docutils literal notranslate"><span class="pre">min()</span></code> if your list has numeric elements.
+<code class="docutils literal notranslate"><span class="pre">sorted()</span></code> is another function that takes your list and <em>returns</em> a sorted list with the same elements in increasing order.
+These are all functions that take the list as an <em>input argument</em>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The min and max are </span><span class="si">{</span><span class="nb">min</span><span class="p">(</span><span class="n">core</span><span class="p">)</span><span class="si">}</span><span class="s1"> and </span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">core</span><span class="p">)</span><span class="si">}</span><span class="s1">, respectively.&#39;</span><span class="p">)</span>
+<span class="n">core_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">core</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># a keyword argument!</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The sorted list is: </span><span class="si">{</span><span class="n">core_sorted</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Lists are nice when we want to organize our data and access them later using an index.
+But there are times when we want to have a different data access pattern.
+For example, if we wanted to get chemical data on the elements, we’re never really going to say, “Oh I want to access the fifth property of the third element;” but rather, “What is the atomic mass of lithium?”</p>
+<p>This calls for a new data structure!
+<strong>Dictionary</strong> (<code class="docutils literal notranslate"><span class="pre">dict</span></code> class) is a data structure that contains a collection of <code class="docutils literal notranslate"><span class="pre">key:value</span></code> pairs.
+It is, just like a dictionary, a mapping between a particular <code class="docutils literal notranslate"><span class="pre">key</span></code> (like a word) to its associated <code class="docutils literal notranslate"><span class="pre">value</span></code> (like a definition).
+They are created using curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> and the entries are comma-separated tokens of <code class="docutils literal notranslate"><span class="pre">key</span></code>:<code class="docutils literal notranslate"><span class="pre">value</span></code> pairs separated by <strong>colons</strong>.
+Examples include:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">empty</span> <span class="o">=</span> <span class="p">{}</span>      <span class="c1"># the empty dictionary</span>
+<span class="n">schools</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;UC Berkeley&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;UCLA&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Stanford&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>   <span class="c1"># values can repeat; keys cannot!</span>
+<span class="n">band_gaps</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;copper&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;silicon&#39;</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">:</span><span class="mf">5.0</span><span class="p">}</span>
+<span class="n">props</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;lithium&#39;</span><span class="p">:{</span><span class="s1">&#39;number&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">:</span><span class="mf">6.941</span><span class="p">,</span> <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;alkali metal&#39;</span><span class="p">}}</span>   <span class="c1"># nested dictionary with many types!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="access-entries">
+<h3>Access entries<a class="headerlink" href="#access-entries" title="Permalink to this headline">¶</a></h3>
+<p>To access individual entries of the dictionary, use the syntax</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>to get the <code class="docutils literal notranslate"><span class="pre">value</span></code> associated with the <code class="docutils literal notranslate"><span class="pre">key</span></code>.
+Just like with lists, the syntax is the same for getting the value and for setting the value (<code class="docutils literal notranslate"><span class="pre">dict</span></code>s, like <code class="docutils literal notranslate"><span class="pre">list</span></code>s, are <em>mutable</em>).</p>
+</div>
+<div class="section" id="adding-new-entries">
+<h3>Adding new entries<a class="headerlink" href="#adding-new-entries" title="Permalink to this headline">¶</a></h3>
+<p>To add an entry to a dictionary, we specify a new <code class="docutils literal notranslate"><span class="pre">key</span></code>:<code class="docutils literal notranslate"><span class="pre">value</span></code> pair:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">band_gaps</span><span class="p">[</span><span class="s1">&#39;germanium&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.67</span>   <span class="c1"># new entry!</span>
+<span class="n">band_gaps</span><span class="p">[</span><span class="s1">&#39;copper&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>       <span class="c1"># this overrides the old entry! Now float instead of int</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">band_gaps</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A few notes on dictionaries in Python:</p>
+<ul class="simple">
+<li><p>The keys of a dictionary <strong>must be unique</strong>.
+Otherwise you can imagine how confusing it is for two keys to map to different values.
+Multiple keys can have the same value though.</p></li>
+<li><p>What can the <code class="docutils literal notranslate"><span class="pre">key</span></code> be?
+The key can be any type that is <em>immutable</em>.</p></li>
+<li><p>What can the <code class="docutils literal notranslate"><span class="pre">value</span></code> be?
+Essentially unrestricted—they can even be other dictionaries!</p></li>
+<li><p>We stressed with <code class="docutils literal notranslate"><span class="pre">list</span></code>s how they have the nice property of being ordered.
+<code class="docutils literal notranslate"><span class="pre">dict</span></code>s in Python, for the most part, <em>are not ordered</em>.
+So there’s no real sense of “the first entry” or “the second-to-last entry” in the dictionary.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-numpy-package">
+<h2>The NumPy package<a class="headerlink" href="#the-numpy-package" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>So far, everything that we’ve done is with native Python; in other words, the functions and data that come with the default Python installation.
+However, one of the advantages of Python is its <strong>extensibility</strong>, which comes in the form of various <strong>packages</strong> (i.e., libraries) that allow you to do more with Python.
+A default Python installation comes with a few extra packages installed, while others you have to install on your own.</p>
+<p>In all cases, before you can use the functions inside a package, you have to <strong>import</strong> it like the following example:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>            <span class="c1"># this package allows your code to interface with your operating system</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>   <span class="c1"># this is a function from the os package. We include the package namespace</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You’ll notice that in the above example, we had to type <code class="docutils literal notranslate"><span class="pre">os.function_name()</span></code> to use any function from the <code class="docutils literal notranslate"><span class="pre">os</span></code> package.
+This will be true for all packages.
+However, if the specific function is one that we use frequently, we can directly import it too, using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">package</span> <span class="kn">import</span> <span class="n">function_1_name</span><span class="p">,</span> <span class="n">function_2_name</span><span class="p">,</span> <span class="o">...</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getcwd</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getcwd</span><span class="p">())</span>    <span class="c1"># now we don&#39;t need the &quot;os.&quot; prefix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="import-numpy">
+<h3>Import NumPy<a class="headerlink" href="#import-numpy" title="Permalink to this headline">¶</a></h3>
+<p>In this last section, we’ll be using the <a class="reference external" href="https://numpy.org/">NumPy package</a> to do some basic scientific computing in Python.
+On JupyterHub, Colab, and several other places, it comes preinstalled. 🙌🏼
+To import the NumPy package, it is best practice to actually give it an <strong>alias</strong>.
+These are abbreviations that typically allow you to reference the package with fewer characters, resulting in cleaner code if you have to call the package <em>a lot</em>, which is typically the case with NumPy.
+The syntax for an alias is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">standard_package_name_that_could_be_really_long</span> <span class="k">as</span> <span class="nn">short_alias</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># not too much shorter, but this is best practice</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numpy-arrays">
+<h3>NumPy arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<p>At the heart of NumPy is the <strong>NumPy array</strong>, which is used to store data into a structured format with multiple dimensions.
+You will find that these arrays function very similarly to arrays in MATLAB!
+In fact, the NumPy developers even created <a class="reference external" href="https://numpy.org/doc/stable/user/numpy-for-matlab-users.html">a comparison chart</a> for you.</p>
+<p>Depending on the dimensionality, these arrays correspond to our conventional notion of scalars (0D), vectors (1D), matrices (2D), and tensors (3D+), and this is described by their <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute.
+Each available dimension of the specific array is called an <code class="docutils literal notranslate"><span class="pre">axis</span></code>, which is how we index into them and it factors into certain calculations.
+Here’s an illustration:</p>
+<p><img alt="NumPy arrays" src="../_images/numpy_arrays.png" /></p>
+<p>To create NumPy arrays, we actually have <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.array-creation.html">several options</a>.
+One of the most straightforward ways, given how arrays look so similar to lists, is to convert a list into an array using the function <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html"><code class="docutils literal notranslate"><span class="pre">np.array(my_list)</span></code></a>.</p>
+<p>The resulting NumPy array is a unique object and also stores its <a class="reference external" href="https://numpy.org/doc/stable/user/basics.types.html">data type</a>, which can be accessed using the <code class="docutils literal notranslate"><span class="pre">array.dtype</span></code> <strong>attribute</strong>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>           <span class="c1"># original data as list of int</span>
+<span class="n">primes_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primes_list</span><span class="p">)</span>           <span class="c1"># convert to NumPy array of int</span>
+<span class="n">primes_str</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes_list</span><span class="p">]</span>   <span class="c1"># change data to str by casting</span>
+<span class="n">primes_str_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primes_str</span><span class="p">)</span>        <span class="c1"># convert to NumPy array of str</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Regular list: </span><span class="si">{</span><span class="n">primes_list</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">primes_list</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;NumPy array: </span><span class="si">{</span><span class="n">primes_arr</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">primes_arr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;This array has data type: </span><span class="si">{</span><span class="n">primes_arr</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">primes_str_arr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">primes_str_arr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;This array has data type: </span><span class="si">{</span><span class="n">primes_str_arr</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice how a single list gave us a 1D array (like a <strong>vector</strong>), so as you might imagine, a <em>nested list of lists</em> will give us a 2D array, or a <strong>matrix</strong>, when we call <code class="docutils literal notranslate"><span class="pre">np.array(my_list_of_lists)</span></code> on it.
+This will only work when the dimensions of the nested lists are consistent.</p>
+</div>
+<div class="section" id="quick-exercise-given-num-below-create-a-2d-numpy-array-print-the-array-to-observe-the-formatting">
+<h3>Quick exercise: given <code class="docutils literal notranslate"><span class="pre">num</span></code> below, create a 2D NumPy array. Print the array to observe the formatting.<a class="headerlink" href="#quick-exercise-given-num-below-create-a-2d-numpy-array-print-the-array-to-observe-the-formatting" title="Permalink to this headline">¶</a></h3>
+<p>We can also verify that the array is 2D when we print out its <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute, which now has two terms <code class="docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">3)</span></code>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>   <span class="c1"># after your code works, delete the 6 and run it again</span>
+<span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-numpy-arrays">
+<h3>Creating NumPy arrays<a class="headerlink" href="#creating-numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<p>There are <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.array-creation.html">many more ways to create NumPy arrays</a>, and we’ll demonstrate a few here.</p>
+<p>In 1D, there are two primary methods we use to create arrays.
+There is a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html"><code class="docutils literal notranslate"><span class="pre">np.arange()</span></code></a> function that works analogously to the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function we saw with <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.
+It generates a sequence of integers from the starting number (inclusive) to the ending number (exclusive).</p>
+<p>There is also a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html"><code class="docutils literal notranslate"><span class="pre">np.linspace(start,</span> <span class="pre">stop,</span> <span class="pre">num_points)</span></code></a> function that works analogously to <code class="docutils literal notranslate"><span class="pre">linspace()</span></code> in MATLAB.
+This generates a NumPy array of length <code class="docutils literal notranslate"><span class="pre">num_points</span></code> with evenly-spaced points between <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span></code>, both inclusive.</p>
+<p>Note that both functions require specifying the <code class="docutils literal notranslate"><span class="pre">np</span></code> package prefix.</p>
+</div>
+<div class="section" id="quick-exercise-create-the-following-1d-arrays">
+<h3>Quick exercise: create the following 1D arrays<a class="headerlink" href="#quick-exercise-create-the-following-1d-arrays" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html">range of integers</a> from 0 to 99, inclusive.</p></li>
+<li><p>An array of 15 <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html">evenly-spaced numbers</a> from 0 to 50, inclusive.</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-an-array-from-a-text-file">
+<h3>Creating an array from a text file<a class="headerlink" href="#creating-an-array-from-a-text-file" title="Permalink to this headline">¶</a></h3>
+<p>There is an <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a> function that can read in text files that are formatted with an array structure.
+For example, if you had a file with the following contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.000</span><span class="p">,</span><span class="mf">0.000000</span>
+<span class="mf">0.001</span><span class="p">,</span><span class="mf">0.000100</span>
+<span class="mf">0.002</span><span class="p">,</span><span class="mf">0.000399</span>
+<span class="mf">0.003</span><span class="p">,</span><span class="mf">0.000897</span>
+<span class="mf">0.004</span><span class="p">,</span><span class="mf">0.001594</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>it would certainly be convenient to directly load the contents of this file into a 2D NumPy array with two columns.
+The <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a> function takes the following input arguments (more arguments can be found in the linked documentation):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fname</span></code>: The name of the text file (required).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delimiter</span></code>: The token that separates the different elements. Default is space <code class="docutils literal notranslate"><span class="pre">None</span></code> but you might need comma <code class="docutils literal notranslate"><span class="pre">','</span></code> or something else.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skiprows</span></code>: Helpful if there are extraneous lines at the beginning of your file. Default is <code class="docutils literal notranslate"><span class="pre">0</span></code> if not specified (i.e., start from the top).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_rows</span></code>: Helpful if there are extraneous lines at the end of your file. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code> if not specified (i.e., read the whole file to the last line).</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;np_txt_demo.txt&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">arr</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Ta-da! 🎉
+We will be relying on this function heavily in this lab. Stay tuned.</p>
+<p>Otherwise, that concludes this abbreviated whirlwind introduction to Python.
+The next notebook is also a tutorial—on plotting data—and it will apply the knowledge presented here, assuming that you are at least somewhat familiar with all of these concepts.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -342,7 +1365,7 @@ const thebe_selector_output = ".output, .cell_output"
     <a class='right-next' id="next-link" href="intro_plotting_blank.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to Python and Jupyter notebooks</p>
+        <p class="prev-next-title">Introduction to data visualization in Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

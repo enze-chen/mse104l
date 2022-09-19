@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/mse_ucb.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lab 1: X-ray emission and absorption" href="lab1/lab1.html" />
+    <link rel="next" title="How to use Jupyter Book" href="jbook_usage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -101,6 +101,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jbook_usage.html">
+   How to use Jupyter Book 🚀
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="lab1/lab1.html">
    Lab 1️⃣
@@ -170,6 +175,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="lab4/lab4.html">
    Lab 4️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab5/lab5.html">
+   Lab 5️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab6/lab6.html">
+   Lab 6️⃣
   </a>
  </li>
  <li class="toctree-l1">
@@ -267,13 +282,18 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#navigating-the-curriculum">
-   Navigating the curriculum
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-on-external-links">
-     Note on external links
+    <a class="reference internal nav-link" href="#learning-outcomes">
+     Learning outcomes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intended-audience">
+     Intended audience
     </a>
    </li>
   </ul>
@@ -299,13 +319,18 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#navigating-the-curriculum">
-   Navigating the curriculum
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-on-external-links">
-     Note on external links
+    <a class="reference internal nav-link" href="#learning-outcomes">
+     Learning outcomes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intended-audience">
+     Intended audience
     </a>
    </li>
   </ul>
@@ -321,21 +346,47 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="welcome">
 <span id="h1-welcome"></span><h1>Welcome! 👋<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h1>
-<p>These exercises are meant to accompany the laboratory procedures in MSE 104L.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>These exercises are very much a work in progress, so if you have suggestions for how to improve things or other analysis that you would like to see, please let us know.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="tip admonition">
+<p class="admonition-title">We need your help!</p>
+<p>These exercises are very much a work in progress, so if you have suggestions for how to improve things or other analysis that you would like to see, please let us know.
+You can open an issue on GitHub or email Enze (<code class="docutils literal notranslate"><span class="pre">chenze&#64;</span></code>).</p>
 </div>
-<div class="section" id="navigating-the-curriculum">
-<h2>Navigating the curriculum<a class="headerlink" href="#navigating-the-curriculum" title="Permalink to this headline">¶</a></h2>
-<p>For the most part, you can use the navigation panel on the left to jump quickly to the exercise you’re interested in.
-The <code class="docutils literal notranslate"><span class="pre">Lab</span> <span class="pre">X</span></code> pages will have a more detailed summary of all of the associated exercises for that lab, which can be expanded by clicking the down chevron (⌄).</p>
-<p>Most of the curriculum will be accessible to everyone through the campus JupyterHub.
-If you want to view the source code of this textbook, you can hover over <a class="reference external" href="https://github.com/octocat">Octocat</a> in the top-right corner and click <span class="guilabel">repository</span> or <a class="reference external" href="https://github.com/enze-chen/mse104l">click here</a>.</p>
-<div class="section" id="note-on-external-links">
-<h3>Note on external links<a class="headerlink" href="#note-on-external-links" title="Permalink to this headline">¶</a></h3>
-<p>The default behavior of Jupyter Book/Sphinx/HTML is to open all links <em>in the current tab</em>, so if you want to open external links in a new tab, you will have to <code class="docutils literal notranslate"><span class="pre">Ctrl+Click</span></code> the link or right click and select <span class="guilabel">Open link in new tab</span>.
-Otherwise you’ll have to keep clicking the ⬅ button in your browser to return to (and reload) the Jupyter Book.</p>
+</div>
+<p>We have prepared these <strong>optional</strong> exercises to accompany the laboratory procedures in MSE 104L.
+Again, these are <em>truly optional</em> and completing them is not a requirement for any of the labs;
+that being said, we hope they can be helpful guides for your analysis and teach you something new, maybe even lead to a grade boost.</p>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>Several students who have taken MSE 104L in the past have appreciated the hands-on experimental procedures, but wished that there could be more structured guidance during the data analysis portion as well to facilitate the writeup.
+Because we care about your feedback and your success in this course, we have tried to accommodate this request, albeit with a slight twist.
+Namely, we hope to provide greater clarity in the steps of the analysis, but we will do so in the context of teaching you a bit of computing skills as well.
+This will not only help you complete your lab reports, but it will also give you transferable skills that you can apply to your future work.</p>
+<div class="section" id="learning-outcomes">
+<h3>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h3>
+<p>We hope these exercises will help you grow in the following ways: 🌱</p>
+<ul class="simple">
+<li><p>Create some hella nice plots. 📊</p></li>
+<li><p>Gain a deeper appreciation for computational methods/tools. 💻</p></li>
+<li><p>Develop basic proficiency with common Python packages for scientific computing—another tool to add to your toolbox. 🧰</p></li>
+<li><p>Understand the utility for automation in scientific experiments. 🤖</p></li>
+</ul>
+</div>
+<div class="section" id="intended-audience">
+<h3>Intended audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">¶</a></h3>
+<p>Students will be coming into MSE 104L with a whole range of experiences in programming, so we will broadly outline some user personas and how you might stand to benefit:</p>
+<ul class="simple">
+<li><p>You do not care for coding: Well, OK, maybe you can just stop reading now.
+Or you can give the first exercises a try with an open mind and see if we can change your mind. 🙂</p></li>
+<li><p>You are interested but have no experience in coding: Awesome!
+These exercises are meant to start from the very beginning, so it should be approachable, but we acknowledge that there might be a non-trivial learning curve that you may not have time for, depending on how late you start your lab writeup. 😉</p></li>
+<li><p>You have experience in coding, but not necessarily scientific computing in Python.
+For example, maybe you’ve done scientific computing in MATLAB in ENGR 7 or you’ve used Python for a traditional course like CS 61A.
+Either way, you should find the transition to be smooth and the techniques to be a valuable addition to your toolkit. 💡</p></li>
+<li><p>You are a Python god.
+Well, great! You will probably breeze through the data analysis, and we hope we can still offer tips and tricks for advanced users. 💪🏼</p></li>
+</ul>
 </div>
 </div>
 <div class="toctree-wrapper compound">
@@ -367,10 +418,10 @@ Otherwise you’ll have to keep clicking the ⬅ button in your browser to retur
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="lab1/lab1.html" title="next page">
+    <a class='right-next' id="next-link" href="jbook_usage.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lab 1: X-ray emission and absorption</p>
+        <p class="prev-next-title">How to use Jupyter Book</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -3,3 +3,9 @@
 
 
 Welcome to Lab 3!
+
+
+## Associated notebooks 
+
+```{tableofcontents}
+```

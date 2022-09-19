@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to use Jupyter Book &#8212; MSE 104L Data Analysis</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="canonical" href="https://enze-chen.github.io/mse104l/jbook_usage.html" />
+    <link rel="shortcut icon" href="_static/mse_ucb.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lab 1: X-ray emission and absorption" href="lab1/lab1.html" />
+    <link rel="prev" title="Welcome! 👋" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/mse104l.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MSE 104L Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome! 👋
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   How to use Jupyter Book 🚀
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lab1/lab1.html">
+   Lab 1️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lab1/intro_python_jupyter_blank.html">
+     Intro to Python 🚀
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lab1/intro_plotting_blank.html">
+     Intro to plots 🚀
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lab1/lab1_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lab2/lab2.html">
+   Lab 2️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lab2/intro_tabular_blank.html">
+     Intro to tabular data 🚀
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lab2/lab2_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lab3/lab3.html">
+   Lab 3️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lab3/lab3_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab4/lab4.html">
+   Lab 4️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab5/lab5.html">
+   Lab 5️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lab6/lab6.html">
+   Lab 6️⃣
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="acknowl.html">
+   Acknowledgments
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/jbook_usage.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/enze-chen/mse104l"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/enze-chen/mse104l/issues/new?title=Issue%20on%20page%20%2Fjbook_usage.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/enze-chen/mse104l/edit/main/jbook_usage.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https://github.com/enze-chen/mse104l&urlpath=tree/mse104l/jbook_usage.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/enze-chen/mse104l/blob/main/jbook_usage.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navigating-the-curriculum">
+   Navigating the curriculum
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactivity">
+   Interactivity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-python">
+     Why Python? 🐍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-jupyterhub">
+     Launching JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-a-jupyter-notebook">
+     Running a Jupyter notebook
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-cells">
+       Code cells
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#benefits-of-datahub">
+     Benefits of DataHub
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uploading-your-own-data">
+   Uploading your own data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#note-on-external-links">
+   Note on external links
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>How to use Jupyter Book</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navigating-the-curriculum">
+   Navigating the curriculum
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactivity">
+   Interactivity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-python">
+     Why Python? 🐍
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-jupyterhub">
+     Launching JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-a-jupyter-notebook">
+     Running a Jupyter notebook
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-cells">
+       Code cells
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#benefits-of-datahub">
+     Benefits of DataHub
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uploading-your-own-data">
+   Uploading your own data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#note-on-external-links">
+   Note on external links
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="how-to-use-jupyter-book">
+<h1>How to use Jupyter Book<a class="headerlink" href="#how-to-use-jupyter-book" title="Permalink to this headline">¶</a></h1>
+<p>This document/website that you’re reading right now is created using <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book</a>.
+Not only can you read the prose, but you can also run the code in real time to put the ideas into practice.
+Here, we will take a moment to explain the UI to maximize your benefit.</p>
+<div class="section" id="navigating-the-curriculum">
+<h2>Navigating the curriculum<a class="headerlink" href="#navigating-the-curriculum" title="Permalink to this headline">¶</a></h2>
+<p>For the most part, you can use the navigation panel on the left to jump quickly to the exercise you’re interested in.
+The <code class="docutils literal notranslate"><span class="pre">Lab</span> <span class="pre">X</span></code> pages will have a more detailed summary of all of the associated exercises for that lab, which can be expanded by clicking the down chevron (⌄).</p>
+<!-- If you want to view the source code of this textbook, you can hover over [Octocat](https://github.com/octocat) in the top-right corner and click {guilabel}`repository` or [click here](https://github.com/enze-chen/mse104l). --><div class="sidebar">
+<p class="sidebar-title">Pythonenv</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/pythonenv_xkcd.png"><img alt="pythonenv_xkcd" src="_images/pythonenv_xkcd.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text"><a class="reference external" href="https://xkcd.com/1987/">xkcd 1987</a>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="interactivity">
+<h2>Interactivity<a class="headerlink" href="#interactivity" title="Permalink to this headline">¶</a></h2>
+<p>Several of the pages of this book are actually Jupyter notebooks, which provide interactive programming environments that interleave text, code, and graphics to provide hands-on experience for students.
+On these pages, you will be able to run Python code in real time, whether that’s for a tutorial to learn the commands or for your actual laboratory data analysis.
+The interactivity is enabled through the campus <a class="reference external" href="https://datahub.berkeley.edu/">JupyterHub</a>, which runs Jupyter notebooks in the cloud so you don’t have to manage your own computing resources and Python installations.
+It’s a blessing!</p>
+<div class="sidebar">
+<p class="sidebar-title">Python</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/python_xkcd.png"><img alt="python_xkcd" src="_images/python_xkcd.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text"><a class="reference external" href="https://xkcd.com/353/">xkcd 353</a>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="why-python">
+<h3>Why Python? 🐍<a class="headerlink" href="#why-python" title="Permalink to this headline">¶</a></h3>
+<p>There are many programming languages one can choose from, and we eventually settled on Python as it has <a class="reference external" href="https://stackoverflow.blog/2017/09/06/incredible-growth-python/">skyrocketed in popularity</a> in recent years.
+This growth is in part due to:</p>
+<ol class="simple">
+<li><p>Its <em>readability</em>. Python is designed to be simple and reads like English, using common keywords instead of symbols (e.g., <code class="docutils literal notranslate"><span class="pre">and</span></code> vs. <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>).</p></li>
+<li><p>Its <em>extensibility</em>. Python makes it easy for developers to write <em>modules</em> that extend its functionalities for applications in data science, <a class="reference external" href="https://www.nature.com/articles/s41586-020-2649-2">scientific computing</a>, <a class="reference external" href="https://numfocus.org/case-studies/first-photograph-black-hole">imaging black holes</a>, and <a class="reference external" href="https://twitter.com/ThePSF/status/1362516507918483458?s=20">flying drones on Mars</a>.</p></li>
+<li><p>Its <em>open-source</em> properties. This means anyone can contribute to Python development and anyone can use it—for free!</p></li>
+</ol>
+</div>
+<div class="section" id="launching-jupyterhub">
+<h3>Launching JupyterHub<a class="headerlink" href="#launching-jupyterhub" title="Permalink to this headline">¶</a></h3>
+<p>To launch any page in the JupyterHub, hover over the <span class="fa fa-rocket"></span> icon in the top-right corner, click <span class="guilabel">JupyterHub</span>, and wait for the Hub to spawn an environment.
+You may have to login using your CalNet credentials and approve Canvas authorizations.
+Note that not all pages are interactive, and thus not all pages will have the rocket symbol; we will try to indicate interactive pages with a 🚀 emoji in the navigation bar.
+<strong>Try it now</strong> for this page and read the rest of the page in JupyterHub!</p>
+</div>
+<div class="section" id="running-a-jupyter-notebook">
+<h3>Running a Jupyter notebook<a class="headerlink" href="#running-a-jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<p>The information in Jupyter notebooks is organized into <strong>cells</strong>, which come in many forms.
+This cell is called a <strong>Markdown cell</strong>, which is used for text that can be formatted with the <a class="reference external" href="https://www.markdownguide.org/">Markdown</a> markup language.
+You know this is a Markdown cell because when you select this cell (click on it such that a <font color="blue">blue bar</font> appears on the left), the menu bar at the top shows “<code class="docutils literal notranslate"><span class="pre">Markdown</span>&#160; <span class="pre">v</span></code>” in the second row:</p>
+<p><img alt="jupyter_menu" src="_images/jupyter_menu.png" /></p>
+<div class="section" id="code-cells">
+<h4>Code cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h4>
+<p>Notice how the next cell looks a little different.
+It is a <strong>code cell</strong>, which you can distinguish in a few ways.</p>
+<ul class="simple">
+<li><p>If you click in the cell, the menu bar at the top will now show “<code class="docutils literal notranslate"><span class="pre">Code</span>&#160;&#160; <span class="pre">v</span></code>.”</p></li>
+<li><p>The cell will always have a gray background.</p></li>
+<li><p>You may also notice a <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[</span> <span class="pre">]:</span></code> tag in the left margin.</p></li>
+</ul>
+<p>You can write Python code in these cells and then <strong>execute the code</strong> with <kbd>Shift</kbd>+<kbd>Enter</kbd>.
+Or you can click the <kbd>▶ Run</kbd> button in the menu bar to execute the code.</p>
+<p><strong>EXERCISE:</strong> In the space below, enter your name between the quotation marks and then run the code cell by pressing <kbd>Shift</kbd>+<kbd>Enter</kbd>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inline comments in Python start with &quot;#&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>                  <span class="c1"># enter your name here as a string, which is enclosed by quotation marks</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now you might notice that some output appeared after you executed the cell (which makes sense because we called <code class="docutils literal notranslate"><span class="pre">print()</span></code>) and a number also appeared between the square brackets!
+(e.g., <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[1]:</span></code>)
+This number indicates the sequence of code cell execution, which can be handy for a few reasons:</p>
+<ul class="simple">
+<li><p>You can clearly tell which cells have been executed and which cells have not.</p></li>
+<li><p>You can split code among several code blocks and run them in whatever order you want.</p></li>
+<li><p>You can easily change an earlier code cell (and rerun it!) if you later deem it necessary.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="benefits-of-datahub">
+<h3>Benefits of DataHub<a class="headerlink" href="#benefits-of-datahub" title="Permalink to this headline">¶</a></h3>
+<p>If you are a UC Berkeley student, you may be reading this Jupyter notebook on the school’s DataHub (a <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a> instance), which has been graciously provisioned for this module by the <a class="reference external" href="https://data.berkeley.edu/">Division of Computing, Data Science, and Society</a>.
+With DataHub, all of our Python code will be saved and executed in the cloud, which saves us <em>a lot</em> of hassle with software installation.
+Everything is also automatically synced with the Jupyter Book!</p>
+<p>We’ll also quickly demonstrate how to navigate to the root directory for you to see all the files in DataHub and upload new ones as needed.
+Note that when you close a DataHub notebook, <strong>your edits and outputs are preserved</strong> 🙏🏼, but the variables will be reset.</p>
+</div>
+</div>
+<div class="section" id="uploading-your-own-data">
+<h2>Uploading your own data<a class="headerlink" href="#uploading-your-own-data" title="Permalink to this headline">¶</a></h2>
+<p>While we’ve structured the coding and data analysis, you will still have to supply the raw data that you’ve collected.
+Moreover, if there are any files produced by the code (e.g., figures), you will have to download those onto your computer.
+Luckily, it’s quite easy to interface with DataHub to upload/download files so you can use them in your notebooks.</p>
+<p>First navigate to the root DataHub directory with all of your environments: <a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a> is the URL, or you can click the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> logo in the top-left corner.
+Then enter the folder of the lab that you’re working on, by clicking 📁 &gt; <strong>mse104l</strong> &gt; <strong>lab#</strong>.
+An example of Lab 1 is shown below.</p>
+<p><img alt="jhub_lab1" src="_images/jhub_lab1.png" /></p>
+<p>Here, you can:</p>
+<ul class="simple">
+<li><p><strong>Upload</strong> raw data files (e.g., CSV) by clicking <kbd>Upload</kbd> in the top-right corner and finding the files on your computer.</p></li>
+<li><p><strong>Download</strong> files by selecting the check box and clicking <kbd>Download</kbd> in the menu options that appear.</p></li>
+</ul>
+</div>
+<div class="section" id="note-on-external-links">
+<h2>Note on external links<a class="headerlink" href="#note-on-external-links" title="Permalink to this headline">¶</a></h2>
+<p>The default behavior of Jupyter Book/Sphinx/HTML is to open all links <em>in the current tab</em>, so if you want to open external links in a new tab, you will have to <code class="docutils literal notranslate"><span class="pre">Ctrl+Click</span></code> the link or right click and select <span class="guilabel">Open link in new tab</span>.
+Otherwise you’ll have to keep clicking the ⬅ button in your browser to return to (and reload) the Jupyter Book.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome! 👋</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="lab1/lab1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab 1: X-ray emission and absorption</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Enze Chen and Andrew Minor<br/>
+    
+        &copy; Copyright 2022.<br/>
+      <div class="extra_footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+</a>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
