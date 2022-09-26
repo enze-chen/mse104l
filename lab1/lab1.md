@@ -3,7 +3,7 @@
 
 Welcome to Lab 1!
 For this lab, we will be writing some Python code to help analyze your X-ray emission and absorption data.
-Because there are a lot of spectra and plots involved in the writeup, we'll focus this lab on data visualization in Python.
+Because there are a lot of spectra and plots involved in the writeup, we'll focus this lab on **data visualization** in Python.
 The primary objectives are:
 - Understand enough Python syntax to finish these exercises. 
 - Create compelling plots with the Matplotlib library. 

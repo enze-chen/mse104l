@@ -1,7 +1,7 @@
 (h1:acknowl)=
 # Acknowledgments
 
-We thank the [MSE Department staff](https://mse.berkeley.edu/staff/), in particular Chris Kumai and Chad Southard, for their assistance with laboratory scheduling, training, and supervision.
+We thank the [MSE Department Staff](https://mse.berkeley.edu/staff/), in particular Chris Kumai and Chad Southard, for their assistance with laboratory scheduling, training, and supervision.
 
 We thank the developers of [Jupyter Book](https://jupyterbook.org/intro.html) and the [Executable Books Project](https://executablebooks.org/en/latest/index.html) for creating this software and providing excellent documentation. 🙏
 We also thank the [DataHub](https://datahub.berkeley.edu/) developers at UC Berkeley for the interactive computing resources and technical support.

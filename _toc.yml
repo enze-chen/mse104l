@@ -1,7 +1,7 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/en/stable/structure/toc.html
 format              : jb-book 
-root                : intro
+root                : index
 
 chapters:
 - file              : jbook_usage
@@ -40,6 +40,9 @@ chapters:
 ###################################################################
 - file              : lab4/lab4
   title             : Lab 4️⃣ 
+  sections:
+    - file          : lab4/lab4_exercises_blank
+      title         : Enrichment 🚀
 
 
 ###################################################################
