@@ -12,5 +12,8 @@ __pycache__
 my_work/
 104_labs_data
 lab1/Cu_bare.png
+lab1/sine*.png
 lab2/sine_updated.txt
 lab2/Sample6.txt
+lab4/fake_EDS_map.png
+lab4/spectra_replot.png

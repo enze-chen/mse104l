@@ -4,15 +4,16 @@ format              : jb-book
 root                : index
 
 chapters:
-- file              : jbook_usage
+- file              : lab0/jbook_usage
   title             : How to use Jupyter Book 🚀
+  sections: 
+    - file          : lab0/intro_python_jupyter_blank
+      title         : Intro to Python 🚀
     
 ###################################################################
 - file              : lab1/lab1
   title             : Lab 1️⃣
   sections:
-    - file          : lab1/intro_python_jupyter_blank
-      title         : Intro to Python 🚀
     - file          : lab1/intro_plotting_blank
       title         : Intro to plots 🚀
     - file          : lab1/lab1_exercises_blank
@@ -42,7 +43,7 @@ chapters:
   title             : Lab 4️⃣ 
   sections:
     - file          : lab4/lab4_exercises_blank
-      title         : Enrichment 🚀
+      title         : Your turn! 🚀
 
 
 ###################################################################

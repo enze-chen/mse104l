@@ -21,6 +21,9 @@ Copper-nickel phase diagram taken from ref. {cite}`callister_2014`
 ```{tableofcontents}
 ```
 
+
+## References 
+
 ```{bibliography}
 :style: unsrt
 :filter: docname in docnames

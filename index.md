@@ -5,32 +5,40 @@
 ````{margin} 
 ```{admonition} We need your help!
 :class: tip
-These exercises are very much a work in progress, so if you have suggestions for how to improve things or other analysis that you would like to see, please let us know.
+These exercises are very much a work in progress, so if you have suggestions, please let us know.
 You can open an issue on GitHub or email Enze (`chenze@`).
 ```
 ````
 
-We have prepared these **optional** exercises to accompany the laboratory procedures in MSE 104L.
+We have prepared these **optional** programmatic data science (DS) exercises to accompany the laboratory procedures in MSE 104L.
 Again, these are _truly optional_ and completing them is not a requirement for any of the labs; 
-you also will **not** be assessed on Python/algorithms in MSE 104/L.
-That being said, we hope these exercises can be helpful guides for your analysis and teach you something new, maybe even lead to a grade boost. 💡
+you also will **not** be assessed on Python/DS in MSE 104/L.
+That being said, we hope these exercises can be helpful guides for your analysis and teach you something new—maybe even lead to a grade boost. 💡
 
 
 ## Purpose
 
-Several students who have taken MSE 104L in the past have appreciated the hands-on experimental procedures, but wished that there could be more structured guidance during the data analysis portion as well to facilitate the writeup. 
+````{margin} 
+```{admonition} Group work 
+:class: note 
+It is totally fair game to work together on the analysis, particularly to help each other figure out the code / debug.
+That's another reason for this online, uniform interface. 
+Please generate your own plots and complete your own writeup with [honesty and integrity](https://teaching.berkeley.edu/berkeley-honor-code).
+```
+````
+
+Several students who have taken MSE 104L in the past have appreciated the hands-on experimental procedures, but wished that there could also be more structured guidance during the data analysis portion to facilitate the writeup. 
 Because we care about your feedback and your success in this course, we have tried to accommodate this request, albeit with a slight twist. 
-Namely, we hope to provide **greater clarity for the analysis**, but we will do so in the context of **teaching you some computing** skills as well.
-This will not only help you complete your lab reports, but it will also give you transferable skills that you can apply to your future work.
+Namely, we hope to **provide greater clarity for the analysis**, but we will do so in the context of **teaching you some data science** skills as well.
+This will not only help you complete your lab reports, but it will also give you transferable skills that you can use for other tasks.
 
 
-### Learning outcomes 
+## Learning outcomes 
 
 We hope these exercises will help you grow in the following ways: 🌱
-- Create some hella nice plots. 📊
-- Gain a deeper appreciation for computational methods/tools. 💻
-- Develop basic proficiency with common Python packages for scientific computing—another tool to add to your toolbox. 🧰
-- Understand the utility for automation in scientific experiments. 🤖
+- Create some hella nice plots based on effective data visualization principles. 📊
+- Develop basic proficiency with common Python packages for DS—another tool to add to your toolbox. 🧰
+- Apply computational tools to streamline and automate the analysis of MSE data. 🤖
 
 
 <!-- ### Intended audience
