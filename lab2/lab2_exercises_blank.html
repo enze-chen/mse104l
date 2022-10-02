@@ -98,20 +98,15 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../index.html">
    Welcome! 👋
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../jbook_usage.html">
-   How to use Jupyter Book 🚀
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../lab1/lab1.html">
-   Lab 1️⃣
+  <a class="reference internal" href="../lab0/jbook_usage.html">
+   How to use Jupyter Book 🚀
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -120,10 +115,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lab1/intro_python_jupyter_blank.html">
+    <a class="reference internal" href="../lab0/intro_python_jupyter_blank.html">
      Intro to Python 🚀
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lab1/lab1.html">
+   Lab 1️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
      Intro to plots 🚀
@@ -140,8 +147,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="lab2.html">
    Lab 2️⃣
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -162,8 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lab3/lab3.html">
    Lab 3️⃣
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -175,10 +182,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lab4/lab4.html">
    Lab 4️⃣
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lab4/lab4_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lab5/lab5.html">
@@ -259,9 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
             href="https://github.com/enze-chen/mse104l/issues/new?title=Issue%20on%20page%20%2Flab2/lab2_exercises_blank.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/enze-chen/mse104l/edit/main/lab2/lab2_exercises_blank.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+        
     </div>
 </div>
 
@@ -307,6 +324,11 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-python-packages">
    Import Python packages
   </a>
@@ -320,10 +342,69 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#lattice-constant-calculations">
    Lattice constant calculations
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inputs-experimental-data">
+     1. Inputs / experimental data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-our-dataframe">
+     2. Creating our DataFrame
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical-calculations">
+     3. Numerical calculations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-theta">
+       3.1 Find
+       <span class="math notranslate nohighlight">
+        \(\theta\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#take-the-sine">
+       3.2 Take the sine
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calculate-the-interplanar-spacing-d">
+       3.3 Calculate the interplanar spacing,
+       <span class="math notranslate nohighlight">
+        \(d\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#take-the-ratio-of-d-2-values">
+       3.4 Take the ratio of
+       <span class="math notranslate nohighlight">
+        \(d^2\)
+       </span>
+       values
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figure-out-the-crystal-structure-and-index-the-peaks">
+       3.5 Figure out the crystal structure and index the peaks
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nelson-riley-plots">
    Nelson-Riley plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
  </li>
 </ul>
@@ -347,6 +428,11 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-python-packages">
    Import Python packages
   </a>
@@ -360,10 +446,69 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#lattice-constant-calculations">
    Lattice constant calculations
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inputs-experimental-data">
+     1. Inputs / experimental data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-our-dataframe">
+     2. Creating our DataFrame
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical-calculations">
+     3. Numerical calculations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-theta">
+       3.1 Find
+       <span class="math notranslate nohighlight">
+        \(\theta\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#take-the-sine">
+       3.2 Take the sine
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calculate-the-interplanar-spacing-d">
+       3.3 Calculate the interplanar spacing,
+       <span class="math notranslate nohighlight">
+        \(d\)
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#take-the-ratio-of-d-2-values">
+       3.4 Take the ratio of
+       <span class="math notranslate nohighlight">
+        \(d^2\)
+       </span>
+       values
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#figure-out-the-crystal-structure-and-index-the-peaks">
+       3.5 Figure out the crystal structure and index the peaks
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nelson-riley-plots">
    Nelson-Riley plots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
   </a>
  </li>
 </ul>
@@ -383,14 +528,21 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
 </div>
 <p>This notebook contains a series of exercises to help you process your data from Lab 2.
-It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report.
-We certainly believe it will lead to a higher grade!</p>
-<p>We tried to stagger the guidance such that each exercise only introduces 1-2 new ideas at a time.
-These new ideas are marked with a ⭐.</p>
+It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create some figures that can supplement the narrative of your lab report.</p>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<p>The exercises in this notebook include:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#Plot-a-spectra-as-a-sanity-check">Plotting refresher</a></p></li>
+<li><p><a class="reference external" href="#Lattice-constant-calculations">Calculating lattice constants</a></p></li>
+<li><p><a class="reference external" href="#Nelson-Riley-plots">Nelson-Riley plots</a></p></li>
+</ol>
+</div>
 <div class="section" id="import-python-packages">
 <h2>Import Python packages<a class="headerlink" href="#import-python-packages" title="Permalink to this headline">¶</a></h2>
 <p>It can be pretty helpful to import all required packages at the top of the notebook.
-We’ve imported a few for you, and we’ll let you figure out what else you might need. ⭐</p>
+We’ve imported a few for you, and we’ll let you figure out what else you might need.
+Don’t forget the plot styling! ⭐</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -403,15 +555,108 @@ We’ve imported a few for you, and we’ll let you figure out what else you mig
 </div>
 <div class="section" id="plot-a-spectra-as-a-sanity-check">
 <h2>Plot a spectra as a sanity check<a class="headerlink" href="#plot-a-spectra-as-a-sanity-check" title="Permalink to this headline">¶</a></h2>
-<p>Since you’re working with more powder XRD spectra in this lab, it’s a good idea to just visualize the spectra and create a clean figure for each of your unknown samples.
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Since you’re working with more powder XRD spectra in this lab, it’s a good idea to just visualize the spectra and create <strong>a clean figure for each of your unknown samples</strong>.
+This is also good practice to remind yourself of the commands from the previous lab.
 You should be quite proficient at this by now!</p>
 <p>Remember the general steps are:</p>
 <ol class="simple">
 <li><p>Upload your data to JupyterHub in the <code class="docutils literal notranslate"><span class="pre">lab2</span></code> folder.</p></li>
-<li><p>Write code below to process and plot the data.</p></li>
-<li><p>Save the figure and download it to your computer.</p></li>
+<li><p>Write code below to process and plot the data.</p>
+<ul class="simple">
+<li><p>You’ll probably start with <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv('sample_N.txt',</span> <span class="pre">names=['something',</span> <span class="pre">'sensible'])</span></code>.</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">ax</span> <span class="pre">=</span> <span class="pre">plt.subplots()</span></code> to get things started.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> to plot and style things.</p></li>
+</ul>
+</li>
+<li><p>Save the figure and download it to your computer.</p>
+<ul class="simple">
+<li><p>Recall this is <code class="docutils literal notranslate"><span class="pre">fig.savefig('my_figure.png',</span> <span class="pre">dpi=300,</span> <span class="pre">bbox_inches='tight')</span></code>.</p></li>
+</ul>
+</li>
 </ol>
-<p>If you don’t remember what you did in lab 1, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>.</p>
+<p>If you don’t remember what you did in lab 1, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>.
+<strong>Copy+paste previous code</strong> is definitely a thing!</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class='alert alert-warning'>
+    For your cubic crystal structures, you don't <i>have to</i> use a programmatic solution to solve for the lattice constants.
+    But realize that this means you'll have to calculate the lattice constant (<i>a</i>) corresponding to each peak by hand, and that gets <i>repetitive</i>.
+    Often times, if we find ourselves doing the same set of structured tasks over and over again, it's a good case to turn to a programmatic solution to automate things. 
+    Also, you'll thank us when you get to Lab 3. 😉
+</div></div>
+<div class="section" id="lattice-constant-calculations">
+<h2>Lattice constant calculations<a class="headerlink" href="#lattice-constant-calculations" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>In this course, you can expect to be given an XRD spectrum and deduce the crystal structure from the peak positions.
+This is a tedious exercise by hand because we have to compute each peak individually, so we’ll try to speed things up and <em>automate</em> the calculations using Python.</p>
+<p>Arguably the most important equation is <strong>Bragg’s law</strong>, given by</p>
+<div class="math notranslate nohighlight">
+\[ n\lambda = 2d \sin(\theta) \tag{1} \]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the order (typically <span class="math notranslate nohighlight">\(1\)</span>), <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength, <span class="math notranslate nohighlight">\(d\)</span> is the interplanar spacing, and <span class="math notranslate nohighlight">\(\theta\)</span> is the Bragg angle.
+We’ll be manipulating this equation to calculate lattice constants.</p>
+<div class="section" id="inputs-experimental-data">
+<h3>1. Inputs / experimental data<a class="headerlink" href="#inputs-experimental-data" title="Permalink to this headline">¶</a></h3>
+<p>Start by typing in your known values:</p>
+<ul class="simple">
+<li><p>Wavelength: A <code class="docutils literal notranslate"><span class="pre">float</span></code> in <em>nanometers</em>, most likely <code class="docutils literal notranslate"><span class="pre">0.154</span></code> corresponding to Cu-K<span class="math notranslate nohighlight">\(\alpha\)</span>.</p></li>
+<li><p>Angles: Values are <span class="math notranslate nohighlight">\(2\theta\)</span> in <em>degrees</em>. The angles should be stored in a <code class="docutils literal notranslate"><span class="pre">list</span></code> in the form</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">angles</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">4.56</span><span class="p">,</span> <span class="mf">7.89</span><span class="p">]</span>  
+</pre></div>
+</div>
+<p>for however many <span class="math notranslate nohighlight">\(2\theta\)</span> peak values you’ve measured (maybe 3 to 5, or so).
+If you don’t have your own data, or just want to try these exercises for fun, you can use the sample data <a class="reference external" href="https://github.com/enze-chen/learning_modules/blob/master/data/xrd_peaks_CuKa.csv">in this file</a> (ignore intensity for this lab).</p>
+<p><strong>Note</strong>: Unlike the spectra plots, we <strong>only</strong> need the angles corresponding to the <em>peak positions</em>, <strong>not all angles</strong> collected by the diffractometer. 😅</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+<span class="n">wavelength</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-our-dataframe">
+<h3>2. Creating our DataFrame<a class="headerlink" href="#creating-our-dataframe" title="Permalink to this headline">¶</a></h3>
+<p>Now it’s time to construct our <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">pandas DataFrame</a> using the <code class="docutils literal notranslate"><span class="pre">dict</span></code> version of the constructor.
+We’ll need one column (<code class="docutils literal notranslate"><span class="pre">key:value</span></code> pair) for the <code class="docutils literal notranslate"><span class="pre">wavelength</span></code> and another for <code class="docutils literal notranslate"><span class="pre">angles</span></code>.
+Once you’ve constructed the DataFrame, the <code class="docutils literal notranslate"><span class="pre">df</span></code> variable on the last line will display it.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+
+<span class="n">df</span>  <span class="c1"># you should see two columns with your data! Always good to show the df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numerical-calculations">
+<h3>3. Numerical calculations<a class="headerlink" href="#numerical-calculations" title="Permalink to this headline">¶</a></h3>
+<p>Note that if we assume <span class="math notranslate nohighlight">\(n=1\)</span> in Bragg’s law, then we have three unknowns.
+In our case, we know the wavelength and angle, so we can find the interplanar spacing as follows:</p>
+<div class="math notranslate nohighlight">
+\[ d = \frac{\lambda}{2 \sin (\theta)} \tag{2}\]</div>
+<p>We will try to do this in a very principled fashion.
+<em>Modular solutions</em> are very important when programming.</p>
+<div class="section" id="find-theta">
+<h4>3.1 Find <span class="math notranslate nohighlight">\(\theta\)</span><a class="headerlink" href="#find-theta" title="Permalink to this headline">¶</a></h4>
+<p>First, we need to get the <span class="math notranslate nohighlight">\(\theta\)</span> values.
+We can do this by creating a new column in the DataFrame whose entries are computed by dividing the existing column of <span class="math notranslate nohighlight">\(2\theta\)</span> values by 2.
+Also, we <strong>strongly recommend</strong> that you convert the angles to radians using the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.deg2rad.html"><code class="docutils literal notranslate"><span class="pre">np.deg2rad()</span></code></a> function on the result. ⭐</p>
+<p>So, the syntax will look something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_column_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column_of_2theta_angles&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Of course, please use better names.
+After you’ve done this, display the DataFrame like we did above to confirm you did it correctly.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
@@ -420,19 +665,120 @@ You should be quite proficient at this by now!</p>
 </div>
 </div>
 </div>
-<div class="section" id="lattice-constant-calculations">
-<h2>Lattice constant calculations<a class="headerlink" href="#lattice-constant-calculations" title="Permalink to this headline">¶</a></h2>
-<p>Recall that for a cubic system the interplanar spacing between <span class="math notranslate nohighlight">\((hkl)\)</span> planes is given by:</p>
-<div class="math notranslate nohighlight">
-\[ \frac{1}{d_{hkl}^2} = \frac{h^2 + k^2 + l^2}{a^2} \]</div>
-<p>The equation for other systems can be found in your textbook (Table 4.1.2 in <a class="reference external" href="https://academic.oup.com/book/43510">Krishnan</a>).</p>
+<div class="section" id="take-the-sine">
+<h4>3.2 Take the sine<a class="headerlink" href="#take-the-sine" title="Permalink to this headline">¶</a></h4>
+<p>Next, we’ll compute the sine of the <span class="math notranslate nohighlight">\(\theta\)</span> values using <code class="docutils literal notranslate"><span class="pre">np.sin()</span></code>, whose argument inside the parentheses <em>must be in radians</em> —good thing we converted it earlier!
+Add another column to your DataFrame with the sine of the angles.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="calculate-the-interplanar-spacing-d">
+<h4>3.3 Calculate the interplanar spacing, <span class="math notranslate nohighlight">\(d\)</span><a class="headerlink" href="#calculate-the-interplanar-spacing-d" title="Permalink to this headline">¶</a></h4>
+<p>Now you have all the pieces in place for calculating <span class="math notranslate nohighlight">\(d\)</span>. What’s awesome about pandas is that you can perform element-wise division of two columns by use of the division operator, <code class="docutils literal notranslate"><span class="pre">/</span></code>.
+Create a new column that does exactly what Equation (2) says.
+Don’t forget to include parentheses when you multiply the denominator by 2!</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="take-the-ratio-of-d-2-values">
+<h4>3.4 Take the ratio of <span class="math notranslate nohighlight">\(d^2\)</span> values<a class="headerlink" href="#take-the-ratio-of-d-2-values" title="Permalink to this headline">¶</a></h4>
+<p>At this point, you know to take the ratio between the first distance and each distance measured; however, there’s a small “hack” to this. 😎</p>
+<p>If you do it naively, you’ll get numbers like <code class="docutils literal notranslate"><span class="pre">1.000</span></code>, <code class="docutils literal notranslate"><span class="pre">1.414</span></code>, <code class="docutils literal notranslate"><span class="pre">1.732</span></code>, and the like.
+Unless you know your square root approximations, this can be tricky to decipher.
+We prefer to <strong>square</strong> the distances first, and then take the ratio.
+We’ve done this below for some sample data, but you may have to modify it to match your column names.</p>
+<p>The resulting column should have values that are close to integers or multiples of a simple fraction like <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+<span class="c1"># square the distances</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;d^2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># take the ratio - finish this one-liner</span>
+
+
+<span class="c1"># show the df</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="figure-out-the-crystal-structure-and-index-the-peaks">
+<h4>3.5 Figure out the crystal structure and index the peaks<a class="headerlink" href="#figure-out-the-crystal-structure-and-index-the-peaks" title="Permalink to this headline">¶</a></h4>
+<p>OK! At this point, the ratios should be enough for you to deduce which crystal structure you have on your hands.
+This will allow you to index the peaks accordingly.
+You can probably do this part by hand.</p>
+</div>
+</div>
 </div>
 <div class="section" id="nelson-riley-plots">
 <h2>Nelson-Riley plots<a class="headerlink" href="#nelson-riley-plots" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>Recall that the Nelson-Riley function is used for cubic systems to get a more accurate measurement of the lattice constant.
 The Nelson-Riley function is</p>
 <div class="math notranslate nohighlight">
-\[ \text{NR} = \frac{\cos^{2} \theta}{\sin \theta} + \frac{\cos^2 \theta}{\theta} \]</div>
+\[ \text{NR} = \frac{\cos^{2} \theta}{\sin \theta} + \frac{\cos^2 \theta}{\theta} \tag{3} \]</div>
+<p>You can probably sense where this is going.
+If you’ve done the above calculations with the pandas DataFrame, it’s quite easy to <strong>add another column</strong> of Nelson-Riley values!
+Only one line of number crunching with Equation (3).
+If you already did the previous parts and come back to this section later, you’ll see with coding that it’s very easy to pick up where you left off by extending the code you’ve already created.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Recall that for a cubic system the interplanar spacing between <span class="math notranslate nohighlight">\((hkl)\)</span> planes is given by (Table 4.1.2 in <a class="reference external" href="https://academic.oup.com/book/43510">Krishnan</a>):</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{d_{hkl}} = \frac{\sqrt{h^2 + k^2 + l^2}}{a} \stackrel{\text{def}}{=} \frac{s_{hkl}}{a} \implies a = s_{hkl} \cdot d_{hkl}\]</div>
+<p>In order to get the cubic lattice constants for our Nelson-Riley plots, we need to first include <span class="math notranslate nohighlight">\(s\)</span>, which we can hard code below.
+Based on the structure (SC, BCC, FCC), index the planes accordingly to get <span class="math notranslate nohighlight">\(hkl\)</span> values to calculate <span class="math notranslate nohighlight">\(s\)</span>.
+To clarify what we mean, we’ve left in the code structure below, which you’ll have to again modify and fill in the calculation to get <span class="math notranslate nohighlight">\(a\)</span>.
+In the JupyterHub, we’ve also included a PNG of our final data table (<code class="docutils literal notranslate"><span class="pre">xrd_dataframe.png</span></code>, using our fake data) so you have a sense of what we were intending—and if you did something else, that’s OK!</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>   <span class="c1"># based on our dummy data</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>    <span class="c1"># create a column</span>
+<span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+
+<span class="n">df</span>   <span class="c1"># add in one line of multiplication above to calculate a!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now you’re all set to make your NR plot!</p>
+<ol class="simple">
+<li><p>⭐ First plot the individual data points using a method like <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.scatter.html"><code class="docutils literal notranslate"><span class="pre">ax.scatter()</span></code></a>. The <code class="docutils literal notranslate"><span class="pre">s</span></code> parameter changes the marker size.</p></li>
+<li><p>Then compute a line of best fit using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> and add it to the plot.</p></li>
+<li><p>⭐ You may want to <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> the <span class="math notranslate nohighlight">\(x\)</span>-axis limits to be bounded by the <span class="math notranslate nohighlight">\(y\)</span>-intercept on the left.</p></li>
+<li><p>Of course, with <code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code>, it directly returns the <span class="math notranslate nohighlight">\(y\)</span>-intercept which you can print out!</p></li>
+</ol>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>This concludes the programming exercises for Lab 2.
+Congratulations!
+We hope you’re proud of the plots that you generated and wish you luck with the lab writeup. 📝</p>
 </div>
 </div>
 

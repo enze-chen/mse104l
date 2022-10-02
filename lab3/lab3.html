@@ -96,20 +96,15 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../index.html">
    Welcome! 👋
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../jbook_usage.html">
-   How to use Jupyter Book 🚀
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../lab1/lab1.html">
-   Lab 1️⃣
+  <a class="reference internal" href="../lab0/jbook_usage.html">
+   How to use Jupyter Book 🚀
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -118,10 +113,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lab1/intro_python_jupyter_blank.html">
+    <a class="reference internal" href="../lab0/intro_python_jupyter_blank.html">
      Intro to Python 🚀
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lab1/lab1.html">
+   Lab 1️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
      Intro to plots 🚀
@@ -138,8 +145,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lab2/lab2.html">
    Lab 2️⃣
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -160,8 +167,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="current reference internal" href="#">
    Lab 3️⃣
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -173,10 +180,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lab4/lab4.html">
    Lab 4️⃣
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lab4/lab4_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lab5/lab5.html">
@@ -257,9 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
             href="https://github.com/enze-chen/mse104l/issues/new?title=Issue%20on%20page%20%2Flab3/lab3.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/enze-chen/mse104l/edit/main/lab3/lab3.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+        
     </div>
 </div>
 
@@ -287,6 +304,11 @@ const thebe_selector_output = ".output, .cell_output"
    Associated notebooks
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -312,6 +334,11 @@ const thebe_selector_output = ".output, .cell_output"
    Associated notebooks
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -323,7 +350,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab-3-precision-x-ray-diffractometry">
 <span id="h1-lab3-intro"></span><h1>Lab 3: Precision X-ray Diffractometry<a class="headerlink" href="#lab-3-precision-x-ray-diffractometry" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Lab 3!</p>
+<p>Welcome to Lab 3!
+In this lab you are working with Cu–Ni alloys, which form an FCC solid solution at all compositions.
+You’ll be getting more practice with some of the programming techniques that we introduced in previous labs.</p>
+<div class="figure align-center" id="cuni-pd">
+<a class="reference internal image-reference" href="../_images/CuNi_PD.png"><img alt="../_images/CuNi_PD.png" src="../_images/CuNi_PD.png" style="width: 66%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Copper-nickel phase diagram taken from ref. <span id="id1">[<a class="reference internal" href="#id3">1</a>]</span></span><a class="headerlink" href="#cuni-pd" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="associated-notebooks">
 <h2>Associated notebooks<a class="headerlink" href="#associated-notebooks" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -331,6 +364,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lab3_exercises_blank.html">Your turn! 🚀</a></li>
 </ul>
 </div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>William D. Callister, Jr. and David G. Rethwisch. <em>Materials Science and Engineering: An Introduction</em>. Wiley, Hoboken, NJ, 9th edition, 2014. ISBN 978-1-118-32457-8.</p>
+</dd>
+</dl>
+</p>
 </div>
 </div>
 

@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/mse_ucb.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lab 5: Self-guided experiments" href="../lab5/lab5.html" />
-    <link rel="prev" title="Introduction to Python and Jupyter notebooks" href="../lab3/lab3_exercises_blank.html" />
+    <link rel="next" title="MSE 104L laboratory 4 exercises" href="lab4_exercises_blank.html" />
+    <link rel="prev" title="MSE 104L laboratory 3 exercises" href="../lab3/lab3_exercises_blank.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -96,20 +96,15 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../index.html">
    Welcome! 👋
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../jbook_usage.html">
-   How to use Jupyter Book 🚀
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../lab1/lab1.html">
-   Lab 1️⃣
+  <a class="reference internal" href="../lab0/jbook_usage.html">
+   How to use Jupyter Book 🚀
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -118,10 +113,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lab1/intro_python_jupyter_blank.html">
+    <a class="reference internal" href="../lab0/intro_python_jupyter_blank.html">
      Intro to Python 🚀
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lab1/lab1.html">
+   Lab 1️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
      Intro to plots 🚀
@@ -138,8 +145,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lab2/lab2.html">
    Lab 2️⃣
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -160,8 +167,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lab3/lab3.html">
    Lab 3️⃣
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -173,10 +180,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Lab 4️⃣
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lab4_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lab5/lab5.html">
@@ -257,9 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
             href="https://github.com/enze-chen/mse104l/issues/new?title=Issue%20on%20page%20%2Flab4/lab4.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/enze-chen/mse104l/edit/main/lab4/lab4.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+        
     </div>
 </div>
 
@@ -277,6 +294,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#associated-notebooks">
+   Associated notebooks
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -289,6 +319,19 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#associated-notebooks">
+   Associated notebooks
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -298,7 +341,17 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="lab-4-eds-in-the-sem">
 <span id="h1-lab4-intro"></span><h1>Lab 4: EDS in the SEM<a class="headerlink" href="#lab-4-eds-in-the-sem" title="Permalink to this headline">¶</a></h1>
 <p>Welcome to Lab 4!
-This page is currently a stub as we figure out a suitable exercise to complement this lab.</p>
+This lab finally departs from X-ray diffraction, although you’ve noticed that spectroscopy still plays an important role.
+Since the SEM micrographs are not particularly interesting, we don’t have a great opportunity to work with computer vision tools in this analysis, but we’ll still demo something that we think is cool (purely to pique your interest).
+Furthermore, the analysis isn’t particularly extensive in this lab, so we’ll focus on some fine-tuning of your plots.</p>
+<div class="section" id="associated-notebooks">
+<h2>Associated notebooks<a class="headerlink" href="#associated-notebooks" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lab4_exercises_blank.html">Your turn! 🚀</a></li>
+</ul>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -330,13 +383,13 @@ This page is currently a stub as we figure out a suitable exercise to complement
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction to Python and Jupyter notebooks</p>
+            <p class="prev-next-title">MSE 104L laboratory 3 exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../lab5/lab5.html" title="next page">
+    <a class='right-next' id="next-link" href="lab4_exercises_blank.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lab 5: Self-guided experiments</p>
+        <p class="prev-next-title">MSE 104L laboratory 4 exercises</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

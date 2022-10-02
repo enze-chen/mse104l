@@ -98,20 +98,15 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../index.html">
    Welcome! 👋
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../jbook_usage.html">
-   How to use Jupyter Book 🚀
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../lab1/lab1.html">
-   Lab 1️⃣
+  <a class="reference internal" href="../lab0/jbook_usage.html">
+   How to use Jupyter Book 🚀
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -120,10 +115,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lab1/intro_python_jupyter_blank.html">
+    <a class="reference internal" href="../lab0/intro_python_jupyter_blank.html">
      Intro to Python 🚀
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lab1/lab1.html">
+   Lab 1️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
      Intro to plots 🚀
@@ -140,8 +147,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="lab2.html">
    Lab 2️⃣
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -162,8 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lab3/lab3.html">
    Lab 3️⃣
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -175,10 +182,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lab4/lab4.html">
    Lab 4️⃣
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lab4/lab4_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lab5/lab5.html">
@@ -259,9 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
             href="https://github.com/enze-chen/mse104l/issues/new?title=Issue%20on%20page%20%2Flab2/intro_tabular_blank.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/enze-chen/mse104l/edit/main/lab2/intro_tabular_blank.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+        
     </div>
 </div>
 
@@ -339,18 +356,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-heads-or-tails-of-dataframes">
-     Making heads or tails of DataFrames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indexing-and-slicing-a-dataframe">
      Indexing and slicing a DataFrame
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-more-columns-through-operations">
-     Adding more columns through operations
+    <a class="reference internal nav-link" href="#combining-columns-with-operations">
+     Combining columns with operations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -428,18 +440,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#making-heads-or-tails-of-dataframes">
-     Making heads or tails of DataFrames
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indexing-and-slicing-a-dataframe">
      Indexing and slicing a DataFrame
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-more-columns-through-operations">
-     Adding more columns through operations
+    <a class="reference internal nav-link" href="#combining-columns-with-operations">
+     Combining columns with operations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -497,7 +504,7 @@ Like the previous lab, if you’re already familiar working with tabular data, y
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>By now, you’ve probably realized that your XRD data is highly <em>structured</em>.
 In particular, it takes the format <code class="docutils literal notranslate"><span class="pre">angle,intensity</span></code> inside a text file, like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="p">,</span><span class="mf">1712.5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.00</span><span class="p">,</span><span class="mf">1712.5</span>
 <span class="mf">3.02</span><span class="p">,</span><span class="mi">1850</span>
 <span class="mf">3.04</span><span class="p">,</span><span class="mi">2075</span>
 <span class="mf">3.06</span><span class="p">,</span><span class="mf">1912.5</span>
@@ -513,10 +520,8 @@ Here, we’ll teach you how to use another package that gives you even more flex
 <h2>pandas!<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p><img alt="pandas" src="../_images/pandas.png" /></p>
-<p>Luckily, our furry friends from the East 🐼 have heard our pleas and are here to save the day! …kinda.
-Not really.</p>
-<p><a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> is Python package developed in 2008 by <a class="reference external" href="https://wesmckinney.com/">Wes McKinney</a> to facilitate data analysis and it has since become one of the most widely used packages in the Python community.
-The name is cleverly derived from “<a class="reference external" href="https://en.wikipedia.org/wiki/Panel_data">panel data</a>” and the package is built on top of <a class="reference external" href="https://numpy.org/">NumPy</a>, so there are many aspects of it that you should already be familiar with!</p>
+<p><a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> is Python package developed in 2008 to facilitate data analysis and it has since become one of the most widely used packages in the Python community.
+The name is derived from “<a class="reference external" href="https://en.wikipedia.org/wiki/Panel_data">panel data</a>” and the package is built on top of <a class="reference external" href="https://numpy.org/">NumPy</a>, which you should already be familiar with!</p>
 <div class="section" id="dataframes">
 <h3>DataFrames<a class="headerlink" href="#dataframes" title="Permalink to this headline">¶</a></h3>
 <p>At the heart of pandas lies the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a> data structure for all of your informatics needs.
@@ -534,7 +539,7 @@ They feature row and column labels for intelligent indexing and they support <st
 </ul>
 <p>You’ll likely find yourself using both methods when building DataFrames from scratch, all depends on your use case.
 Let’s see this in practice.</p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -551,25 +556,108 @@ Let’s see this in practice.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>atomic number</th>
+      <th>atomic mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>atomic number</th>
+      <th>atomic mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
-<p>And the nice part about working with pandas DataFrames in Jupyter notebooks is the stylistic rendering! 🙏🏼</p>
+<p>And the nice part about working with pandas DataFrames in Jupyter notebooks is the stylistic rendering! 🙏🏼
+Take a moment to see how the column names in the constructors correspond to the names in the DataFrame; in particular, note that these names are labels in the DataFrame, but they’re <em>not</em> part of the data itself.</p>
 </div>
 <div class="section" id="reading-in-a-csv-file">
 <h3>Reading in a CSV file<a class="headerlink" href="#reading-in-a-csv-file" title="Permalink to this headline">¶</a></h3>
 <p>The above methods are handy, but what if your data source is a CSV file that’s already nicely formatted for you?
 As with our first example in this notebook, it would be nice if we could directly use that structure and express it in Python.
-To do this, we will use the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"><code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code></a> function which does exactly as the name describes.
+You don’t want to be stuck typing out all those rows.</p>
+<p>To do this, we will use the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"><code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code></a> function which does exactly as the name describes.
 This function, as you can see from the documentation, has <em>a bajillion</em> input arguments that we don’t have time to cover today, so we’ll describe just a few here:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filepath_or_buffer</span></code> (str): The only required argument, which is the file you’re trying to read in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code> (str): The character separating your data tokens.
-<strong>Default is comma</strong> (<code class="docutils literal notranslate"><span class="pre">','</span></code>), but you can change this to be space (<code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>), tab (<code class="docutils literal notranslate"><span class="pre">'\t'</span></code>), etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filepath_or_buffer</span></code> (str): The only <strong>required</strong> argument, which is the file you’re trying to read in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sep</span></code> (str): The character separating your data tokens. <strong>Default is a comma</strong> (<code class="docutils literal notranslate"><span class="pre">','</span></code>), but you can change this to be space (<code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code>), tab (<code class="docutils literal notranslate"><span class="pre">'\t'</span></code>), etc.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (int): Which row to read column headers from.
 Default is the first row.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">names</span></code> (list): If you would like to rename your columns.
 This list cannot have duplicates.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">skiprows</span></code> (int): Extremely useful if there are lines of comments and extra text at the top of the file that you want to avoid reading.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nrows</span></code> (int): Useful if your file is very large, or your data stops before reaching the end of the file (e.g., there’s footer text in the file).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nrows</span></code> (int): Extremely useful if your file is very large, or your data stops before reaching the end of the file (e.g., there’s footer text in the file).</p></li>
 </ul>
 <p>Notice how this is similar to <code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code>, just with some extra headers for the columns (bolded in the previous output).
 We’ll address these headers shortly.</p>
@@ -579,13 +667,96 @@ We’ll also rename the column names to be:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;sin&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sine.txt&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;sin&#39;</span><span class="p">])</span>  <span class="c1"># try omitting the names argument and see what happens</span>
 <span class="n">df_sine</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>sin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.006283</td>
+      <td>0.006283</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.012566</td>
+      <td>0.012566</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.018850</td>
+      <td>0.018848</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.025133</td>
+      <td>0.025130</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>6.258053</td>
+      <td>-0.025130</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>6.264336</td>
+      <td>-0.018848</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>6.270619</td>
+      <td>-0.012566</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>6.276902</td>
+      <td>-0.006283</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>6.283185</td>
+      <td>-0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>1001 rows × 2 columns</p>
+</div></div></div>
 </div>
 </div>
 </div>
@@ -593,51 +764,59 @@ We’ll also rename the column names to be:</p>
 <h2>Working with DataFrames<a class="headerlink" href="#working-with-dataframes" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>We got our data into a DataFrame! Now what?</p>
-<p>Well, <strong>now the fun begins</strong>. 😄</p>
+<p>Well, <em>now the fun begins</em>. 😄</p>
 <p>The first thing you might be interested in is the dimensions of your data (DataFrame).
 We can access that using the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html"><code class="docutils literal notranslate"><span class="pre">df.shape</span></code></a> <em>attribute</em>.</p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1001, 2)
 </pre></div>
 </div>
 </div>
 </div>
 <p>We can also get statistics of the rows/columns of the DataFrame by using methods like <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.min.html"><code class="docutils literal notranslate"><span class="pre">df.min()</span></code></a>, <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.max.html"><code class="docutils literal notranslate"><span class="pre">df.max()</span></code></a>, and <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html"><code class="docutils literal notranslate"><span class="pre">df.mean()</span></code></a>.
 For these methods, the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter specifies if we compute along the columns (<code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or rows (<code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
-<p>We can also get general summary statistics using <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html"><code class="docutils literal notranslate"><span class="pre">df.describe()</span></code></a></p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>   <span class="c1"># default is axis=0, compute along columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>   <span class="c1"># default is axis=0, compute along columns.</span>
+                <span class="c1"># note these minima are in each INDIVIDUAL column, </span>
+                <span class="c1"># NOT necessarily corresponding to the same row!</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x      0.0
+sin   -1.0
+dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># compute mean along each row</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>    <span class="c1"># summary statistics</span>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       0.000000
+1       0.006283
+2       0.012566
+3       0.018849
+4       0.025131
+          ...   
+996     3.116461
+997     3.122744
+998     3.129026
+999     3.135309
+1000    3.141593
+Length: 1001, dtype: float64
 </pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="making-heads-or-tails-of-dataframes">
-<h3>Making heads or tails of DataFrames<a class="headerlink" href="#making-heads-or-tails-of-dataframes" title="Permalink to this headline">¶</a></h3>
-<p>You may have noticed that when we display a DataFrame, we get quite a lot of rows.
-But maybe in some cases we don’t really <em>need</em> to see all the rows, which quickly fills up our Jupyter workspace.
-The <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.head.html"><code class="docutils literal notranslate"><span class="pre">df.head(n)</span></code></a> method will return the first <span class="math notranslate nohighlight">\(n\)</span> (default is <code class="docutils literal notranslate"><span class="pre">5</span></code>) rows of your DataFrame, and is commonly used to check that column headers and first few values are correctly loaded in.
-The <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.tail.html"><code class="docutils literal notranslate"><span class="pre">df.tail(n)</span></code></a> method works analogously, but for the last <span class="math notranslate nohighlight">\(n\)</span> rows.</p>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>   <span class="c1"># first 5 rows</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -646,56 +825,460 @@ The <a class="reference external" href="https://pandas.pydata.org/docs/reference
 <p>There are many ways to <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/indexing.html">index into a DataFrame</a> and slice it to get subsets of your data.
 If we want to get the data in particular columns, all you have to do is enter a list of the column names!
 For example:</p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span>   <span class="c1"># this gets the x column of the DataFrame</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.006283</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.012566</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.018850</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.025133</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>6.258053</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>6.264336</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>6.270619</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>6.276902</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>6.283185</td>
+    </tr>
+  </tbody>
+</table>
+<p>1001 rows × 1 columns</p>
+</div></div></div>
 </div>
 <p>Another common method, particularly when we want to slice a subset of rows (but also columns) by the numerical index, is to use <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html"><code class="docutils literal notranslate"><span class="pre">df.iloc[]</span></code></a>.</p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>    <span class="c1"># only integer indices are allowed</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.000000
+1    0.006283
+2    0.012566
+3    0.018850
+4    0.025133
+5    0.031416
+Name: x, dtype: float64
+</pre></div>
 </div>
 </div>
-<div class="section" id="adding-more-columns-through-operations">
-<h3>Adding more columns through operations<a class="headerlink" href="#adding-more-columns-through-operations" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="combining-columns-with-operations">
+<h3>Combining columns with operations<a class="headerlink" href="#combining-columns-with-operations" title="Permalink to this headline">¶</a></h3>
 <p>Recall that with NumPy arrays, we could perform arithmetic operations on the entire array or a slice of it and store the result somewhere.
-The neat thing about pandas DataFrames is that if we apply an operation to an entire column, we can store the result in a new column that’s appended to the original DataFrame!
+The neat thing about pandas DataFrames is that if we apply an operation to an entire column, we can <strong>store the result in a new column</strong> that’s appended to the original DataFrame!
 The general syntax is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;new_column_name&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">operation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;old_column_name&#39;</span><span class="p">])</span>   <span class="c1"># on the RHS the single column name can be a string</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_column_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">operation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;old_column_name&#39;</span><span class="p">])</span>   <span class="c1"># note we now have a single string for the column names</span>
 </pre></div>
 </div>
 <p>See the example below where we use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.cos.html"><code class="docutils literal notranslate"><span class="pre">np.cos()</span></code></a> to compute the cosine of the <code class="docutils literal notranslate"><span class="pre">x</span></code> values.</p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[[</span><span class="s1">&#39;cos&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;cos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
 <span class="n">df_sine</span>   <span class="c1"># ta-da!</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>sin</th>
+      <th>cos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.006283</td>
+      <td>0.006283</td>
+      <td>0.999980</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.012566</td>
+      <td>0.012566</td>
+      <td>0.999921</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.018850</td>
+      <td>0.018848</td>
+      <td>0.999822</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.025133</td>
+      <td>0.025130</td>
+      <td>0.999684</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>6.258053</td>
+      <td>-0.025130</td>
+      <td>0.999684</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>6.264336</td>
+      <td>-0.018848</td>
+      <td>0.999822</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>6.270619</td>
+      <td>-0.012566</td>
+      <td>0.999921</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>6.276902</td>
+      <td>-0.006283</td>
+      <td>0.999980</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>6.283185</td>
+      <td>-0.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>1001 rows × 3 columns</p>
+</div></div></div>
 </div>
 <p>Here’s another example:</p>
-<div class="cell tag_remove-output docutils container">
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[[</span><span class="s1">&#39;diff&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;sin&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;diff (x - sin)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;sin&#39;</span><span class="p">]</span>
 <span class="n">df_sine</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>sin</th>
+      <th>cos</th>
+      <th>diff (x - sin)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000e+00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.006283</td>
+      <td>0.006283</td>
+      <td>0.999980</td>
+      <td>4.100000e-08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.012566</td>
+      <td>0.012566</td>
+      <td>0.999921</td>
+      <td>3.310000e-07</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.018850</td>
+      <td>0.018848</td>
+      <td>0.999822</td>
+      <td>1.116000e-06</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.025133</td>
+      <td>0.025130</td>
+      <td>0.999684</td>
+      <td>2.646000e-06</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>6.258053</td>
+      <td>-0.025130</td>
+      <td>0.999684</td>
+      <td>6.283183e+00</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>6.264336</td>
+      <td>-0.018848</td>
+      <td>0.999822</td>
+      <td>6.283184e+00</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>6.270619</td>
+      <td>-0.012566</td>
+      <td>0.999921</td>
+      <td>6.283185e+00</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>6.276902</td>
+      <td>-0.006283</td>
+      <td>0.999980</td>
+      <td>6.283185e+00</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>6.283185</td>
+      <td>-0.000000</td>
+      <td>1.000000</td>
+      <td>6.283185e+00</td>
+    </tr>
+  </tbody>
+</table>
+<p>1001 rows × 4 columns</p>
+</div></div></div>
 </div>
-<p>Here’s yet another example where we simply tack on a new column of values, and pandas tries to make everything consistent with repetitions as needed.</p>
-<div class="cell tag_remove-output docutils container">
+<p>Here’s yet another example where we simply tack on a new column of values.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_sine</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>   <span class="c1"># note how else we can get the number of rows</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">df_sine</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">df_sine</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>sin</th>
+      <th>cos</th>
+      <th>diff (x - sin)</th>
+      <th>foo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000e+00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.006283</td>
+      <td>0.006283</td>
+      <td>0.999980</td>
+      <td>4.100000e-08</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.012566</td>
+      <td>0.012566</td>
+      <td>0.999921</td>
+      <td>3.310000e-07</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.018850</td>
+      <td>0.018848</td>
+      <td>0.999822</td>
+      <td>1.116000e-06</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.025133</td>
+      <td>0.025130</td>
+      <td>0.999684</td>
+      <td>2.646000e-06</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>6.258053</td>
+      <td>-0.025130</td>
+      <td>0.999684</td>
+      <td>6.283183e+00</td>
+      <td>997</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>6.264336</td>
+      <td>-0.018848</td>
+      <td>0.999822</td>
+      <td>6.283184e+00</td>
+      <td>998</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>6.270619</td>
+      <td>-0.012566</td>
+      <td>0.999921</td>
+      <td>6.283185e+00</td>
+      <td>999</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>6.276902</td>
+      <td>-0.006283</td>
+      <td>0.999980</td>
+      <td>6.283185e+00</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>6.283185</td>
+      <td>-0.000000</td>
+      <td>1.000000</td>
+      <td>6.283185e+00</td>
+      <td>1001</td>
+    </tr>
+  </tbody>
+</table>
+<p>1001 rows × 5 columns</p>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="quick-exercise-add-another-column-to-the-dataframe-to-verify-the-identity">
@@ -713,8 +1296,8 @@ The general syntax is:</p>
 </div>
 <div class="section" id="plotting-data-from-a-dataframe">
 <h3>Plotting data from a DataFrame<a class="headerlink" href="#plotting-data-from-a-dataframe" title="Permalink to this headline">¶</a></h3>
-<p>We can easily index into a DataFrame using the headers to select the columns for plotting!</p>
-<div class="cell tag_remove-output docutils container">
+<p>We can easily index into a DataFrame <strong>using the headers to select the columns</strong> for plotting!</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -726,6 +1309,9 @@ The general syntax is:</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/intro_tabular_blank_27_0.png" src="../_images/intro_tabular_blank_27_0.png" />
+</div>
 </div>
 </div>
 <div class="section" id="saving-a-dataframe">
@@ -734,11 +1320,11 @@ The general syntax is:</p>
 Some things to be aware of:</p>
 <ul class="simple">
 <li><p>The only required argument is the name of the file.</p></li>
-<li><p>pandas likes to save the <em>index</em> (row labels) be default, but that looks a little weird if you later open the CSV in a program like Excel, so we typically like to have <code class="docutils literal notranslate"><span class="pre">index=False</span></code>.</p></li>
-<li><p>Note that this is a method attached to a DataFrame object, not the pandas package!</p></li>
+<li><p>pandas likes to save the <em>index</em> (row labels) by default, but that looks a little weird if you later open the CSV in a program like Excel, so we typically like to have <code class="docutils literal notranslate"><span class="pre">index=False</span></code>.</p></li>
+<li><p>Note that this is a method attached to a DataFrame object, not the pandas package! That is, it’s <code class="docutils literal notranslate"><span class="pre">df.to_csv()</span></code>, <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">pd.to_csv(df)</span></code>.</p></li>
 </ul>
-<p>After you run the following cell, you should find the file appear in your JupyterHub folder.</p>
-<div class="cell tag_remove-output docutils container">
+<p>After you run the following cell, you should see the new file appear in your JupyterHub folder.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;sine_updated.txt&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># save the df we&#39;ve been working with</span>
 </pre></div>
@@ -749,6 +1335,7 @@ Some things to be aware of:</p>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>This concludes the introduction to tabular data.
 If you would like to learn more about pandas, we suggest you look at the <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html">official user guide</a>.
 Realistically, there’s way too much to cover about pandas, and a lot of your understanding will be built as you work with it for your own datasets.

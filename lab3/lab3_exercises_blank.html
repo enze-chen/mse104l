@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/mse104l/lab3/lab3_exercises_blank.html" />
     <link rel="shortcut icon" href="../_static/mse_ucb.png"/>
@@ -96,20 +98,15 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../index.html">
    Welcome! 👋
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../jbook_usage.html">
-   How to use Jupyter Book 🚀
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../lab1/lab1.html">
-   Lab 1️⃣
+  <a class="reference internal" href="../lab0/jbook_usage.html">
+   How to use Jupyter Book 🚀
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -118,10 +115,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lab1/intro_python_jupyter_blank.html">
+    <a class="reference internal" href="../lab0/intro_python_jupyter_blank.html">
      Intro to Python 🚀
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lab1/lab1.html">
+   Lab 1️⃣
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
      Intro to plots 🚀
@@ -138,8 +147,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../lab2/lab2.html">
    Lab 2️⃣
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -160,8 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="lab3.html">
    Lab 3️⃣
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -173,10 +182,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lab4/lab4.html">
    Lab 4️⃣
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lab4/lab4_exercises_blank.html">
+     Your turn! 🚀
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lab5/lab5.html">
@@ -257,9 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
             href="https://github.com/enze-chen/mse104l/issues/new?title=Issue%20on%20page%20%2Flab3/lab3_exercises_blank.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/enze-chen/mse104l/edit/main/lab3/lab3_exercises_blank.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+        
     </div>
 </div>
 
@@ -299,6 +318,49 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-a-spectra-as-a-sanity-check">
+   Plot a spectra as a sanity check
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-a-function-to-calculate-the-lattice-constant">
+   Write a function to calculate the lattice constant
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vegards-law">
+   Vegard’s law
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computing-r">
+     Computing
+     <span class="math notranslate nohighlight">
+      \(r\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -311,6 +373,49 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-a-spectra-as-a-sanity-check">
+   Plot a spectra as a sanity check
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-a-function-to-calculate-the-lattice-constant">
+   Write a function to calculate the lattice constant
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vegards-law">
+   Vegard’s law
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computing-r">
+     Computing
+     <span class="math notranslate nohighlight">
+      \(r\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -324,11 +429,185 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Note</p>
 <p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
 </div>
-<p>This notebook contains a series of exercises to help you process your data from Lab 1.
-It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report.
-We certainly believe it will lead to a higher grade!</p>
-<p>We tried to stagger the guidance such that each exercise only introduces 1-2 new ideas at a time.
-These new ideas are marked with a ⭐.</p>
+<p>This notebook contains a series of exercises to help you process your data from Lab 3.
+It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create some figures that can supplement the narrative of your lab report.</p>
+<div class='alert alert-success'>
+    This lab doesn't have a whole lot of new MSE material (from a conceptual standpoint), so we'll try to give some Python tips/challenges. 
+    You will not be assessed on any of the coding material here, but we hope you'll give it a shot and have some fun.
+</div><div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<p>The exercises in this notebook include:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="#Plot-a-spectra-as-a-sanity-check">Plotting refresher</a></p></li>
+<li><p><a class="reference external" href="#Write-a-function-to-calculate-the-lattice-constant">Writing functions</a></p></li>
+<li><p><a class="reference external" href="#Vegard%27s-law">Vegard’s law</a></p></li>
+</ol>
+</div>
+<div class="section" id="plot-a-spectra-as-a-sanity-check">
+<h2>Plot a spectra as a sanity check<a class="headerlink" href="#plot-a-spectra-as-a-sanity-check" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Just like Lab 2, we’ll start with a plot of one of the spectra, which you should <strong>include at least one</strong> of so your readers have a general sense of what Cu–Ni alloy XRD patterns look like.</p>
+<p>Remember the general steps are:</p>
+<ol class="simple">
+<li><p>Upload your data to JupyterHub in the <code class="docutils literal notranslate"><span class="pre">lab3</span></code> folder.</p></li>
+<li><p>Write code below to process and plot the data.</p></li>
+<li><p>Save the figure and download it to your computer.</p></li>
+</ol>
+<p>If you don’t remember what you did in lab 2, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab2</span></code>.</p>
+</div>
+<div class="section" id="write-a-function-to-calculate-the-lattice-constant">
+<h2>Write a function to calculate the lattice constant<a class="headerlink" href="#write-a-function-to-calculate-the-lattice-constant" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>In the previous lab, you had to calculate the lattice constant and apply the Nelson-Riley method for your samples with cubic crystal structure.
+Well, since Cu–Ni forms an FCC solid solution, you have the great privilege of <em>repeating</em> what you did for each of your samples here.
+Of course, if you did the programming solution last time, you’ll have no problem with this part of the lab. 😁
+There are two ways to go about this:</p>
+<ol class="simple">
+<li><p>(<em>Works</em>) You can copy-paste the individual code sections from the previous lab into a single code block and just run it repeatedly, with different peak positions (corresponding to different Cu–Ni samples), to get lattice constants through Nelson-Riley.</p></li>
+<li><p>(<em>Slightly more preferred?</em>) You can do something slightly fancier and <strong>write a function</strong> that makes things look cleaner as you repeat the steps.
+Recall that functions in Python look like:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+       <span class="c1"># do something</span>
+</pre></div>
+</div>
+<p>Here’s an example of what we mean:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">df_calcs</span><span class="p">(</span><span class="n">angles</span><span class="p">):</span>
+    <span class="c1"># in your function, this would be the operations to calculate the lattice constant</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;angles&#39;</span><span class="p">:</span><span class="n">angles</span><span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;angles&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sub&#39;</span><span class="p">])</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="k">def</span> <span class="nf">make_nr</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="c1"># make a similar function that makes NR plots based on the DataFrame!</span>
+    <span class="k">pass</span>
+    
+    
+<span class="c1"># change the inputs and call the function - voila!</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">17.02</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">4.99</span><span class="p">,</span> <span class="mf">2.01</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df_calcs</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">make_nr</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>angles</th>
+      <th>sub</th>
+      <th>d</th>
+      <th>s</th>
+      <th>a</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17.02</td>
+      <td>16.02</td>
+      <td>4.002499</td>
+      <td>3</td>
+      <td>12.007498</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.00</td>
+      <td>9.00</td>
+      <td>3.000000</td>
+      <td>4</td>
+      <td>12.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.99</td>
+      <td>3.99</td>
+      <td>1.997498</td>
+      <td>6</td>
+      <td>11.984991</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.01</td>
+      <td>1.01</td>
+      <td>1.004988</td>
+      <td>12</td>
+      <td>12.059851</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="vegards-law">
+<h2>Vegard’s law<a class="headerlink" href="#vegards-law" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>Recall that in the pre-lab you learned about Vegard’s law (which is pretty remarkable!) that says:</p>
+<div class="math notranslate nohighlight">
+\[ a_{\text{A-B}} = a_{\text{A}} x_{\text{A}} + a_{\text{B}} x_{\text{B}} \]</div>
+<p>where <span class="math notranslate nohighlight">\(a_X\)</span> and <span class="math notranslate nohighlight">\(x_X\)</span> are the lattice constant and concentration, respectively, of species <span class="math notranslate nohighlight">\(X\)</span>.
+For the binary case where this applies, note <span class="math notranslate nohighlight">\(x_{\text{B}} = 1 - x_{\text{A}}\)</span>.</p>
+<p>Anyways, you’ll do the Nelson-Riley calculation above and get a few values of <span class="math notranslate nohighlight">\(a\)</span> corresponding to different concentrations <span class="math notranslate nohighlight">\(x\)</span>.
+You then have to plot this and comment on whether Vegard’s law is obeyed.
+There are several ways to answer this question, and we encourage you to be creative.
+Here are just two <em>suggestions</em>, one based on something you’ve seen, and another based on something that you have probably heard before and we’ll teach you how to calculate it.</p>
+<ol class="simple">
+<li><p>Like with Nelson-Riley plots, you can compute a line of best fit, plot that line, and <strong>look at the intercepts</strong> at <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span>.
+Do they agree with the experimental lattice constants of the pure metals?</p></li>
+<li><p>You can compute a <strong>linear correlation coefficient</strong> (also known as <a class="reference external" href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"><strong>Pearson’s <span class="math notranslate nohighlight">\(r\)</span></strong></a>) between your values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(x\)</span>.
+Pearson’s <span class="math notranslate nohighlight">\(r\)</span> can be expressed mathematically as:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ r_{X, Y} = \frac{\text{covariance}(X, Y)}{\sigma(X) \sigma(Y)} \]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma(\cdot)\)</span> is the standard deviation, and values of <span class="math notranslate nohighlight">\(r\)</span> range from <span class="math notranslate nohighlight">\([-1, +1]\)</span> as follows:</p>
+<p><img alt="pearson" src="../_images/pearson.png" /></p>
+<p><em>Please note</em>: You already know this, but just a reminder that <span class="math notranslate nohighlight">\(r\)</span> has no relationship to the orange line of best fit (<em>it is not the slope!</em>), but rather is an estimate of the linearity between the green data points.</p>
+<div class="section" id="computing-r">
+<h3>Computing <span class="math notranslate nohighlight">\(r\)</span><a class="headerlink" href="#computing-r" title="Permalink to this headline">¶</a></h3>
+<p>Once again, NumPy makes our lives pretty easy by handing to us <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html"><code class="docutils literal notranslate"><span class="pre">np.corrcoef()</span></code></a> on a silver platter.
+This function takes in <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> arrays and returns their correlation coefficient <em>as a matrix</em> (which element should we choose?).
+It should take only a few lines of code—see if you can get it working!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>This concludes the programming exercises for Lab 3.
+Congratulations!
+We hope you’re proud of the plots that you generated and wish you luck with the lab writeup. 📝</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
