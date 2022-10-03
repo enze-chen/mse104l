@@ -15,7 +15,7 @@ chapters:
   title             : Lab 1️⃣
   sections:
     - file          : lab1/intro_plotting_blank
-      title         : Intro to plots 🚀
+      title         : Intro to plotting 🚀
     - file          : lab1/lab1_exercises_blank
       title         : Your turn! 🚀
 

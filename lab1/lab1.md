@@ -8,6 +8,11 @@ The primary objectives are:
 - Create plots of your data with the Matplotlib library. 
 - Articulate and apply fundamental data visualization principles.
 
+```{tip}
+If you're unfamiliar with Python and the JupyterHub interface, we've prepared some tutorials for you in the previous pages.
+In particular, there's an {doc}`../lab0/intro_python_jupyter_blank` notebook with a series of short exercises to introduce the Python syntax.
+```
+
 
 ## Associated notebooks 
 
