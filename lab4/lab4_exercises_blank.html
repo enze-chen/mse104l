@@ -99,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
-   Welcome! 👋
+   Welcome! 👋🏼
   </a>
  </li>
 </ul>
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
-     Intro to plots 🚀
+     Intro to plotting 🚀
     </a>
    </li>
    <li class="toctree-l2">
@@ -477,14 +477,13 @@ It doesn’t answer all of the discussion questions in the lab procedures, but i
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p><img alt="compare" src="../_images/compare.png" /></p>
 <p>In this lab, you collected a lot of different images/data; however, some of the images aren’t very high quality.
-Take the EDS spectra, for instance, which is shown above on the left.
+Take the EDS spectra, for instance, an example of which is shown above on the left.
 The <strong><font color="red">wall of red</font></strong> is a little aggressive and the fonts are way too small to be read!
 It would be far more effective for you to take the raw data (which hopefully you saved as a <code class="docutils literal notranslate"><span class="pre">TXT</span></code> file!) and replot it, demonstrated in the above right.
 This is a great opportunity to show off your visualization skills and <strong>remaking figures is commonly done</strong> in practice, whether you work in academia, industry, or something else.</p>
 <div class="section" id="adding-annotations">
 <h3>Adding annotations<a class="headerlink" href="#adding-annotations" title="Permalink to this headline">¶</a></h3>
-<p>Moreover, from the earlier exercises, you already know how to make beautiful plots.
-The one addition from the above example that we have not yet taught is how to <strong>annotate your figures with text</strong>, so now is a good time to introduce it.
+<p>You already know how to make beautiful plots, and now we’ll spice things up by <strong>annotating them with text</strong>.
 The <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.annotate.html"><code class="docutils literal notranslate"><span class="pre">ax.annotate()</span></code></a> method is very powerful, capable of adding text, arrows, and many different styles.
 We’ll be showing a simple use case, using only the following inputs:</p>
 <ul class="simple">
@@ -492,7 +491,7 @@ We’ll be showing a simple use case, using only the following inputs:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">xy</span></code> ((float, float), required): The coordinates to put the text at (specifically, the lower left corner of the text box). The default coordinate system is specified by the data values.</p></li>
 <li><p>Any optional <a class="reference external" href="https://matplotlib.org/stable/api/text_api.html#matplotlib.text.Text"><code class="docutils literal notranslate"><span class="pre">Text</span></code></a> arguments such as <code class="docutils literal notranslate"><span class="pre">fontsize</span></code> or <code class="docutils literal notranslate"><span class="pre">color</span></code>.</p></li>
 </ul>
-<p>Below is an example. Obviously, you should make plots for your actual EDS data.</p>
+<p>Below is an example for an XRD spectra. Obviously, you should make plots for your actual EDS data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
@@ -547,7 +546,7 @@ It will involve more data visualization and even a little bit of machine learnin
 <h3>Image segmentation<a class="headerlink" href="#image-segmentation" title="Permalink to this headline">¶</a></h3>
 <p>When working with images, it is often important to split the image into different parts and identify what’s where.
 This often occurs in autonomous vehicles (<em>where’s the person?</em>), healthcare (<em>where’s the tumor?</em>), and even materials science (<em>where’s the defect?</em>).
-You might want to locate the position of a nanoparticle adsorbed onto a surface, identify nuclei growing on a substrate, segment the different grains in your sample, or identify different phases in the microstructure (e.g., MSE 45L steel lab 😜).</p>
+You might want to locate the position of a scratch on a surface, identify nuclei growing on a substrate, segment the different grains in your sample, or identify different phases in the microstructure (e.g., MSE 45L steel lab 😜).</p>
 <p>This technique of isolating/differentiating parts of an image is called <strong>image segmentation</strong>, and we will demonstrate a use case using a simplified version of something you’ve seen in this lab.
 In particular, we’ll take an artificial EDS map and try to isolate where the different elements are to estimate a composition.
 The reason we call it artificial is because Enze generated this 80–20 A–B image using Python so that it’s clean for the purposes of demonstration.
@@ -679,7 +678,7 @@ We’ll make a scatter plot of this below and demonstrate some <a class="referen
 </div>
 <p><strong>Answer 3</strong>: <em>Aha!</em>
 In this projection of the data, it is a lot more clear how we can separate the pixels.
-We see three distinct <strong>clusters</strong> corresponding to the three colors, which makes it much easier for algorithm to isolate out the pixels of a specific color in this 3D RGB space compared to the 2D image.
+We see three distinct <strong>clusters</strong> corresponding to the three colors, which makes it much easier for an algorithm to isolate out the pixels of a specific color in this 3D RGB space compared to the 2D image.
 Coordinate transformation is a common trick to help solve mathematical/computational problems. 💡</p>
 </div>
 <div class="section" id="k-means-clustering-algorithm">
@@ -708,7 +707,7 @@ Scikit-learn is an incredibly powerful package with all sorts of ML algorithms i
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 
 <span class="c1"># Initialize the object, set random seed for consistency</span>
-<span class="n">n_clus</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">n_clus</span> <span class="o">=</span> <span class="mi">3</span>    <span class="c1"># what happens if you use more than 3?</span>
 <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clus</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Calculate clusters based on data - automated for you!</span>
@@ -746,11 +745,11 @@ Cluster labels: [2 2 2 ... 1 1 1]
 <img alt="../_images/lab4_exercises_blank_18_1.png" src="../_images/lab4_exercises_blank_18_1.png" />
 </div>
 </div>
-<p><em>Note</em>: Just the obvious reminder that the color assigned by Matplotlib is not indicative of the actual color of the pixels.
+<p><em>Note</em>: Just the obvious reminder that the color assigned by Matplotlib is <strong>not</strong> indicative of the actual color of the pixels.
 The upper cluster is blue pixels (large values on the <code class="docutils literal notranslate"><span class="pre">blue</span></code> axis), the right cluster is yellow (large values of <code class="docutils literal notranslate"><span class="pre">red</span></code> and <code class="docutils literal notranslate"><span class="pre">green</span></code>), and the lower left is black (small values of all).</p>
 <p>Hey, that looks pretty good!
 The clustering seems consistent with our expectations, even though it’s not “perfect” as there are a few misassigned points in the upper cluster.
-Now we’ll do a simple calculation to see if we can get the ratio between labels to get a composition, using the two clusters that are away from the origin.
+Now we’ll do a simple calculation to see if we can get the ratio between labels to get a composition, using the two clusters that are farthest away from the origin.
 There’s a lot more one can do with manipulating select pixels, using the colors to train an ML classifier, etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

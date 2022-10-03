@@ -99,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
-   Welcome! 👋
+   Welcome! 👋🏼
   </a>
  </li>
 </ul>
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Intro to plots 🚀
+     Intro to plotting 🚀
     </a>
    </li>
    <li class="toctree-l2">
@@ -463,11 +463,10 @@ Here are some reasons we can come up with:</p>
 <ul class="simple">
 <li><p>Important for scientific communication</p></li>
 <li><p>Important for data literacy</p></li>
-<li><p>Visualizing trends in the data</p></li>
 <li><p>Reveals more than summary statistics</p></li>
 <li><p>Uncovers underlying structure</p></li>
-<li><p>Aids data interpretation</p></li>
 </ul>
+<p>We invite you to think of more. 💡</p>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -478,10 +477,9 @@ Here are some reasons we can come up with:</p>
 <div class="section" id="intro-to-matplotlib">
 <h2>Intro to Matplotlib<a class="headerlink" href="#intro-to-matplotlib" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>In Python, there are many packages for data visualization, each with their own merits, but the base package that many of them are based off of is <a class="reference external" href="https://matplotlib.org/stable/index.html"><strong>Matplotlib</strong></a>, which is now quite ubiquitous and integrates well with NumPy.</p>
-<p>The name “Matplotlib” purposely sounds kinda like MATLAB because the <strong>Pyplot</strong> module was purposely designed to give a MATLAB-like way of plotting.
-This allows us to get high-quality graphics (like MATLAB) while obeying Pythonic principles. 🐍</p>
-<p>To use Pyplot, we write the following import statement and alias, which is a community standard:</p>
+<p>In Python, there are many packages for data visualization, but the base package that many of them are based off of is <a class="reference external" href="https://matplotlib.org/stable/index.html"><strong>Matplotlib</strong></a>.</p>
+<p>To use the Pyplot module within the Matplotlib package, we write the following import statement and alias to follow the community standard.
+Be sure to run the cell!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>   <span class="c1"># standard alias</span>
@@ -497,7 +495,7 @@ This allows us to get high-quality graphics (like MATLAB) while obeying Pythonic
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object (<code class="docutils literal notranslate"><span class="pre">fig</span></code> variable) is the top-level container for all plot elements while the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> (<code class="docutils literal notranslate"><span class="pre">ax</span></code> variable) is the object for a particular plot.
 <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> creates both of these objects, which we then assign to the variables on the left.
-Imagine this step as the IRL-equivalent of saying, “Before we can paint a painting, we must fetch a new canvas,” and it’s possible to have multiple Axes on the same Figure.</p>
+Note it’s possible to have multiple Axes on the same Figure, which helps motivate the existence of both objects.</p>
 <p><strong>Step 2</strong>: To make a plot, we can call a method like <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot(x,</span> <span class="pre">y)</span></code></a> <strong>directly using the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object</strong>—<em>not</em> <code class="docutils literal notranslate"><span class="pre">fig</span></code> or <code class="docutils literal notranslate"><span class="pre">plt</span></code>.
 This standard method plots <span class="math notranslate nohighlight">\(y\)</span> vs. <span class="math notranslate nohighlight">\(x\)</span> points and, by default, connects the points with lines in the order that they’re plotted.
 Note the syntax for <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> is a list (or array) of <span class="math notranslate nohighlight">\(x\)</span>-coordinates and <em>then</em> a list of <span class="math notranslate nohighlight">\(y\)</span>-coordinates, <strong>not</strong> a list of <span class="math notranslate nohighlight">\((x,y)\)</span> pairs.</p>
@@ -508,7 +506,7 @@ Matplotlib can be quite literal!</p>
 Here’s a few lines of code to plot <span class="math notranslate nohighlight">\(y = x ^ 2\)</span> for the first five positive integers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># standard alias for NumPy as previously discussed</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
@@ -522,7 +520,8 @@ Here’s a few lines of code to plot <span class="math notranslate nohighlight">
 </div>
 <p>Neat!</p>
 <p>We will now show you something slightly cooler by reading in some data using NumPy and plotting the columns of the NumPy array.
-This utilizes the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a> function and <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html?highlight=slice#indexing-and-slicing">array slicing</a>.</p>
+This utilizes the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a> function and <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html?highlight=slice#indexing-and-slicing">array slicing</a>.
+You’ll be doing something similar with your lab data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;sine.txt&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>   <span class="c1"># we created this file for you</span>
@@ -628,7 +627,7 @@ You should find that each call to <code class="docutils literal notranslate"><sp
 <p>We’ll conclude with a protip.
 If you did the above exercises, you may have noticed a few repetitive moments.
 Perhaps you had to specify the linewidth each time you called <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code>, or had to adjust the figure size every time.
-It would be nice if we could change the default Pyplot settings so we automatically get some of these improvements every time we make a new plot.</p>
+It would be nice if we could change the default Pyplot settings so we automatically get some of these improvements every time.</p>
 <p>Luckily, we can do that, through <code class="docutils literal notranslate"><span class="pre">plt.rcParams.update(params)</span></code>, which takes in a dictionary of <code class="docutils literal notranslate"><span class="pre">params</span></code> that we want to modify.
 Note that there are <a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/customizing.html#the-default-matplotlibrc-file"><em>a ton</em></a> of options, so we’ll just list some notable ones here that Enze likes.
 Obviously, you can also set your own.</p>
@@ -636,7 +635,7 @@ Obviously, you can also set your own.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-    <span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>    <span class="c1"># XRD spectra could be wider (e.g., full page width)</span>
+    <span class="s1">&#39;figure.figsize&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>    <span class="c1"># (W,H) - XRD spectra could be wider, e.g., (12,5)</span>
     <span class="s1">&#39;font.size&#39;</span><span class="p">:</span>         <span class="mi">18</span><span class="p">,</span>    <span class="c1"># very important!</span>
     <span class="s1">&#39;lines.linewidth&#39;</span><span class="p">:</span>    <span class="mi">4</span><span class="p">,</span>    <span class="c1"># good for visuals</span>
     <span class="s1">&#39;lines.markersize&#39;</span><span class="p">:</span>  <span class="mi">10</span><span class="p">,</span>    <span class="c1"># in case you have scatter plots</span>

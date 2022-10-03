@@ -99,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
-   Welcome! 👋
+   Welcome! 👋🏼
   </a>
  </li>
 </ul>
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
-     Intro to plots 🚀
+     Intro to plotting 🚀
     </a>
    </li>
    <li class="toctree-l2">
@@ -556,7 +556,7 @@ Don’t forget the plot styling! ⭐</p>
 <div class="section" id="plot-a-spectra-as-a-sanity-check">
 <h2>Plot a spectra as a sanity check<a class="headerlink" href="#plot-a-spectra-as-a-sanity-check" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>Since you’re working with more powder XRD spectra in this lab, it’s a good idea to just visualize the spectra and create <strong>a clean figure for each of your unknown samples</strong>.
+<p>Since you’re working with more powder XRD spectra in this lab, it’s a good idea to just visualize the spectra of each sample as a reference.
 This is also good practice to remind yourself of the commands from the previous lab.
 You should be quite proficient at this by now!</p>
 <p>Remember the general steps are:</p>
@@ -564,9 +564,10 @@ You should be quite proficient at this by now!</p>
 <li><p>Upload your data to JupyterHub in the <code class="docutils literal notranslate"><span class="pre">lab2</span></code> folder.</p></li>
 <li><p>Write code below to process and plot the data.</p>
 <ul class="simple">
-<li><p>You’ll probably start with <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv('sample_N.txt',</span> <span class="pre">names=['something',</span> <span class="pre">'sensible'])</span></code>.</p></li>
+<li><p>You can now use pandas!
+You’ll probably start with <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv('sample_N.txt',</span> <span class="pre">names=['something',</span> <span class="pre">'sensible'])</span></code>.</p></li>
 <li><p>Call <code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">ax</span> <span class="pre">=</span> <span class="pre">plt.subplots()</span></code> to get things started.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> and <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> to plot and style things.</p></li>
+<li><p>Use <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a> and <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axes.html"><code class="docutils literal notranslate"><span class="pre">ax.set()</span></code></a> to plot and style things.</p></li>
 </ul>
 </li>
 <li><p>Save the figure and download it to your computer.</p>
@@ -576,7 +577,7 @@ You should be quite proficient at this by now!</p>
 </li>
 </ol>
 <p>If you don’t remember what you did in lab 1, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>.
-<strong>Copy+paste previous code</strong> is definitely a thing!</p>
+<strong>Copy+paste previous code</strong> is definitely a thing! (it’s also one advantage of programming over manual manipulation)</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
@@ -593,7 +594,7 @@ You should be quite proficient at this by now!</p>
 <div class="section" id="lattice-constant-calculations">
 <h2>Lattice constant calculations<a class="headerlink" href="#lattice-constant-calculations" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>In this course, you can expect to be given an XRD spectrum and deduce the crystal structure from the peak positions.
+<p>In this course, you can expect to be given an XRD spectrum of a cubic material and deduce the crystal structure from the peak positions.
 This is a tedious exercise by hand because we have to compute each peak individually, so we’ll try to speed things up and <em>automate</em> the calculations using Python.</p>
 <p>Arguably the most important equation is <strong>Bragg’s law</strong>, given by</p>
 <div class="math notranslate nohighlight">
@@ -602,9 +603,9 @@ This is a tedious exercise by hand because we have to compute each peak individu
 We’ll be manipulating this equation to calculate lattice constants.</p>
 <div class="section" id="inputs-experimental-data">
 <h3>1. Inputs / experimental data<a class="headerlink" href="#inputs-experimental-data" title="Permalink to this headline">¶</a></h3>
-<p>Start by typing in your known values:</p>
+<p>Start by typing in your known values collected from the experiment:</p>
 <ul class="simple">
-<li><p>Wavelength: A <code class="docutils literal notranslate"><span class="pre">float</span></code> in <em>nanometers</em>, most likely <code class="docutils literal notranslate"><span class="pre">0.154</span></code> corresponding to Cu-K<span class="math notranslate nohighlight">\(\alpha\)</span>.</p></li>
+<li><p>Wavelength: A <code class="docutils literal notranslate"><span class="pre">float</span></code> corresponding to <span class="math notranslate nohighlight">\(\lambda\)</span> of your X-ray source, likely Cu-K<span class="math notranslate nohighlight">\(\alpha\)</span>.</p></li>
 <li><p>Angles: Values are <span class="math notranslate nohighlight">\(2\theta\)</span> in <em>degrees</em>. The angles should be stored in a <code class="docutils literal notranslate"><span class="pre">list</span></code> in the form</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">angles</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">4.56</span><span class="p">,</span> <span class="mf">7.89</span><span class="p">]</span>  
@@ -612,7 +613,7 @@ We’ll be manipulating this equation to calculate lattice constants.</p>
 </div>
 <p>for however many <span class="math notranslate nohighlight">\(2\theta\)</span> peak values you’ve measured (maybe 3 to 5, or so).
 If you don’t have your own data, or just want to try these exercises for fun, you can use the sample data <a class="reference external" href="https://github.com/enze-chen/learning_modules/blob/master/data/xrd_peaks_CuKa.csv">in this file</a> (ignore intensity for this lab).</p>
-<p><strong>Note</strong>: Unlike the spectra plots, we <strong>only</strong> need the angles corresponding to the <em>peak positions</em>, <strong>not all angles</strong> collected by the diffractometer. 😅</p>
+<p><strong>Note</strong>: Unlike the spectra plots, we only need the angles <strong>corresponding to the peak positions</strong>, <strong>not all angles</strong> collected by the diffractometer. 😅</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
@@ -626,7 +627,11 @@ If you don’t have your own data, or just want to try these exercises for fun, 
 <div class="section" id="creating-our-dataframe">
 <h3>2. Creating our DataFrame<a class="headerlink" href="#creating-our-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>Now it’s time to construct our <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">pandas DataFrame</a> using the <code class="docutils literal notranslate"><span class="pre">dict</span></code> version of the constructor.
-We’ll need one column (<code class="docutils literal notranslate"><span class="pre">key:value</span></code> pair) for the <code class="docutils literal notranslate"><span class="pre">wavelength</span></code> and another for <code class="docutils literal notranslate"><span class="pre">angles</span></code>.
+Recall that a dictionary takes the form:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key1&#39;</span><span class="p">:</span><span class="n">val1</span><span class="p">,</span> <span class="s1">&#39;key2&#39;</span><span class="p">:</span><span class="n">val2</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>We’ll need one column (<code class="docutils literal notranslate"><span class="pre">key:value</span></code> pair) for the <code class="docutils literal notranslate"><span class="pre">wavelength</span></code> and another for <code class="docutils literal notranslate"><span class="pre">angles</span></code>.
 Once you’ve constructed the DataFrame, the <code class="docutils literal notranslate"><span class="pre">df</span></code> variable on the last line will display it.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -641,11 +646,13 @@ Once you’ve constructed the DataFrame, the <code class="docutils literal notra
 <div class="section" id="numerical-calculations">
 <h3>3. Numerical calculations<a class="headerlink" href="#numerical-calculations" title="Permalink to this headline">¶</a></h3>
 <p>Note that if we assume <span class="math notranslate nohighlight">\(n=1\)</span> in Bragg’s law, then we have three unknowns.
-In our case, we know the wavelength and angle, so we can find the interplanar spacing as follows:</p>
-<div class="math notranslate nohighlight">
-\[ d = \frac{\lambda}{2 \sin (\theta)} \tag{2}\]</div>
-<p>We will try to do this in a very principled fashion.
+In our case, we know the wavelength and angle, so we can find the interplanar spacing.
+We will try to do this in a very principled fashion.
 <em>Modular solutions</em> are very important when programming.</p>
+<div class="alert alert-warning">
+    Before continuing, rewrite Bragg's law to solve for the interplanar spacing.
+</div>
+<hr class="docutils" />
 <div class="section" id="find-theta">
 <h4>3.1 Find <span class="math notranslate nohighlight">\(\theta\)</span><a class="headerlink" href="#find-theta" title="Permalink to this headline">¶</a></h4>
 <p>First, we need to get the <span class="math notranslate nohighlight">\(\theta\)</span> values.
@@ -667,7 +674,7 @@ After you’ve done this, display the DataFrame like we did above to confirm you
 </div>
 <div class="section" id="take-the-sine">
 <h4>3.2 Take the sine<a class="headerlink" href="#take-the-sine" title="Permalink to this headline">¶</a></h4>
-<p>Next, we’ll compute the sine of the <span class="math notranslate nohighlight">\(\theta\)</span> values using <code class="docutils literal notranslate"><span class="pre">np.sin()</span></code>, whose argument inside the parentheses <em>must be in radians</em> —good thing we converted it earlier!
+<p>Next, we’ll compute the sine of the <span class="math notranslate nohighlight">\(\theta\)</span> values using <code class="docutils literal notranslate"><span class="pre">np.sin()</span></code>, whose argument inside the parentheses <i>must be in radians</i>—good thing we converted it earlier!
 Add another column to your DataFrame with the sine of the angles.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -680,7 +687,6 @@ Add another column to your DataFrame with the sine of the angles.</p>
 <div class="section" id="calculate-the-interplanar-spacing-d">
 <h4>3.3 Calculate the interplanar spacing, <span class="math notranslate nohighlight">\(d\)</span><a class="headerlink" href="#calculate-the-interplanar-spacing-d" title="Permalink to this headline">¶</a></h4>
 <p>Now you have all the pieces in place for calculating <span class="math notranslate nohighlight">\(d\)</span>. What’s awesome about pandas is that you can perform element-wise division of two columns by use of the division operator, <code class="docutils literal notranslate"><span class="pre">/</span></code>.
-Create a new column that does exactly what Equation (2) says.
 Don’t forget to include parentheses when you multiply the denominator by 2!</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -696,7 +702,7 @@ Don’t forget to include parentheses when you multiply the denominator by 2!</p
 <p>If you do it naively, you’ll get numbers like <code class="docutils literal notranslate"><span class="pre">1.000</span></code>, <code class="docutils literal notranslate"><span class="pre">1.414</span></code>, <code class="docutils literal notranslate"><span class="pre">1.732</span></code>, and the like.
 Unless you know your square root approximations, this can be tricky to decipher.
 We prefer to <strong>square</strong> the distances first, and then take the ratio.
-We’ve done this below for some sample data, but you may have to modify it to match your column names.</p>
+We’ve started it below, so you have to fill in the second half.</p>
 <p>The resulting column should have values that are close to integers or multiples of a simple fraction like <span class="math notranslate nohighlight">\(\frac{1}{3}\)</span>.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -728,11 +734,11 @@ You can probably do this part by hand.</p>
 <p>Recall that the Nelson-Riley function is used for cubic systems to get a more accurate measurement of the lattice constant.
 The Nelson-Riley function is</p>
 <div class="math notranslate nohighlight">
-\[ \text{NR} = \frac{\cos^{2} \theta}{\sin \theta} + \frac{\cos^2 \theta}{\theta} \tag{3} \]</div>
+\[ \text{NR} = \frac{\cos^{2} \theta}{\sin \theta} + \frac{\cos^2 \theta}{\theta} \tag{2} \]</div>
 <p>You can probably sense where this is going.
 If you’ve done the above calculations with the pandas DataFrame, it’s quite easy to <strong>add another column</strong> of Nelson-Riley values!
-Only one line of number crunching with Equation (3).
-If you already did the previous parts and come back to this section later, you’ll see with coding that it’s very easy to pick up where you left off by extending the code you’ve already created.</p>
+Only one line of number crunching with Equation (2).
+If you already did the previous parts and come back to this section later, you can easily rerun everything (<kbd>Cell</kbd> &gt; <kbd>Run All</kbd>) and pick up where you left off.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
@@ -749,9 +755,9 @@ To clarify what we mean, we’ve left in the code structure below, which you’l
 In the JupyterHub, we’ve also included a PNG of our final data table (<code class="docutils literal notranslate"><span class="pre">xrd_dataframe.png</span></code>, using our fake data) so you have a sense of what we were intending—and if you did something else, that’s OK!</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>   <span class="c1"># based on our dummy data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>   <span class="c1"># example -- change this!</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span>    <span class="c1"># create a column</span>
-<span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
 
 <span class="n">df</span>   <span class="c1"># add in one line of multiplication above to calculate a!</span>
 </pre></div>
@@ -762,8 +768,8 @@ In the JupyterHub, we’ve also included a PNG of our final data table (<code cl
 <ol class="simple">
 <li><p>⭐ First plot the individual data points using a method like <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.scatter.html"><code class="docutils literal notranslate"><span class="pre">ax.scatter()</span></code></a>. The <code class="docutils literal notranslate"><span class="pre">s</span></code> parameter changes the marker size.</p></li>
 <li><p>Then compute a line of best fit using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> and add it to the plot.</p></li>
-<li><p>⭐ You may want to <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> the <span class="math notranslate nohighlight">\(x\)</span>-axis limits to be bounded by the <span class="math notranslate nohighlight">\(y\)</span>-intercept on the left.</p></li>
-<li><p>Of course, with <code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code>, it directly returns the <span class="math notranslate nohighlight">\(y\)</span>-intercept which you can print out!</p></li>
+<li><p>⭐ You may want to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axes.html"><code class="docutils literal notranslate"><span class="pre">ax.set()</span></code></a> the <span class="math notranslate nohighlight">\(x\)</span>-axis limits to be bounded by the <span class="math notranslate nohighlight">\(y\)</span>-intercept as a guide to the eye. 👀</p></li>
+<li><p>Of course, with <code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code>, you can directly obtain the value of interest to <code class="docutils literal notranslate"><span class="pre">print()</span></code> out!</p></li>
 </ol>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">

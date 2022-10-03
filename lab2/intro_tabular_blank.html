@@ -99,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
-   Welcome! 👋
+   Welcome! 👋🏼
   </a>
  </li>
 </ul>
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
-     Intro to plots 🚀
+     Intro to plotting 🚀
     </a>
    </li>
    <li class="toctree-l2">
@@ -502,7 +502,7 @@ Like the previous lab, if you’re already familiar working with tabular data, y
 <div class="section" id="csv-files">
 <h2>CSV files<a class="headerlink" href="#csv-files" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>By now, you’ve probably realized that your XRD data is highly <em>structured</em>.
+<p>By now, you’ve probably realized that your XRD data is <strong>highly structured</strong>.
 In particular, it takes the format <code class="docutils literal notranslate"><span class="pre">angle,intensity</span></code> inside a text file, like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.00</span><span class="p">,</span><span class="mf">1712.5</span>
 <span class="mf">3.02</span><span class="p">,</span><span class="mi">1850</span>
@@ -514,7 +514,7 @@ In particular, it takes the format <code class="docutils literal notranslate"><s
 <p>We call these files <strong>comma-separated values</strong> files, or <strong>CSV</strong> for short.
 They’re nice because they’re easy to store and they strike a healthy balance between easy for humans to read (looks like a data table) and easy for computers to read (the values can be loaded into an array).
 Previously, you’ve seen how the NumPy package can read in CSV files for plotting purposes.
-Here, we’ll teach you how to use another package that gives you even more flexibility when working with such <em>tabular data</em>.</p>
+Here, we’ll teach you how to use another package that gives you even more flexibility when working with such tabular data.</p>
 </div>
 <div class="section" id="pandas">
 <h2>pandas!<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h2>
@@ -656,10 +656,10 @@ This function, as you can see from the documentation, has <em>a bajillion</em> i
 Default is the first row.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">names</span></code> (list): If you would like to rename your columns.
 This list cannot have duplicates.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">skiprows</span></code> (int): Extremely useful if there are lines of comments and extra text at the top of the file that you want to avoid reading.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nrows</span></code> (int): Extremely useful if your file is very large, or your data stops before reaching the end of the file (e.g., there’s footer text in the file).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skiprows</span></code> (int): Extremely useful if there are extra lines at the top of the file that you want to avoid reading (e.g., comments).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nrows</span></code> (int): Extremely useful if your file is very large or if your data stops before reaching the end of the file (e.g., there’s a footer).</p></li>
 </ul>
-<p>Notice how this is similar to <code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code>, just with some extra headers for the columns (bolded in the previous output).
+<p>Notice how this is similar to <code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code>, just with a different default separator and some extra headers for the columns (bolded in the previous output).
 We’ll address these headers shortly.</p>
 <hr class="docutils" />
 <p>Let’s use <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> to read in our <code class="docutils literal notranslate"><span class="pre">sine.txt</span></code> file from Lab 1’s demo (copied again into this folder).
@@ -764,9 +764,9 @@ We’ll also rename the column names to be:</p>
 <h2>Working with DataFrames<a class="headerlink" href="#working-with-dataframes" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>We got our data into a DataFrame! Now what?</p>
-<p>Well, <em>now the fun begins</em>. 😄</p>
+<p><em>Well, now the fun begins</em>. 😄</p>
 <p>The first thing you might be interested in is the dimensions of your data (DataFrame).
-We can access that using the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html"><code class="docutils literal notranslate"><span class="pre">df.shape</span></code></a> <em>attribute</em>.</p>
+We can access that using the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html"><code class="docutils literal notranslate"><span class="pre">df.shape</span></code></a> <em>attribute</em>, which returns (rows, columns).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">shape</span>
@@ -785,7 +785,7 @@ For these methods, the <code class="docutils literal notranslate"><span class="p
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>   <span class="c1"># default is axis=0, compute along columns.</span>
                 <span class="c1"># note these minima are in each INDIVIDUAL column, </span>
-                <span class="c1"># NOT necessarily corresponding to the same row!</span>
+                <span class="c1"># NOT necessarily corresponding to the same data point!</span>
 </pre></div>
 </div>
 </div>
@@ -903,25 +903,6 @@ For example:</p>
 <p>1001 rows × 1 columns</p>
 </div></div></div>
 </div>
-<p>Another common method, particularly when we want to slice a subset of rows (but also columns) by the numerical index, is to use <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html"><code class="docutils literal notranslate"><span class="pre">df.iloc[]</span></code></a>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>    <span class="c1"># only integer indices are allowed</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.000000
-1    0.006283
-2    0.012566
-3    0.018850
-4    0.025133
-5    0.031416
-Name: x, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="combining-columns-with-operations">
 <h3>Combining columns with operations<a class="headerlink" href="#combining-columns-with-operations" title="Permalink to this headline">¶</a></h3>
@@ -1036,7 +1017,7 @@ The general syntax is:</p>
 <p>1001 rows × 3 columns</p>
 </div></div></div>
 </div>
-<p>Here’s another example:</p>
+<p>Here’s another example performing subtraction of one column by another:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;diff (x - sin)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;sin&#39;</span><span class="p">]</span>
@@ -1310,7 +1291,7 @@ The general syntax is:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/intro_tabular_blank_27_0.png" src="../_images/intro_tabular_blank_27_0.png" />
+<img alt="../_images/intro_tabular_blank_25_0.png" src="../_images/intro_tabular_blank_25_0.png" />
 </div>
 </div>
 </div>
@@ -1337,8 +1318,7 @@ Some things to be aware of:</p>
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>This concludes the introduction to tabular data.
-If you would like to learn more about pandas, we suggest you look at the <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html">official user guide</a>.
-Realistically, there’s way too much to cover about pandas, and a lot of your understanding will be built as you work with it for your own datasets.
+Realistically, there’s way too much to cover about pandas, and a lot of your understanding will be built as you work with it for your own datasets (<a class="reference external" href="https://pandas.pydata.org/docs/user_guide/index.html">official user guide</a>).
 But, we hope that by giving a brief introduction, you at least know what’s available, where to go for help, and <em>how to think about tabular data</em> with pandas, at least enough to finish up the lab calculations.
 Onwards to the exercises!</p>
 </div>

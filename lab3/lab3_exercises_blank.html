@@ -99,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../index.html">
-   Welcome! 👋
+   Welcome! 👋🏼
   </a>
  </li>
 </ul>
@@ -133,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lab1/intro_plotting_blank.html">
-     Intro to plots 🚀
+     Intro to plotting 🚀
     </a>
    </li>
    <li class="toctree-l2">
@@ -450,7 +450,7 @@ It doesn’t answer all of the discussion questions in the lab procedures, but i
 <p>Remember the general steps are:</p>
 <ol class="simple">
 <li><p>Upload your data to JupyterHub in the <code class="docutils literal notranslate"><span class="pre">lab3</span></code> folder.</p></li>
-<li><p>Write code below to process and plot the data.</p></li>
+<li><p>Write code below (add a new Code cell) to process and plot the data.</p></li>
 <li><p>Save the figure and download it to your computer.</p></li>
 </ol>
 <p>If you don’t remember what you did in lab 2, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab2</span></code>.</p>
@@ -487,15 +487,17 @@ Recall that functions in Python look like:</p></li>
     <span class="n">df</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">df</span>
 
-<span class="k">def</span> <span class="nf">make_nr</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">make_nr</span><span class="p">(</span><span class="n">dataframe</span><span class="p">):</span>
     <span class="c1"># make a similar function that makes NR plots based on the DataFrame!</span>
     <span class="k">pass</span>
     
     
 <span class="c1"># change the inputs and call the function - voila!</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">17.02</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">4.99</span><span class="p">,</span> <span class="mf">2.01</span><span class="p">]</span>
+
 <span class="n">df</span> <span class="o">=</span> <span class="n">df_calcs</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
 <span class="n">make_nr</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -578,7 +580,8 @@ There are several ways to answer this question, and we encourage you to be creat
 Here are just two <em>suggestions</em>, one based on something you’ve seen, and another based on something that you have probably heard before and we’ll teach you how to calculate it.</p>
 <ol class="simple">
 <li><p>Like with Nelson-Riley plots, you can compute a line of best fit, plot that line, and <strong>look at the intercepts</strong> at <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span>.
-Do they agree with the experimental lattice constants of the pure metals?</p></li>
+Do they agree with the experimental lattice constants of the pure metals?
+Can you quantify the amount of error?</p></li>
 <li><p>You can compute a <strong>linear correlation coefficient</strong> (also known as <a class="reference external" href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"><strong>Pearson’s <span class="math notranslate nohighlight">\(r\)</span></strong></a>) between your values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(x\)</span>.
 Pearson’s <span class="math notranslate nohighlight">\(r\)</span> can be expressed mathematically as:</p></li>
 </ol>
@@ -586,7 +589,8 @@ Pearson’s <span class="math notranslate nohighlight">\(r\)</span> can be expre
 \[ r_{X, Y} = \frac{\text{covariance}(X, Y)}{\sigma(X) \sigma(Y)} \]</div>
 <p>where <span class="math notranslate nohighlight">\(\sigma(\cdot)\)</span> is the standard deviation, and values of <span class="math notranslate nohighlight">\(r\)</span> range from <span class="math notranslate nohighlight">\([-1, +1]\)</span> as follows:</p>
 <p><img alt="pearson" src="../_images/pearson.png" /></p>
-<p><em>Please note</em>: You already know this, but just a reminder that <span class="math notranslate nohighlight">\(r\)</span> has no relationship to the orange line of best fit (<em>it is not the slope!</em>), but rather is an estimate of the linearity between the green data points.</p>
+<p><em>Please note</em>: A friendly reminder that <span class="math notranslate nohighlight">\(r\)</span> has no relationship to the orange line of best fit (<em>it is not the slope!</em>), but rather is an estimate of the linearity between the green data points.
+The orange line is merely a guide to the eye.</p>
 <div class="section" id="computing-r">
 <h3>Computing <span class="math notranslate nohighlight">\(r\)</span><a class="headerlink" href="#computing-r" title="Permalink to this headline">¶</a></h3>
 <p>Once again, NumPy makes our lives pretty easy by handing to us <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html"><code class="docutils literal notranslate"><span class="pre">np.corrcoef()</span></code></a> on a silver platter.
