@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="canonical" href="https://enze-chen.github.io/mse104l/lab4/lab4.html" />
     <link rel="shortcut icon" href="../_static/mse_ucb.png"/>
@@ -342,8 +344,12 @@ const thebe_selector_output = ".output, .cell_output"
 <span id="h1-lab4-intro"></span><h1>Lab 4: EDS in the SEM<a class="headerlink" href="#lab-4-eds-in-the-sem" title="Permalink to this headline">¶</a></h1>
 <p>Welcome to Lab 4!
 This lab finally departs from X-ray diffraction, although you’ve noticed that spectroscopy still plays an important role.
-Since the SEM micrographs are not particularly interesting, we don’t have a great opportunity to work with computer vision tools in this analysis, but we’ll still demo something that we think is cool (purely to pique your interest).
-Furthermore, the analysis isn’t particularly extensive in this lab, so we’ll focus on some fine-tuning of your plots.</p>
+Since the SEM micrographs are not particularly interesting, we don’t have a great opportunity to work with computer vision tools in this analysis, but we’ll still demo something that we think is cool (purely to pique your interest).</p>
+<p>The primary objectives of these notebooks are:</p>
+<ul class="simple">
+<li><p>Apply more Matplotlib commands to fine-tune your plots.</p></li>
+<li><p>Run a basic machine learning algorithm (<span class="math notranslate nohighlight">\(k\)</span>-means) for image segmentation.</p></li>
+</ul>
 <div class="section" id="associated-notebooks">
 <h2>Associated notebooks<a class="headerlink" href="#associated-notebooks" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">

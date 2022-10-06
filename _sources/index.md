@@ -21,9 +21,9 @@ That being said, we hope these exercises can be helpful guides for your analysis
 ````{margin} 
 ```{admonition} Group work 
 :class: note 
-It is totally fair game to work together on the analysis, particularly to help each other with coding/debugging.
+It is totally fair game to work together on the analysis, particularly to help each other with Python syntax and debugging.
 We hope the online, uniform interface can encourage group work; 
-however, please be sure to generate your own plots and complete your own lab writeup with [honesty and integrity](https://teaching.berkeley.edu/berkeley-honor-code).
+however, please be sure to write your own code, generate your own plots, and complete your own lab writeup with [honesty and integrity](https://teaching.berkeley.edu/berkeley-honor-code).
 ```
 ````
 
