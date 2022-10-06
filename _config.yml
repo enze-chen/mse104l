@@ -25,7 +25,7 @@ html:
   use_edit_page_button      : false      # button for users to edit page and submit a PR.
   use_issues_button         : true      # button for users to submit a GitHub issue
   use_repository_button     : true      # button for users to look at the source code in GitHub repo
-  favicon                   : "mse_ucb.png"      # the icon in the browser tab
+  favicon                   : mse_ucb.png      # the icon in the browser tab
   baseurl                   : https://enze-chen.github.io/mse104l   # The base URL where the book is hosted
   extra_footer              : |
     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
