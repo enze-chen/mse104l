@@ -447,7 +447,7 @@ const thebe_selector_output = ".output, .cell_output"
 It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report.
 It will likely lead to a higher grade!</p>
 <div class='alert alert-success'>
-We tried to stagger the guidance such that each exercise only introduces 1-2 new ideas at a time.
+We tried to stagger the guidance such that each exercise only introduces a few new ideas at a time.
 These new ideas are marked with a ⭐.
 </div><div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
@@ -462,7 +462,8 @@ These new ideas are marked with a ⭐.
 <div class="section" id="import-python-packages">
 <h2>Import Python packages<a class="headerlink" href="#import-python-packages" title="Permalink to this headline">¶</a></h2>
 <p>It can be pretty helpful to import all required packages at the top of the notebook, which we’ve done below.
-We even changed some of the default settings!</p>
+We even changed some of the default settings!
+Run the cell below using <kbd>Shift</kbd>+<kbd>Enter</kbd>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can import other packages if you want, but you shouldn&#39;t have to.</span>
@@ -494,7 +495,8 @@ We even changed some of the default settings!</p>
 <li><p>Then you can load it into a NumPy array with <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a>.</p></li>
 <li><p>⭐ Then plot it with Matplotlib (<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a>).</p></li>
 <li><p>❗Don’t forget styling elements! Here’s the character for theta: θ</p></li>
-<li><p><strong>Download the saved figure</strong> and paste it into your lab writeup.</p></li>
+<li><p><strong>Download the saved figure</strong> and paste it into your lab writeup.
+You can find the saved figure in the same JupyterHub directory as above.</p></li>
 </ol>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -581,8 +583,7 @@ You have collected the values of <span class="math notranslate nohighlight">\(I_
 The individual points will have noise, so it’s best to compute a line of best fit and then extract the mass absorption coefficient <span class="math notranslate nohighlight">\(\mu/\rho\)</span>.</p>
 <p>Here are some more hints:</p>
 <ul class="simple">
-<li><p>You should probably manually create NumPy arrays for the <span class="math notranslate nohighlight">\(x\)</span> values and intensity ratios.
-Recall the syntax: <code class="docutils literal notranslate"><span class="pre">np.array(list_of_values)</span></code>.</p></li>
+<li><p>You should probably manually create NumPy arrays for your values with the syntax: <code class="docutils literal notranslate"><span class="pre">np.array(list_of_values)</span></code>.</p></li>
 <li><p>⭐ To take the <strong>natural logarithm</strong> of an array, use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.log.html"><code class="docutils literal notranslate"><span class="pre">np.log(arr)</span></code></a>.</p></li>
 <li><p>⭐ To calculate a <strong>line of best fit</strong>, you can use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> command as follows:</p></li>
 </ul>
@@ -590,10 +591,9 @@ Recall the syntax: <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> hold your values and <code class="docutils literal notranslate"><span class="pre">1</span></code> specifies a degree 1 polynomial (line).
-The resulting slope and <span class="math notranslate nohighlight">\(y\)</span>-intercept are stored in <code class="docutils literal notranslate"><span class="pre">c[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">c[1]</span></code>, respectively, as <code class="docutils literal notranslate"><span class="pre">c</span></code> is an array containing coefficients in decreasing order of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+The resulting slope and <span class="math notranslate nohighlight">\(y\)</span>-intercept are stored in <code class="docutils literal notranslate"><span class="pre">c[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">c[1]</span></code>, respectively, as <code class="docutils literal notranslate"><span class="pre">c</span></code> is an array containing coefficients in <em>decreasing order of</em> <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <ul class="simple">
-<li><p>Just as <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> is for curves, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.scatter.html"><code class="docutils literal notranslate"><span class="pre">ax.scatter(x,</span> <span class="pre">y)</span></code></a> can be used for individual points.</p></li>
-<li><p>❗Beware of units!</p></li>
+<li><p>⭐ Just as <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> is for curves, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.scatter.html"><code class="docutils literal notranslate"><span class="pre">ax.scatter(x,</span> <span class="pre">y)</span></code></a> can be used for individual points.</p></li>
 </ul>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">

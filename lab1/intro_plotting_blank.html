@@ -479,7 +479,7 @@ Here are some reasons we can come up with:</p>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>In Python, there are many packages for data visualization, but the base package that many of them are based off of is <a class="reference external" href="https://matplotlib.org/stable/index.html"><strong>Matplotlib</strong></a>.</p>
 <p>To use the Pyplot module within the Matplotlib package, we write the following import statement and alias to follow the community standard.
-Be sure to run the cell!</p>
+Be sure to run the cell with <kbd>Shift</kbd>+<kbd>Enter</kbd>!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>   <span class="c1"># standard alias</span>
@@ -495,7 +495,7 @@ Be sure to run the cell!</p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object (<code class="docutils literal notranslate"><span class="pre">fig</span></code> variable) is the top-level container for all plot elements while the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> (<code class="docutils literal notranslate"><span class="pre">ax</span></code> variable) is the object for a particular plot.
 <code class="docutils literal notranslate"><span class="pre">plt.subplots()</span></code> creates both of these objects, which we then assign to the variables on the left.
-Note it’s possible to have multiple Axes on the same Figure, which helps motivate the existence of both objects.</p>
+Note it’s possible to have multiple Axes on the same Figure, which helps motivate the need for both objects.</p>
 <p><strong>Step 2</strong>: To make a plot, we can call a method like <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot(x,</span> <span class="pre">y)</span></code></a> <strong>directly using the <code class="docutils literal notranslate"><span class="pre">Axes</span></code> object</strong>—<em>not</em> <code class="docutils literal notranslate"><span class="pre">fig</span></code> or <code class="docutils literal notranslate"><span class="pre">plt</span></code>.
 This standard method plots <span class="math notranslate nohighlight">\(y\)</span> vs. <span class="math notranslate nohighlight">\(x\)</span> points and, by default, connects the points with lines in the order that they’re plotted.
 Note the syntax for <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> is a list (or array) of <span class="math notranslate nohighlight">\(x\)</span>-coordinates and <em>then</em> a list of <span class="math notranslate nohighlight">\(y\)</span>-coordinates, <strong>not</strong> a list of <span class="math notranslate nohighlight">\((x,y)\)</span> pairs.</p>
@@ -672,7 +672,7 @@ Obviously, you can also set your own.</p>
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>This concludes the introduction to plotting in Matplotlib.
-You should have enough tools to get started with analyzing your own data (which you can upload to JupyterHub).
+You should have enough tools to get started with analyzing your own Lab 1 data (which you can upload to JupyterHub).
 The subsequent notebook will guide you through some of the analysis and discuss further Matplotlib improvements.
 We hope you enjoy!</p>
 </div>

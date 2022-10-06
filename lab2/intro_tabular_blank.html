@@ -329,9 +329,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#csv-files">
-   CSV files
+  <a class="reference internal nav-link" href="#file-formats">
+   File formats
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#csv-files">
+     CSV files
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pandas">
@@ -413,9 +420,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#csv-files">
-   CSV files
+  <a class="reference internal nav-link" href="#file-formats">
+   File formats
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#csv-files">
+     CSV files
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pandas">
@@ -494,14 +508,28 @@ Like the previous lab, if you’re already familiar working with tabular data, y
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <p>These exercises are grouped into the following sections:</p>
 <ol class="simple">
-<li><p><a class="reference external" href="#CSV-files">CSVs</a></p></li>
+<li><p><a class="reference external" href="#File-formats">Working with files</a></p></li>
 <li><p><a class="reference external" href="#pandas%21">pandas</a></p></li>
 <li><p><a class="reference external" href="#Working-with-DataFrames">Operations</a></p></li>
 </ol>
 </div>
-<div class="section" id="csv-files">
-<h2>CSV files<a class="headerlink" href="#csv-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file-formats">
+<h2>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
+<p>We’ll begin by discussing a common problem faced by materials scientists: working with different file types.
+Particularly in industry, and particularly when working with collaborators, you’ll be receiving information in different formats including:</p>
+<ul class="simple">
+<li><p>Text-based files, where the information is completely unstructured.</p></li>
+<li><p>Text-based files with hierarchical structure, such as <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JSON</a></p></li>
+<li><p>Image files, with all sorts of file extensions and compression formats.</p></li>
+<li><p>PDFs, which may or may not enable optical character recognition (OCR).</p></li>
+<li><p>Binary files, with machine-readable data.</p></li>
+<li><p>Proprietary data formats that can only be opened with special software!</p></li>
+</ul>
+<p>The lack of standardization is definitely a pain and a bottleneck in data science pipelines when working with materials data.
+Therefore, we’re using this lesson as an opportunity to learn how to better interface with data files programmatically.</p>
+<div class="section" id="csv-files">
+<h3>CSV files<a class="headerlink" href="#csv-files" title="Permalink to this headline">¶</a></h3>
 <p>By now, you’ve probably realized that your XRD data is <strong>highly structured</strong>.
 In particular, it takes the format <code class="docutils literal notranslate"><span class="pre">angle,intensity</span></code> inside a text file, like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.00</span><span class="p">,</span><span class="mf">1712.5</span>
@@ -513,8 +541,9 @@ In particular, it takes the format <code class="docutils literal notranslate"><s
 </div>
 <p>We call these files <strong>comma-separated values</strong> files, or <strong>CSV</strong> for short.
 They’re nice because they’re easy to store and they strike a healthy balance between easy for humans to read (looks like a data table) and easy for computers to read (the values can be loaded into an array).
-Previously, you’ve seen how the NumPy package can read in CSV files for plotting purposes.
+Previously, you’ve seen how the NumPy package can read in CSV files for plotting purposes, but we didn’t say much more.
 Here, we’ll teach you how to use another package that gives you even more flexibility when working with such tabular data.</p>
+</div>
 </div>
 <div class="section" id="pandas">
 <h2>pandas!<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h2>
@@ -1291,7 +1320,7 @@ The general syntax is:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/intro_tabular_blank_25_0.png" src="../_images/intro_tabular_blank_25_0.png" />
+<img alt="../_images/intro_tabular_blank_26_0.png" src="../_images/intro_tabular_blank_26_0.png" />
 </div>
 </div>
 </div>
