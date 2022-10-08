@@ -29,7 +29,7 @@ however, please be sure to write your own code, generate your own plots, and com
 
 Several students who have taken MSE 104L in the past have appreciated the hands-on experimental procedures, but wished that there could also be more structured guidance during the data analysis portion to facilitate the writeup. 
 Because we care about your feedback and your success in this course, we have tried to accommodate this request, albeit with a slight twist. 
-Namely, we hope to **provide greater clarity for the analysis**, but we will do so in the context of **teaching you some data science** skills as well.
+Namely, we hope to **provide greater clarity for the analysis**, but we will do so in the context of **teaching you some data science and scientific communication** skills as well.
 We believe this will help you complete your lab reports and give you transferable skills that can be applied to other pursuits.
 
 
@@ -37,5 +37,14 @@ We believe this will help you complete your lab reports and give you transferabl
 
 We hope these exercises will help you grow in the following ways: 🌱
 - Create some hella nice plots based on effective data visualization principles. 📊
+- Strengthen scientific communication by incorporating effective visualizations and statistical analyses of data. 🧮
 - Apply computational tools to streamline and automate the analysis of MSE data. 🤖
 - Develop basic proficiency with common Python packages for DS—another tool to add to your toolbox. 🧰
+
+
+## Usage  
+
+If this is your first time using Jupyter Book/Hub, and particularly if it's your first time using Python, we suggest you take a look at the **tutorials** in the next few pages. 
+We've made a few notebooks that you might find helpful: {doc}`lab0/jbook_usage` and {doc}`lab0/intro_python_jupyter_blank`.
+Otherwise, you can proceed to {doc}`lab1/lab1` and get started.
+Have fun!

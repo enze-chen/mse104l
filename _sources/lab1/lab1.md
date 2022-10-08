@@ -12,7 +12,7 @@ The primary objectives of these notebooks are:
 
 ```{tip}
 If you're unfamiliar with Python and the JupyterHub interface, we've prepared some tutorials for you in the previous pages.
-In particular, there's an {doc}`../lab0/intro_python_jupyter_blank` notebook with a series of short exercises to introduce the Python syntax.
+Please refer to the {doc}`../lab0/jbook_usage` and {doc}`../lab0/intro_python_jupyter_blank` notebooks for more guidance!
 ```
 
 
