@@ -4,7 +4,7 @@
 
 Welcome to Lab 4!
 This lab finally departs from X-ray diffraction, although you've noticed that spectroscopy still plays an important role. 
-Since the SEM micrographs are not particularly interesting, we don't have a great opportunity to work with computer vision tools in this analysis, but we'll still demo something that we think is cool (purely to pique your interest).
+Since the SEM micrographs are not particularly interesting, we don't have a great opportunity to work with computer vision tools in this analysis, but we'll still demo something that we think is cool to pique your interest.
 
 The primary objectives of these notebooks are:
 - Apply more Matplotlib commands to fine-tune your plots.

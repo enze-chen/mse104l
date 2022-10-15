@@ -4,7 +4,8 @@
 Welcome to Lab 1!
 For this lab, we will be writing some Python code to help analyze your X-ray emission and absorption data.
 Because there are a lot of spectra and plots involved in the writeup, we'll focus this lab on **data visualization** in Python.
-Whenever we're working with data, there exists an opportunity to _tell a good story_, and creating compelling visualizations (e.g., plots) is a critical component.
+Whenever we're working with data, there exists an opportunity to _tell a good story_, and creating compelling visualizations (e.g., plots) is a critical component as that's what our eyes gravitate towards and what our brains remember best.
+We believe this data-centered approach (e.g., structuring text around figures/tables) will lead to an easier writing process.
 
 The primary objectives of these notebooks are:
 - Create plots of your data with the Matplotlib library. 

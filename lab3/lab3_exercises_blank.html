@@ -453,7 +453,8 @@ It doesn’t answer all of the discussion questions in the lab procedures, but i
 <li><p>Write code below (add a new Code cell) to process and plot the data.</p></li>
 <li><p>Save the figure and download it to your computer.</p></li>
 </ol>
-<p>If you don’t remember what you did in lab 2, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab2</span></code>.</p>
+<p>If you don’t remember what you did in lab 2, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab2</span></code>.
+We hope plotting in Python feels smooth at this point, whether it’s from muscle memory or referencing templates.</p>
 </div>
 <div class="section" id="write-a-function-to-calculate-the-lattice-constant">
 <h2>Write a function to calculate the lattice constant<a class="headerlink" href="#write-a-function-to-calculate-the-lattice-constant" title="Permalink to this headline">¶</a></h2>
@@ -464,7 +465,7 @@ Of course, if you did the programming solution last time, you’ll have no probl
 There are two ways to go about this:</p>
 <ol class="simple">
 <li><p>(<em>Works</em>) You can copy-paste the individual code sections from the previous lab into a single code block and just run it repeatedly, with different peak positions (corresponding to different Cu–Ni samples), to get lattice constants through Nelson-Riley.</p></li>
-<li><p>(<em>Slightly more preferred?</em>) You can do something slightly fancier and <strong>write a function</strong> that makes things look cleaner as you repeat the steps.
+<li><p>(<em>Slightly snazzier?</em>) You can do something fancier and <strong>write a function</strong> that makes things look cleaner as you repeat the steps.
 Recall that functions in Python look like:</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
@@ -478,7 +479,7 @@ Recall that functions in Python look like:</p></li>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="k">def</span> <span class="nf">df_calcs</span><span class="p">(</span><span class="n">angles</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">df_calcs</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">):</span>
     <span class="c1"># in your function, this would be the operations to calculate the lattice constant</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;angles&#39;</span><span class="p">:</span><span class="n">angles</span><span class="p">})</span>
     <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;angles&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
@@ -494,8 +495,9 @@ Recall that functions in Python look like:</p></li>
     
 <span class="c1"># change the inputs and call the function - voila!</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">17.02</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">4.99</span><span class="p">,</span> <span class="mf">2.01</span><span class="p">]</span>
+<span class="n">wl</span> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">df_calcs</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df_calcs</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">wl</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
 <span class="n">make_nr</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -593,7 +595,7 @@ Pearson’s <span class="math notranslate nohighlight">\(r\)</span> can be expre
 The orange line is merely a guide to the eye.</p>
 <div class="section" id="computing-r">
 <h3>Computing <span class="math notranslate nohighlight">\(r\)</span><a class="headerlink" href="#computing-r" title="Permalink to this headline">¶</a></h3>
-<p>Once again, NumPy makes our lives pretty easy by handing to us <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html"><code class="docutils literal notranslate"><span class="pre">np.corrcoef()</span></code></a> on a silver platter.
+<p>Once again, NumPy makes our lives pretty easy by handing to us the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html"><code class="docutils literal notranslate"><span class="pre">np.corrcoef()</span></code></a> function.
 This function takes in <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> arrays and returns their correlation coefficient <em>as a matrix</em> (which element should we choose?).
 It should take only a few lines of code—see if you can get it working!</p>
 <div class="cell docutils container">

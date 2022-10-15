@@ -462,7 +462,7 @@ These new ideas are marked with a ⭐.
 <div class="section" id="import-python-packages">
 <h2>Import Python packages<a class="headerlink" href="#import-python-packages" title="Permalink to this headline">¶</a></h2>
 <p>It can be pretty helpful to import all required packages at the top of the notebook, which we’ve done below.
-We even changed some of the default settings!
+Please modify the settings as needed.
 Run the cell below using <kbd>Shift</kbd>+<kbd>Enter</kbd>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -585,13 +585,14 @@ The individual points will have noise, so it’s best to compute a line of best 
 <ul class="simple">
 <li><p>You should probably manually create NumPy arrays for your values with the syntax: <code class="docutils literal notranslate"><span class="pre">np.array(list_of_values)</span></code>.</p></li>
 <li><p>⭐ To take the <strong>natural logarithm</strong> of an array, use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.log.html"><code class="docutils literal notranslate"><span class="pre">np.log(arr)</span></code></a>.</p></li>
-<li><p>⭐ To calculate a <strong>line of best fit</strong>, you can use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> command as follows:</p></li>
+<li><p>⭐ To calculate a <strong>line of best fit</strong> in Python, you can use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> command as follows:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> hold your values and <code class="docutils literal notranslate"><span class="pre">1</span></code> specifies a degree 1 polynomial (line).
-The resulting slope and <span class="math notranslate nohighlight">\(y\)</span>-intercept are stored in <code class="docutils literal notranslate"><span class="pre">c[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">c[1]</span></code>, respectively, as <code class="docutils literal notranslate"><span class="pre">c</span></code> is an array containing coefficients in <em>decreasing order of</em> <span class="math notranslate nohighlight">\(x\)</span>.</p>
+The resulting coefficients are stored in the <code class="docutils literal notranslate"><span class="pre">c</span></code> array in <em>decreasing order of</em> <span class="math notranslate nohighlight">\(x\)</span>;
+that is, <span class="math notranslate nohighlight">\(c_0 x^n + c_1 x^{n-1} + \cdots + c_{n-1} x + c_n \)</span> for a degree <span class="math notranslate nohighlight">\(n\)</span> polynomial fit.</p>
 <ul class="simple">
 <li><p>⭐ Just as <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> is for curves, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.scatter.html"><code class="docutils literal notranslate"><span class="pre">ax.scatter(x,</span> <span class="pre">y)</span></code></a> can be used for individual points.</p></li>
 </ul>
