@@ -500,8 +500,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quick-exercise-create-the-following-1d-arrays">
-     Quick exercise: create the following 1D arrays
+    <a class="reference internal nav-link" href="#quick-exercise-create-and-print-the-following-1d-arrays">
+     Quick exercise: create and print the following 1D arrays
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -713,8 +713,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quick-exercise-create-the-following-1d-arrays">
-     Quick exercise: create the following 1D arrays
+    <a class="reference internal nav-link" href="#quick-exercise-create-and-print-the-following-1d-arrays">
+     Quick exercise: create and print the following 1D arrays
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -746,9 +746,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
 </div>
 <p>This notebook contains a series of exercises that are <strong>intended for people who are new to Python</strong>.
-It does assume some programming familiarity (maybe in another language) so not all computing concepts are discussed; the focus is largely on Python syntax.
+It does assume some programming familiarity (e.g., maybe in MATLAB), so the focus is largely on Python syntax.
 It is also targeted towards what you’ll need to finish the laboratory exercises, so we won’t discuss all of the details of Python.
-We suggest you go through the notebook from top to bottom; however, if you find that you already know a lot of this information, feel free to skip around.
+We suggest you go through the notebook sequentially; however, if you find that you already know a lot of this information, feel free to skip around (<a class="reference external" href="#The-NumPy-package">NumPy</a> might be new to most).
 If everything in the following Table of Contents looks familiar to you, you can probably proceed directly to Lab 1 exercises.</p>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
@@ -830,7 +830,7 @@ We can directly type the expression into a code cell and evaluate it (remember: 
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>Notice that after we execute the above expressions, the value is displayed, but “lost” in the sense that we cannot use it for future computations (without typing the whole expression again).
-This calls for <strong>variables</strong>, which are used to store values for future use and to improve code readability.
+This calls for <strong>variables</strong>, which can also help improve code readability.
 All Python variables have three components:</p>
 <ul class="simple">
 <li><p>A <code class="docutils literal notranslate"><span class="pre">name</span></code> that you assign.</p></li>
@@ -862,7 +862,7 @@ You’ve already seen two data types in the previous examples, namely <code clas
 For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>   <span class="c1"># notice how we can reference variables and data from previously-run cells!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>   <span class="c1"># in Jupyter we can reference variables and data from previously-run cells!</span>
 </pre></div>
 </div>
 </div>
@@ -922,6 +922,21 @@ Run the next cell to check it out.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>UC Berkeley is the best!
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement below contains an <strong>f-string</strong>, which is very cool.
+It allows us to include other data types within strings, as long as we enclose that quantity inside curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code> and preface the string with an <code class="docutils literal notranslate"><span class="pre">f</span></code> character.
+Note that the quantity inside the <code class="docutils literal notranslate"><span class="pre">{}</span></code> can even be an expression that’s evaluated on-the-fly!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">first</span><span class="si">}{</span><span class="n">second</span><span class="si">}</span><span class="s1">!!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>UC Berkeley is the best!!!
 </pre></div>
 </div>
 </div>
@@ -1016,7 +1031,7 @@ Everything that is indented will be part of the loop, and as soon as the indenta
 <p>We’ve already seen a few examples of built-in functions above: <code class="docutils literal notranslate"><span class="pre">print()</span></code>, <code class="docutils literal notranslate"><span class="pre">type()</span></code>, <code class="docutils literal notranslate"><span class="pre">range(N)</span></code>.
 From these examples, you should notice that functions are called with their name followed by parentheses.
 Inside the parentheses, there <em>may or may not be</em> <strong>input arguments</strong>.
-These input arguments can have an implied order, or explicitly called out with keywords.
+These input arguments can have an implied order, or explicitly specified with keywords, as shown below.
 As we go along, we’ll see more examples of functions that we can call to help us accomplish certain tasks in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1030,7 +1045,7 @@ As we go along, we’ll see more examples of functions that we can call to help 
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;there&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;there&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Specify an input arg, the delimiter, with newline character</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;there&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># keyword argument</span>
 </pre></div>
 </div>
 </div>
@@ -1073,12 +1088,12 @@ If you want to use the values computed by the caller of the function, you have t
 <div class="section" id="lists">
 <h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>Whew, believe it or not, the fun is just beginning! 😁
+<p>The fun is just beginning! 😁
 So far we’ve covered variables, data types, control flow, and functions.
-A natural next question to ask is what should we do if we have several pieces of data?
+A natural question to ask next is what should we do if we have several pieces of data?
 Do we create a variable for each one?
 Or is there somewhere we can <em>store</em> the collection of data for later access?
-This means it’s time to discuss <strong>data structures</strong>, and here we will cover <strong>lists</strong> (and a little bit more on strings) and <strong>dictionaries</strong>.</p>
+This means it’s time to discuss <strong>data structures</strong>, and here we will cover <strong>lists</strong> and <strong>dictionaries</strong>.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">list</span></code> is an <strong>ordered</strong> data structure that stores a sequence of values.
 The elements are contained within square brackets <code class="docutils literal notranslate"><span class="pre">[...]</span></code> and separated by commas <code class="docutils literal notranslate"><span class="pre">,</span></code>.
 The values in a <code class="docutils literal notranslate"><span class="pre">list</span></code> can have <em>different types</em>, and they can even be lists themselves.
@@ -1106,10 +1121,8 @@ We often use this number to figure out the size of our dataset, set the <code cl
 </div>
 <div class="section" id="quick-exercise-below-print-the-length-of-the-list-mixed">
 <h3>Quick exercise: Below, print the length of the list <code class="docutils literal notranslate"><span class="pre">mixed</span></code><a class="headerlink" href="#quick-exercise-below-print-the-length-of-the-list-mixed" title="Permalink to this headline">¶</a></h3>
-<p>Before you write the one line of code below, we ask you to think about it: <strong>Will the length be 5 or 6</strong>? Why?</p>
-<p>Also, you can directly use the <code class="docutils literal notranslate"><span class="pre">mixed</span></code> variable below, and it will have the same value as the <code class="docutils literal notranslate"><span class="pre">mixed</span></code> variable from above (you don’t have to initialize it again).
-Variables in code cells, after being executed, will persist and can be used in other code cells.
-Nice.</p>
+<p>Assuming you executed the previous cell, you can directly use the <code class="docutils literal notranslate"><span class="pre">mixed</span></code> variable.
+But before you write the one line of code below, we ask you to think about it: <strong>Will the length be 5 or 6</strong>? Why?</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
@@ -1117,9 +1130,6 @@ Nice.</p>
 </div>
 </div>
 </div>
-<p><strong>Note</strong>: The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement above contains an <strong>f-string</strong>, which is very cool.
-It allows us to include other data types within strings, as long as we enclose that quantity inside <code class="docutils literal notranslate"><span class="pre">{}</span></code> and preface the string with an <code class="docutils literal notranslate"><span class="pre">f</span></code> character.
-Note that the quantity inside the <code class="docutils literal notranslate"><span class="pre">{}</span></code> can even be an expression that’s evaluated on-the-fly!</p>
 </div>
 <div class="section" id="accessing-list-elements">
 <h3>Accessing list elements<a class="headerlink" href="#accessing-list-elements" title="Permalink to this headline">¶</a></h3>
@@ -1151,7 +1161,7 @@ The last course is 151.
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_15696</span>\<span class="mf">4080821567.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_106828</span>\<span class="mf">4080821567.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The third course is </span><span class="si">{</span><span class="n">core</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The last course is </span><span class="si">{</span><span class="n">core</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The 9th student is </span><span class="si">{</span><span class="n">core</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>    <span class="c1"># error!</span>
@@ -1253,6 +1263,15 @@ Examples include:</p>
 <span class="n">schools</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;UC Berkeley&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;UCLA&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Stanford&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>   <span class="c1"># values can repeat; keys cannot!</span>
 <span class="n">band_gaps</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;copper&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;silicon&#39;</span><span class="p">:</span><span class="mf">1.1</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">:</span><span class="mf">5.0</span><span class="p">}</span>
 <span class="n">props</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;lithium&#39;</span><span class="p">:{</span><span class="s1">&#39;number&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">:</span><span class="mf">6.941</span><span class="p">,</span> <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;alkali metal&#39;</span><span class="p">}}</span>   <span class="c1"># nested dictionary with many types!</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">band_gaps</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">props</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;copper&#39;: 0, &#39;silicon&#39;: 1.1, &#39;diamond&#39;: 5.0}
+{&#39;lithium&#39;: {&#39;number&#39;: 3, &#39;mass&#39;: 6.941, &#39;group&#39;: &#39;alkali metal&#39;}}
 </pre></div>
 </div>
 </div>
@@ -1264,7 +1283,7 @@ Examples include:</p>
 </pre></div>
 </div>
 <p>to get the <code class="docutils literal notranslate"><span class="pre">value</span></code> associated with the <code class="docutils literal notranslate"><span class="pre">key</span></code>.
-Just like with lists, the syntax is the same for getting the value and for setting the value (<code class="docutils literal notranslate"><span class="pre">dict</span></code>s, like <code class="docutils literal notranslate"><span class="pre">list</span></code>s, are <em>mutable</em>).</p>
+Just like with lists, the syntax is the same for getting the value and for setting the value.</p>
 </div>
 <div class="section" id="adding-new-entries">
 <h3>Adding new entries<a class="headerlink" href="#adding-new-entries" title="Permalink to this headline">¶</a></h3>
@@ -1304,11 +1323,15 @@ So there’s no real sense of “the first entry” or “the second-to-last ent
 <p>So far, everything that we’ve done is with native Python; in other words, the functions and data that come with the default Python installation.
 However, one of the advantages of Python is its <strong>extensibility</strong>, which comes in the form of various <strong>packages</strong> (i.e., libraries) that allow you to do more with Python.
 A default Python installation comes with a few extra packages installed, while others you have to install on your own.</p>
-<p>In all cases, before you can use the functions inside a package, you have to <strong>import</strong> it like the following example:</p>
+<p>In all cases, before you can use the functions inside a package, you have to <strong>import</strong> it as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">package_name</span>
+</pre></div>
+</div>
+<p>Example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>            <span class="c1"># this package allows your code to interface with your operating system</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>   <span class="c1"># this is a function from the os package. We include the package namespace</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>   <span class="c1"># this is a function from the os package. We include the package namespace to use it</span>
 </pre></div>
 </div>
 </div>
@@ -1321,7 +1344,7 @@ A default Python installation comes with a few extra packages installed, while o
 <p>You’ll notice that in the above example, we had to type <code class="docutils literal notranslate"><span class="pre">os.function_name()</span></code> to use any function from the <code class="docutils literal notranslate"><span class="pre">os</span></code> package.
 This will be true for all packages.
 However, if the specific function is one that we use frequently, we can directly import it too, using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">package</span> <span class="kn">import</span> <span class="n">function_1_name</span><span class="p">,</span> <span class="n">function_2_name</span><span class="p">,</span> <span class="o">...</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">package_name</span> <span class="kn">import</span> <span class="n">function_1_name</span><span class="p">,</span> <span class="n">function_2_name</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -1347,6 +1370,7 @@ The syntax for an alias is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">standard_package_name_that_could_be_really_long</span> <span class="k">as</span> <span class="nn">short_alias</span>
 </pre></div>
 </div>
+<p>For NumPy, this looks like:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># not too much shorter, but this is best practice</span>
@@ -1427,8 +1451,8 @@ It generates a sequence of integers from the starting number (inclusive) to the 
 This generates a NumPy array of length <code class="docutils literal notranslate"><span class="pre">num_points</span></code> with evenly-spaced points between <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span></code>, both inclusive.</p>
 <p>Note that both functions require specifying the <code class="docutils literal notranslate"><span class="pre">np</span></code> package prefix.</p>
 </div>
-<div class="section" id="quick-exercise-create-the-following-1d-arrays">
-<h3>Quick exercise: create the following 1D arrays<a class="headerlink" href="#quick-exercise-create-the-following-1d-arrays" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="quick-exercise-create-and-print-the-following-1d-arrays">
+<h3>Quick exercise: create and print the following 1D arrays<a class="headerlink" href="#quick-exercise-create-and-print-the-following-1d-arrays" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>A <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.arange.html">range of integers</a> from 0 to 99, inclusive.</p></li>
 <li><p>An array of 15 <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html">evenly-spaced numbers</a> from 0 to 50, inclusive.</p></li>
@@ -1457,7 +1481,7 @@ For example, if you had a file with the following contents:</p>
 The <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a> function takes the following input arguments (more arguments can be found in the linked documentation):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fname</span></code>: The name of the text file (required).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delimiter</span></code>: The token that separates the different elements. Default is space <code class="docutils literal notranslate"><span class="pre">None</span></code> but you might need comma <code class="docutils literal notranslate"><span class="pre">','</span></code> or something else.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delimiter</span></code>: The token that separates the different elements. Default is a space, but you might need comma (<code class="docutils literal notranslate"><span class="pre">','</span></code>) or something else.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">skiprows</span></code>: Helpful if there are extraneous lines at the beginning of your file. Default is <code class="docutils literal notranslate"><span class="pre">0</span></code> if not specified (i.e., start from the top).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_rows</span></code>: Helpful if there are extraneous lines at the end of your file. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code> if not specified (i.e., read the whole file to the last line).</p></li>
 </ul>
@@ -1486,9 +1510,8 @@ The <a class="reference external" href="https://numpy.org/doc/stable/reference/g
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>Ta-da! 🎉
-We will be relying on this function heavily in this lab. Stay tuned.</p>
-<p>Otherwise, that concludes this abbreviated whirlwind introduction to Python.
-The next notebook is also a tutorial—on plotting data—and it will apply the knowledge presented here, assuming that you are at least somewhat familiar with all of these concepts.</p>
+This concludes our abbreviated whirlwind introduction to Python.
+The first notebook for Lab 1 is also a tutorial—on plotting data—and it will apply the knowledge presented here, assuming that you are at least somewhat familiar with all of these concepts.</p>
 </div>
 </div>
 
@@ -1538,7 +1561,7 @@ The next notebook is also a tutorial—on plotting data—and it will apply the 
     <footer class="footer">
   <p>
     
-      By Enze Chen and Andrew Minor<br/>
+      By Enze Chen and Andrew M. Minor<br/>
     
         &copy; Copyright 2022.<br/>
       <div class="extra_footer">

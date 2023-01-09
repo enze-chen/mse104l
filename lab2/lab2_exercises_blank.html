@@ -565,7 +565,8 @@ You should be quite proficient at this by now!</p>
 <li><p>Write code below to process and plot the data.</p>
 <ul class="simple">
 <li><p>You can now use pandas!
-You’ll probably start with <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv('sample_N.txt',</span> <span class="pre">names=['something',</span> <span class="pre">'sensible'])</span></code>.</p></li>
+You’ll probably start with <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv('sample_N.txt',</span> <span class="pre">names=['something',</span> <span class="pre">'sensible'])</span></code>.
+Or you can stick with <code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code> as before.</p></li>
 <li><p>Call <code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">ax</span> <span class="pre">=</span> <span class="pre">plt.subplots()</span></code> to get things started.</p></li>
 <li><p>Use <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a> and <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axes.html"><code class="docutils literal notranslate"><span class="pre">ax.set()</span></code></a> to plot and style things.</p></li>
 </ul>
@@ -589,7 +590,7 @@ You’ll probably start with <code class="docutils literal notranslate"><span cl
     For your cubic crystal structures, you don't <i>have to</i> use a programmatic solution to solve for the lattice constants.
     But realize that this means you'll have to calculate the lattice constant (<i>a</i>) corresponding to each peak by hand, and that gets <i>repetitive</i>.
     Often times, if we find ourselves doing the same set of structured tasks over and over again, it's a good case to turn to a programmatic solution to automate things. 
-    Also, you'll thank us when you get to Lab 3. 😉
+    Also, you'll thank us when you get to Lab 3!
 </div></div>
 <div class="section" id="lattice-constant-calculations">
 <h2>Lattice constant calculations<a class="headerlink" href="#lattice-constant-calculations" title="Permalink to this headline">¶</a></h2>
@@ -650,7 +651,7 @@ In our case, we know the wavelength and angle, so we can find the interplanar sp
 We will try to do this in a very principled fashion.
 <em>Modular solutions</em> are very important when programming.</p>
 <div class="alert alert-warning">
-    Before continuing, rewrite Bragg's law to solve for the interplanar spacing.
+    Before continuing, rewrite Bragg's law (paper and pencil) to solve for the interplanar spacing.
 </div>
 <hr class="docutils" />
 <div class="section" id="find-theta">
@@ -833,7 +834,7 @@ We hope you’re proud of the plots that you generated and wish you luck with th
     <footer class="footer">
   <p>
     
-      By Enze Chen and Andrew Minor<br/>
+      By Enze Chen and Andrew M. Minor<br/>
     
         &copy; Copyright 2022.<br/>
       <div class="extra_footer">

@@ -444,11 +444,15 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
 </div>
 <p>This notebook contains a series of exercises to help you process your data from Lab 1.
-It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report.
-It will likely lead to a higher grade!</p>
+It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report,
+We hope it makes the writeup easier!</p>
 <div class='alert alert-success'>
 We tried to stagger the guidance such that each exercise only introduces a few new ideas at a time.
 These new ideas are marked with a ⭐.
+</div>
+<div class='alert alert-warning'>
+We understand that many students' plots may now look very similar, but please make sure to write your own code and lab reports.
+That will lead to deeper learning.
 </div><div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <p>The exercises in this notebook include:</p>
@@ -489,9 +493,9 @@ Run the cell below using <kbd>Shift</kbd>+<kbd>Enter</kbd>.</p>
 <div class="section" id="visualizing-an-emission-spectra">
 <h2>Visualizing an emission spectra<a class="headerlink" href="#visualizing-an-emission-spectra" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>Since you went through all that trouble to obtain a Cu emission spectra, let’s now plot it!</p>
+<p>Since you went through all that trouble to gather a Cu emission spectra experimentally, let’s now plot it!</p>
 <ol class="simple">
-<li><p>First, you’ll want to <strong>upload</strong> the data to this folder in JupyterHub (📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>).</p></li>
+<li><p>First, you’ll want to <strong>upload</strong> the diffractometer data to this folder in JupyterHub (📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>).</p></li>
 <li><p>Then you can load it into a NumPy array with <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a>.</p></li>
 <li><p>⭐ Then plot it with Matplotlib (<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a>).</p></li>
 <li><p>❗Don’t forget styling elements! Here’s the character for theta: θ</p></li>
@@ -517,7 +521,7 @@ You can find the saved figure in the same JupyterHub directory as above.</p></li
 <h3>Some thoughts on styling<a class="headerlink" href="#some-thoughts-on-styling" title="Permalink to this headline">¶</a></h3>
 <p>From our experience:</p>
 <ul class="simple">
-<li><p>It is <em>almost always</em> the case that your fonts (e.g., labels) need to be <strong>larger than you expect</strong>. This is because the figure will be shrunk in your report/poster/etc., but it still needs to be readable.</p></li>
+<li><p>It is <em>almost always</em> the case that your fonts (e.g., labels) and line thickness need to be <strong>larger than you expect</strong>. This is because the figure will be shrunk in your report/poster/etc., but it still needs to be readable.</p></li>
 <li><p>Titles are somewhat optional, as they just take up valuable space from your data. Throw the descriptions into your captions.</p></li>
 <li><p>Intensities are somewhat arbitrary, so you can give it units of <a class="reference external" href="https://en.wikipedia.org/wiki/Arbitrary_unit"><code class="docutils literal notranslate"><span class="pre">(a.u.)</span></code></a> and omit the bulky <span class="math notranslate nohighlight">\(y\)</span>-ticks/labels by passing <code class="docutils literal notranslate"><span class="pre">yticks=[]</span></code> to <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code>. More space for your data!</p></li>
 </ul>
@@ -533,7 +537,8 @@ If you want to plot multiple curves on the same axis:</p>
 <li><p>Copy the code from above and add another <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> call to add a second spectra featuring <strong>one</strong> of the elemental filters.</p>
 <ul class="simple">
 <li><p>⭐ We recommend adding labels and a legend to help distinguish them.</p></li>
-<li><p>⭐ We recommend making the <strong>colors</strong> for each filter consistent; that is, different filters should be represented by different colors. You can choose the color name <a class="reference external" href="https://matplotlib.org/stable/gallery/color/named_colors.html">from these lists</a> and set it using the <code class="docutils literal notranslate"><span class="pre">c</span></code> parameter: <code class="docutils literal notranslate"><span class="pre">ax.plot(x,</span> <span class="pre">y,</span> <span class="pre">c='my_color_name')</span></code>.</p></li>
+<li><p>⭐ We recommend making the <strong>colors</strong> for each elemental filter consistent.
+You can choose the color name <a class="reference external" href="https://matplotlib.org/stable/gallery/color/named_colors.html">from these lists</a> and set it using the <code class="docutils literal notranslate"><span class="pre">c</span></code> parameter: <code class="docutils literal notranslate"><span class="pre">ax.plot(x,</span> <span class="pre">y,</span> <span class="pre">c='my_color_name')</span></code>.</p></li>
 <li><p>We <em>do not</em> recommend plotting all filters onto the same plot.</p></li>
 </ul>
 </li>
@@ -583,7 +588,7 @@ You have collected the values of <span class="math notranslate nohighlight">\(I_
 The individual points will have noise, so it’s best to compute a line of best fit and then extract the mass absorption coefficient <span class="math notranslate nohighlight">\(\mu/\rho\)</span>.</p>
 <p>Here are some more hints:</p>
 <ul class="simple">
-<li><p>You should probably manually create NumPy arrays for your values with the syntax: <code class="docutils literal notranslate"><span class="pre">np.array(list_of_values)</span></code>.</p></li>
+<li><p>You should probably manually create NumPy arrays for your values with the syntax: <code class="docutils literal notranslate"><span class="pre">x=np.array(list_of_values)</span></code> and similarly for <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
 <li><p>⭐ To take the <strong>natural logarithm</strong> of an array, use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.log.html"><code class="docutils literal notranslate"><span class="pre">np.log(arr)</span></code></a>.</p></li>
 <li><p>⭐ To calculate a <strong>line of best fit</strong> in Python, you can use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> command as follows:</p></li>
 </ul>
@@ -660,7 +665,7 @@ We hope you’re proud of the plots that you generated and wish you luck with th
     <footer class="footer">
   <p>
     
-      By Enze Chen and Andrew Minor<br/>
+      By Enze Chen and Andrew M. Minor<br/>
     
         &copy; Copyright 2022.<br/>
       <div class="extra_footer">

@@ -369,13 +369,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#uploading-your-own-data">
    Uploading your own data
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-on-external-links">
-     Note on external links
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
@@ -450,13 +443,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#uploading-your-own-data">
    Uploading your own data
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-on-external-links">
-     Note on external links
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conclusion">
@@ -475,12 +461,10 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="how-to-use-jupyter-book">
 <h1>How to use Jupyter Book<a class="headerlink" href="#how-to-use-jupyter-book" title="Permalink to this headline">¶</a></h1>
 <p>This document/website that you’re reading right now is created using <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Book</a>.
-Not only can you read the prose, but you can also run the code in real time to put the ideas into practice.
 Here, we will take a moment to explain the UI to help you get the most out of the experience.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>As with any other tool, there will be a learning curve.
-Initially it will take time to figure out the UI and Python commands; however, with time, we believe this method is <strong>a lot faster and cleaner</strong> than other methods (e.g., manual manipulation in Excel).
+<p>As with any other tool, there will be a learning curve; however, over time, we believe this method is <strong>a lot faster and cleaner</strong> than other methods (e.g., Excel).
 It’ll be more creative and fun too. 🙂</p>
 </div>
 <div class="section" id="contents">
@@ -498,10 +482,10 @@ It’ll be more creative and fun too. 🙂</p>
 The <code class="docutils literal notranslate"><span class="pre">Lab</span> <span class="pre">X</span></code> pages will have a more detailed summary of all of the associated exercises for that lab, which can be expanded by clicking the down chevron (⌄).
 Feel free to click around and then come back to this page.</p>
 <div class="sidebar">
-<p class="sidebar-title">Complexities of managing Python</p>
+<p class="sidebar-title">The wonders of Python</p>
 <div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/pythonenv_xkcd.png"><img alt="pythonenv_xkcd" src="../_images/pythonenv_xkcd.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text"><a class="reference external" href="https://xkcd.com/1987/">xkcd 1987</a>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/python_xkcd.png"><img alt="python_xkcd" src="../_images/python_xkcd.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text"><a class="reference external" href="https://xkcd.com/353/">xkcd 353</a>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -509,36 +493,30 @@ Feel free to click around and then come back to this page.</p>
 <h2>Interactivity<a class="headerlink" href="#interactivity" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>Several of the pages of this book are actually <strong>Jupyter notebooks</strong>, which provide interactive programming environments that interleave text, code, and graphics to provide hands-on learning experiences for students.
-On these pages, you will be able to run Python code in real time, whether that’s for a tutorial to learn the commands or for your actual laboratory data analysis.
-The interactivity is enabled through the campus <a class="reference external" href="https://datahub.berkeley.edu/">JupyterHub</a>, which runs Jupyter notebooks in the cloud so you don’t have to manage your own computing resources and Python installations.
+On these pages, you will be able to <strong>run Python code in real time</strong>, both for the tutorials to learn the commands and for your actual laboratory data analysis.
+The interactivity is enabled through the campus <a class="reference external" href="https://datahub.berkeley.edu/">JupyterHub</a>, which runs Jupyter notebooks in the cloud so you don’t have to manage your own software.
 It’s a blessing!</p>
-<div class="sidebar">
-<p class="sidebar-title">The wonders of Python</p>
-<div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/python_xkcd.png"><img alt="python_xkcd" src="../_images/python_xkcd.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text"><a class="reference external" href="https://xkcd.com/353/">xkcd 353</a>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
 <div class="section" id="why-python">
 <h3>Why Python? 🐍<a class="headerlink" href="#why-python" title="Permalink to this headline">¶</a></h3>
 <p>There are many programming languages one can choose from, and we eventually settled on Python as it has <a class="reference external" href="https://stackoverflow.blog/2017/09/06/incredible-growth-python/">skyrocketed in popularity</a> in recent years.
 This growth is in part due to:</p>
 <ol class="simple">
-<li><p>Its <em>readability</em>. Python is designed to be simple and reads like English (e.g., <code class="docutils literal notranslate"><span class="pre">and</span></code> instead of <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>).</p></li>
-<li><p>Its <em>extensibility</em>. Python makes it easy for developers to write <em>modules</em> that extend its functionalities for applications in <a class="reference external" href="https://wesmckinney.com/book/">data science</a>, <a class="reference external" href="https://www.nature.com/articles/s41586-020-2649-2">scientific computing</a>, <a class="reference external" href="https://numfocus.org/case-studies/first-photograph-black-hole">imaging black holes</a>, and <a class="reference external" href="https://twitter.com/ThePSF/status/1362516507918483458?s=20">flying drones on Mars</a>.</p></li>
+<li><p>Its <em>readability</em>. Python is designed to be simple and reads like English.</p></li>
+<li><p>Its <em>extensibility</em>. Python makes it easy for developers to write <em>modules</em> that extend its functionalities for applications in <a class="reference external" href="https://wesmckinney.com/book/">data science</a>, <a class="reference external" href="https://www.nature.com/articles/s41586-020-2649-2">scientific computing</a>, and <a class="reference external" href="https://twitter.com/ThePSF/status/1362516507918483458?s=20">flying drones on Mars</a>.</p></li>
 <li><p>Its <em>open-source</em> properties. This means anyone can contribute to Python development and anyone can use it—for free!</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There are many similarities between Python and MATLAB, but the latter doesn’t interface well with Jupyter Book/Hub (yet).
-You could conceivably follow these instructions and write analogous code in MATLAB, but we invite you to give Python a try in the JupyterHub, and we’re banking on the fact that open-source codes (e.g., Python, Julia) will only become more prominent in your future work.</p>
+You could conceivably follow these instructions and write analogous code in MATLAB, but we invite you to give Python a try in the JupyterHub, and we believe that open-source codes (e.g., Python, Julia) will become even more prominent in your future work.</p>
 </div>
 </div>
 <div class="section" id="launching-jupyterhub">
 <h3>Launching JupyterHub<a class="headerlink" href="#launching-jupyterhub" title="Permalink to this headline">¶</a></h3>
 <p>To launch any notebook in the JupyterHub, hover over the <span class="fa fa-rocket"></span> icon in the top-right corner, then <kbd>Ctrl</kbd>+click the button <span class="guilabel">🪐JupyterHub</span> (open in new tab), and wait for the Hub to spawn an environment.
 You may have to periodically login using your CalNet credentials and approve Canvas authorizations.
-Note that not all pages are interactive, and thus not all pages will have the rocket symbol; we will try to indicate interactive pages with a 🚀 emoji in the navigation bar.</p>
+Note that <em>not all pages are interactive</em>, and thus not all pages will have the rocket symbol;
+we will also try to indicate interactive pages with a 🚀 emoji in the navigation bar.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><strong>Try it now</strong> by clicking on the <span class="fa fa-rocket"></span> for this page and read the rest of the page in JupyterHub!</p>
@@ -577,15 +555,15 @@ This number indicates the sequence of code cell execution, which can be handy fo
 <ul class="simple">
 <li><p>You can clearly tell which cells have been executed and which cells have not.</p></li>
 <li><p>You can split code among several code blocks and run them in whatever order you want.</p></li>
-<li><p>You can easily change an earlier code cell (and rerun it!) if you only realize later on that you missed something.</p></li>
+<li><p>You can easily change an earlier code cell and rerun it.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="benefits-of-jupyterhub">
 <h3>Benefits of JupyterHub<a class="headerlink" href="#benefits-of-jupyterhub" title="Permalink to this headline">¶</a></h3>
-<p>If you are a UC Berkeley student, you may be reading this Jupyter notebook on the school’s DataHub (a <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a> instance), thanks to the support of the <a class="reference external" href="https://data.berkeley.edu/">Division of Computing, Data Science, and Society</a>.
+<p>If you are a UC Berkeley student, you may be reading this Jupyter notebook on the school’s DataHub (a <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a> instance), thanks to the support of <a class="reference external" href="https://data.berkeley.edu/">CDSS</a>.
 With DataHub, all of our Python code will be <strong>executed and saved in the cloud</strong>, even when you close a notebook.
-We’ll now quickly demonstrate how to navigate to the root directory for you to see all the files in DataHub and upload new ones as needed.</p>
+We’ll now quickly demonstrate how to navigate to the root directory for you to see all the files in DataHub and upload new ones (e.g., your data) as needed.</p>
 </div>
 </div>
 <div class="section" id="uploading-your-own-data">
@@ -603,11 +581,6 @@ An example of the Lab 1 folder is shown in the following image:</p>
 <li><p><strong>Upload</strong> raw data files (e.g., CSVs from the diffractometer) by clicking <kbd>Upload</kbd> in the top-right corner and finding the files on your computer.</p></li>
 <li><p><strong>Download</strong> files (e.g., PNG figures) by selecting the check box and clicking <kbd>Download</kbd> in the menu options that appear.</p></li>
 </ul>
-<div class="section" id="note-on-external-links">
-<h3>Note on external links<a class="headerlink" href="#note-on-external-links" title="Permalink to this headline">¶</a></h3>
-<p>The default behavior of Jupyter Book/Sphinx/HTML is to open all links <em>in the current tab</em>, so if you want to open external links in a new tab, you will have to <code class="docutils literal notranslate"><span class="pre">Ctrl+Click</span></code> the link or right click and select <kbd>Open link in new tab</kbd>.
-Otherwise you’ll have to keep clicking the 🔙 button in your browser to return to (and reload) the Jupyter Book.</p>
-</div>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
@@ -615,7 +588,7 @@ Otherwise you’ll have to keep clicking the 🔙 button in your browser to retu
 <p>This completes our introduction to the Jupyter Book interface.
 If you’re new to Python, we’ve included an accompanying notebook on the next page that goes through the fundamental commands you’ll likely need to complete all of the Python exercises for the labs.
 We hope it’s a helpful refresher.</p>
-<p>If you’re already familiar with Python, you can proceed directly to Lab 1, which focuses on data visualization!</p>
+<p>If you’re already familiar with Python, you can proceed directly to <a class="reference internal" href="../lab1/lab1.html"><span class="doc std std-doc">Lab 1</span></a>, which focuses on data visualization!</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -667,7 +640,7 @@ We hope it’s a helpful refresher.</p>
     <footer class="footer">
   <p>
     
-      By Enze Chen and Andrew Minor<br/>
+      By Enze Chen and Andrew M. Minor<br/>
     
         &copy; Copyright 2022.<br/>
       <div class="extra_footer">

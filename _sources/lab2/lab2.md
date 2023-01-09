@@ -7,7 +7,7 @@ You will be analyzing more X-ray diffraction (XRD) spectra in this lab, so you w
 Moreover, there are a few calculations that you will have to do in order to determine the crystal structure (e.g., computing lattice constants), which gives us an opportunity to teach you how to work with tabular data in Python, a very useful skill.
 You may find that these techniques are helpful for your homework as well. 😉
 
-The primary objectives of these notebooks are:
+The primary outcomes of these notebooks are:
 - Apply more Matplotlib commands to fine-tune your plots.
 - Use basic functions associated with pandas and DataFrames to work with tabular data.
 

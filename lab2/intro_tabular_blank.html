@@ -503,7 +503,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>This notebook contains a series of exercises that explore tabular data and <a class="reference external" href="https://pandas.pydata.org/">the pandas package</a>.
 We hope that after going through these exercises, you will be prepared to use pandas and other programmatic tools to operate on tabular data, which can be very helpful when analyzing X-ray diffraction (XRD) data.
-Like the previous lab, if you’re already familiar working with tabular data, you can jump straight to the lab exercises.</p>
+Like the previous lab, if you’re already familiar working with tabular data, you can jump straight to the Lab 2 exercises on the next page.</p>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <p>These exercises are grouped into the following sections:</p>
@@ -556,7 +556,7 @@ The name is derived from “<a class="reference external" href="https://en.wikip
 <p>At the heart of pandas lies the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a> data structure for all of your informatics needs.
 The DataFrame follows our conventional notion of a spreadsheet for 2D tabular data.
 Note that a DataFrame is for 2D data <strong>only</strong> and does not work for lower or higher dimensions (unlike NumPy arrays).
-They feature row and column labels for intelligent indexing and they support <strong>heterogeneously-typed columns</strong>. (a mix of <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code>, etc.) 🙌</p>
+They feature row and column labels for intelligent indexing and different columns can contain different types (a mix of <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">bool</span></code>, etc.) 🙌</p>
 <p>To import pandas, the community standard is to use the alias</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 </pre></div>
@@ -674,7 +674,7 @@ Take a moment to see how the column names in the constructors correspond to the 
 <div class="section" id="reading-in-a-csv-file">
 <h3>Reading in a CSV file<a class="headerlink" href="#reading-in-a-csv-file" title="Permalink to this headline">¶</a></h3>
 <p>The above methods are handy, but what if your data source is a CSV file that’s already nicely formatted for you?
-As with our first example in this notebook, it would be nice if we could directly use that structure and express it in Python.
+As with our first example in this notebook, it would be nice if we could directly use the structure in our data and express it in Python.
 You don’t want to be stuck typing out all those rows.</p>
 <p>To do this, we will use the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"><code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code></a> function which does exactly as the name describes.
 This function, as you can see from the documentation, has <em>a bajillion</em> input arguments that we don’t have time to cover today, so we’ll describe just a few here:</p>
@@ -792,10 +792,9 @@ We’ll also rename the column names to be:</p>
 <div class="section" id="working-with-dataframes">
 <h2>Working with DataFrames<a class="headerlink" href="#working-with-dataframes" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>We got our data into a DataFrame! Now what?</p>
-<p><em>Well, now the fun begins</em>. 😄</p>
+<p>We got our data into a DataFrame! Now we can have some fun. 😄</p>
 <p>The first thing you might be interested in is the dimensions of your data (DataFrame).
-We can access that using the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html"><code class="docutils literal notranslate"><span class="pre">df.shape</span></code></a> <em>attribute</em>, which returns (rows, columns).</p>
+We can access that using the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html"><code class="docutils literal notranslate"><span class="pre">df.shape</span></code></a> attribute, which returns (rows, columns).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">shape</span>
@@ -814,7 +813,7 @@ For these methods, the <code class="docutils literal notranslate"><span class="p
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>   <span class="c1"># default is axis=0, compute along columns.</span>
                 <span class="c1"># note these minima are in each INDIVIDUAL column, </span>
-                <span class="c1"># NOT necessarily corresponding to the same data point!</span>
+                <span class="c1"># NOT necessarily corresponding to the same data point (row)!</span>
 </pre></div>
 </div>
 </div>
@@ -852,85 +851,30 @@ Length: 1001, dtype: float64
 <div class="section" id="indexing-and-slicing-a-dataframe">
 <h3>Indexing and slicing a DataFrame<a class="headerlink" href="#indexing-and-slicing-a-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>There are many ways to <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/indexing.html">index into a DataFrame</a> and slice it to get subsets of your data.
-If we want to get the data in particular columns, all you have to do is enter a list of the column names!
+If we want to get the data in a <em>single</em>, all we have to do is write the column name as a string!
 For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span>   <span class="c1"># this gets the x column of the DataFrame</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>   <span class="c1"># this gets the x column of the DataFrame</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>x</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.006283</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.012566</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.018850</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.025133</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>996</th>
-      <td>6.258053</td>
-    </tr>
-    <tr>
-      <th>997</th>
-      <td>6.264336</td>
-    </tr>
-    <tr>
-      <th>998</th>
-      <td>6.270619</td>
-    </tr>
-    <tr>
-      <th>999</th>
-      <td>6.276902</td>
-    </tr>
-    <tr>
-      <th>1000</th>
-      <td>6.283185</td>
-    </tr>
-  </tbody>
-</table>
-<p>1001 rows × 1 columns</p>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       0.000000
+1       0.006283
+2       0.012566
+3       0.018850
+4       0.025133
+          ...   
+996     6.258053
+997     6.264336
+998     6.270619
+999     6.276902
+1000    6.283185
+Name: x, Length: 1001, dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="combining-columns-with-operations">
@@ -938,7 +882,7 @@ For example:</p>
 <p>Recall that with NumPy arrays, we could perform arithmetic operations on the entire array or a slice of it and store the result somewhere.
 The neat thing about pandas DataFrames is that if we apply an operation to an entire column, we can <strong>store the result in a new column</strong> that’s appended to the original DataFrame!
 The general syntax is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_column_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">operation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;old_column_name&#39;</span><span class="p">])</span>   <span class="c1"># note we now have a single string for the column names</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_column_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">operation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;old_column_name&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>See the example below where we use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.cos.html"><code class="docutils literal notranslate"><span class="pre">np.cos()</span></code></a> to compute the cosine of the <code class="docutils literal notranslate"><span class="pre">x</span></code> values.</p>
@@ -1333,7 +1277,7 @@ Some things to be aware of:</p>
 <li><p>pandas likes to save the <em>index</em> (row labels) by default, but that looks a little weird if you later open the CSV in a program like Excel, so we typically like to have <code class="docutils literal notranslate"><span class="pre">index=False</span></code>.</p></li>
 <li><p>Note that this is a method attached to a DataFrame object, not the pandas package! That is, it’s <code class="docutils literal notranslate"><span class="pre">df.to_csv()</span></code>, <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">pd.to_csv(df)</span></code>.</p></li>
 </ul>
-<p>After you run the following cell, you should see the new file appear in your JupyterHub folder.</p>
+<p>After you run the following cell, you should see the new TXT file appear in your JupyterHub folder.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;sine_updated.txt&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># save the df we&#39;ve been working with</span>
@@ -1399,7 +1343,7 @@ Onwards to the exercises!</p>
     <footer class="footer">
   <p>
     
-      By Enze Chen and Andrew Minor<br/>
+      By Enze Chen and Andrew M. Minor<br/>
     
         &copy; Copyright 2022.<br/>
       <div class="extra_footer">
