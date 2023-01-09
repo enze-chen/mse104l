@@ -12,6 +12,24 @@ It is designed using the open-source [Jupyter Book](https://jupyterbook.org/en/s
 You may find all of the exercises here: https://enze-chen.github.io/mse104l
 
 
+## Citing this work
+
+You may use the following BibTeX citation:
+
+```
+@book{chen_minor_2023_mse104l,
+    title = {MSE 104L Data Analysis},
+    author = {Chen, Enze and Minor, Andrew M.},
+    year = {2023},
+    publisher = {GitHub},
+    url = {https://enze-chen.github.io/mse104l/},
+}
+```
+
+or perhaps the more conventional:
+
+- Enze Chen and Andrew M. Minor. _MSE 104L Data Analysis_. 2023. _GitHub_, https://enze-chen.github.io/mse104l/.
+
 -----------
 
 

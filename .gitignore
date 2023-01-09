@@ -9,6 +9,7 @@ __pycache__
 **_master.ipynb
 
 # Other
+*.lnk
 my_work/
 104_labs_data
 lab1/Cu_bare.png
