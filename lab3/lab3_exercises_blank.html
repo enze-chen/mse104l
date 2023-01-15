@@ -446,14 +446,9 @@ It doesn’t answer all of the discussion questions in the lab procedures, but i
 <div class="section" id="plot-a-spectra-as-a-sanity-check">
 <h2>Plot a spectra as a sanity check<a class="headerlink" href="#plot-a-spectra-as-a-sanity-check" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>Just like Lab 2, we’ll start with a plot of one of the spectra, which you should <strong>include at least one</strong> of so your readers have a general sense of what Cu–Ni alloy XRD patterns look like.</p>
-<p>Remember the general steps are:</p>
-<ol class="simple">
-<li><p>Upload your data to JupyterHub in the <code class="docutils literal notranslate"><span class="pre">lab3</span></code> folder.</p></li>
-<li><p>Write code below (add a new Code cell) to process and plot the data.</p></li>
-<li><p>Save the figure and download it to your computer.</p></li>
-</ol>
-<p>If you don’t remember what you did in lab 2, you can always reference your completed notebooks (assuming you did them) by going to JupyterHub (<a class="reference external" href="https://datahub.berkeley.edu">https://datahub.berkeley.edu</a>) and opening them 📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab2</span></code>.
+<p>Just like Lab 2, we’ll start with a plot of one of the spectra.
+You know the drill!</p>
+<p>Of course, if you don’t remember what you did in lab 2, you can always reference your completed notebooks in <a class="reference external" href="https://datahub.berkeley.edu">JupyterHub</a>.
 We hope plotting in Python feels smooth at this point, whether it’s from muscle memory or referencing templates.</p>
 </div>
 <div class="section" id="write-a-function-to-calculate-the-lattice-constant">
@@ -472,7 +467,8 @@ Recall that functions in Python look like:</p></li>
        <span class="c1"># do something</span>
 </pre></div>
 </div>
-<p>Here’s an example of what we mean:</p>
+<p>Below is an example of what we mean.
+If you don’t like the functions approach, you can delete the code (or create a new cell) and do Method 1 instead.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -------------   WRITE YOUR CODE IN THE SPACE BELOW   ---------- #</span>
@@ -576,14 +572,14 @@ Recall that functions in Python look like:</p></li>
 <p>Recall that in the pre-lab you learned about Vegard’s law (which is pretty remarkable!) that says:</p>
 <div class="math notranslate nohighlight">
 \[ a_{\text{A-B}} = a_{\text{A}} x_{\text{A}} + a_{\text{B}} x_{\text{B}} \]</div>
-<p>where <span class="math notranslate nohighlight">\(a_X\)</span> and <span class="math notranslate nohighlight">\(x_X\)</span> are the lattice constant and concentration, respectively, of species <span class="math notranslate nohighlight">\(X\)</span>.
+<p>where <span class="math notranslate nohighlight">\(a_M\)</span> and <span class="math notranslate nohighlight">\(x_M\)</span> are the lattice constant and concentration, respectively, of species <span class="math notranslate nohighlight">\(M\)</span>.
 For the binary case where this applies, note <span class="math notranslate nohighlight">\(x_{\text{B}} = 1 - x_{\text{A}}\)</span>.</p>
 <p>Anyways, you’ll do the Nelson-Riley calculation above and get a few values of <span class="math notranslate nohighlight">\(a\)</span> corresponding to different concentrations <span class="math notranslate nohighlight">\(x\)</span>.
 You then have to plot this and comment on whether Vegard’s law is obeyed.
 There are several ways to answer this question, and we encourage you to be creative.
-Here are just two <em>suggestions</em>, one based on something you’ve seen, and another based on something that you have probably heard before and we’ll teach you how to calculate it.</p>
+Here are just two <em>suggestions</em>, one based on something you’ve already seen, and another based on something that you have probably also seen in other contexts.</p>
 <ol class="simple">
-<li><p>Like with Nelson-Riley plots, you can compute a line of best fit, plot that line, and <strong>look at the intercepts</strong> at <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span>.
+<li><p>Like with Nelson-Riley plots, you can compute a line of best fit, plot that line, and <strong>look at the value of <span class="math notranslate nohighlight">\(a\)</span> at the endpoints</strong>.
 Do they agree with the experimental lattice constants of the pure metals?
 Can you quantify the amount of error?</p></li>
 <li><p>You can compute a <strong>linear correlation coefficient</strong> (also known as <a class="reference external" href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient"><strong>Pearson’s <span class="math notranslate nohighlight">\(r\)</span></strong></a>) between your values of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(x\)</span>.
@@ -614,7 +610,7 @@ It should take only a few lines of code—see if you can get it working!</p>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>This concludes the programming exercises for Lab 3.
 Congratulations!
-We hope you’re proud of the plots that you generated and wish you luck with the lab writeup. 📝</p>
+We hope you’re proud of the plots that you generated and we wish you luck with the lab writeup. 📝</p>
 </div>
 </div>
 

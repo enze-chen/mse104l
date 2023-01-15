@@ -356,8 +356,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scatterplot-and-line-of-best-fit">
-   Scatterplot and line of best fit
+  <a class="reference internal nav-link" href="#scatterplot-and-curve-fitting">
+   Scatterplot and curve fitting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -418,8 +418,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scatterplot-and-line-of-best-fit">
-   Scatterplot and line of best fit
+  <a class="reference internal nav-link" href="#scatterplot-and-curve-fitting">
+   Scatterplot and curve fitting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -444,7 +444,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This is an interactive exercise, so you will want to click the <span class="fa fa-rocket"></span> and open the notebook in DataHub (or Colab for non-UCB students).</p>
 </div>
 <p>This notebook contains a series of exercises to help you process your data from Lab 1.
-It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report,
+It doesn’t answer all of the discussion questions in the lab procedures, but it will help you create a series of figures that can structure the narrative of your lab report.
 We hope it makes the writeup easier!</p>
 <div class='alert alert-success'>
 We tried to stagger the guidance such that each exercise only introduces a few new ideas at a time.
@@ -493,11 +493,12 @@ Run the cell below using <kbd>Shift</kbd>+<kbd>Enter</kbd>.</p>
 <div class="section" id="visualizing-an-emission-spectra">
 <h2>Visualizing an emission spectra<a class="headerlink" href="#visualizing-an-emission-spectra" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
-<p>Since you went through all that trouble to gather a Cu emission spectra experimentally, let’s now plot it!</p>
+<p>Since you went through all that trouble to gather a Cu emission spectra experimentally, let’s now plot it!
+When talking about any kind of scientific phenomenon, it’s often helpful to include a representative figure. 😉</p>
 <ol class="simple">
-<li><p>First, you’ll want to <strong>upload</strong> the diffractometer data to this folder in JupyterHub (📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>).</p></li>
-<li><p>Then you can load it into a NumPy array with <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a>.</p></li>
-<li><p>⭐ Then plot it with Matplotlib (<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a>).</p></li>
+<li><p>First, you’ll want to <strong>upload the diffractometer data</strong> to the folder containing this notebook in JupyterHub (📁 &gt; <code class="docutils literal notranslate"><span class="pre">mse104l</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">lab1</span></code>).</p></li>
+<li><p>Then you can load the data into a NumPy array with <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html"><code class="docutils literal notranslate"><span class="pre">np.loadtxt()</span></code></a>.</p></li>
+<li><p>⭐ Then plot it with Matplotlib! (<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html"><code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code></a>)</p></li>
 <li><p>❗Don’t forget styling elements! Here’s the character for theta: θ</p></li>
 <li><p><strong>Download the saved figure</strong> and paste it into your lab writeup.
 You can find the saved figure in the same JupyterHub directory as above.</p></li>
@@ -521,9 +522,12 @@ You can find the saved figure in the same JupyterHub directory as above.</p></li
 <h3>Some thoughts on styling<a class="headerlink" href="#some-thoughts-on-styling" title="Permalink to this headline">¶</a></h3>
 <p>From our experience:</p>
 <ul class="simple">
-<li><p>It is <em>almost always</em> the case that your fonts (e.g., labels) and line thickness need to be <strong>larger than you expect</strong>. This is because the figure will be shrunk in your report/poster/etc., but it still needs to be readable.</p></li>
-<li><p>Titles are somewhat optional, as they just take up valuable space from your data. Throw the descriptions into your captions.</p></li>
-<li><p>Intensities are somewhat arbitrary, so you can give it units of <a class="reference external" href="https://en.wikipedia.org/wiki/Arbitrary_unit"><code class="docutils literal notranslate"><span class="pre">(a.u.)</span></code></a> and omit the bulky <span class="math notranslate nohighlight">\(y\)</span>-ticks/labels by passing <code class="docutils literal notranslate"><span class="pre">yticks=[]</span></code> to <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code>. More space for your data!</p></li>
+<li><p>It is <em>almost always</em> the case that your fonts (e.g., labels) and line thickness need to be <strong>larger than you expect</strong>.
+This is because the figure will be shrunk in your report/poster/etc., but it still needs to be readable.</p></li>
+<li><p>Titles are somewhat optional, as they just take up valuable space from your data.
+Throw the descriptions into your figure captions in your report.</p></li>
+<li><p>Intensities are somewhat arbitrary, so you can give it units of <a class="reference external" href="https://en.wikipedia.org/wiki/Arbitrary_unit"><code class="docutils literal notranslate"><span class="pre">(a.u.)</span></code></a> and omit the bulky <span class="math notranslate nohighlight">\(y\)</span>-ticks/labels by passing <code class="docutils literal notranslate"><span class="pre">yticks=[]</span></code> to <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code>.
+More space for your data!</p></li>
 </ul>
 </div>
 </div>
@@ -561,12 +565,11 @@ There are <strong>two plots</strong> that are helpful here.</p>
 This allows you to see how the filters progressively change the intensity.</p>
 <ul class="simple">
 <li><p>⭐ To <strong>zoom in</strong> on the region (peak) of interest, you can change the <span class="math notranslate nohighlight">\(x\)</span>-axis limits with a <code class="docutils literal notranslate"><span class="pre">xlim=(start,end)</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">ax.set()</span></code> method.
-You have to figure out the appropriate index to capture the interesting behavior.</p></li>
+You have to figure out the appropriate limits to capture the interesting behavior.</p></li>
 <li><p>⭐ Make sure you <strong>clearly label</strong> all of your plots and include a legend.
 It’s handy that Matplotlib automatically cycles through different colors.</p></li>
-<li><p>Default linear scaling on the <span class="math notranslate nohighlight">\(y\)</span>-axis is fine.</p></li>
 <li><p>You may want to reset some of your Pyplot settings, depending on what you had set previously.
-You can begin the cell below with another <code class="docutils literal notranslate"><span class="pre">plt.rcParams.update()</span></code> call and update <code class="docutils literal notranslate"><span class="pre">figure.figsize</span></code> and <code class="docutils literal notranslate"><span class="pre">font.size</span></code>.</p></li>
+You can begin the cell below with another <code class="docutils literal notranslate"><span class="pre">plt.rcParams.update()</span></code> call and just update <code class="docutils literal notranslate"><span class="pre">figure.figsize</span></code> and <code class="docutils literal notranslate"><span class="pre">font.size</span></code>.</p></li>
 </ul>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -577,27 +580,27 @@ You can begin the cell below with another <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<div class="section" id="scatterplot-and-line-of-best-fit">
-<h2>Scatterplot and line of best fit<a class="headerlink" href="#scatterplot-and-line-of-best-fit" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scatterplot-and-curve-fitting">
+<h2>Scatterplot and curve fitting<a class="headerlink" href="#scatterplot-and-curve-fitting" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>The second plot is regarding the mass absorption coefficient, <span class="math notranslate nohighlight">\(\mu/\rho\)</span>, given by the equation:</p>
 <div class="math notranslate nohighlight">
 \[ I_x = I_0 \exp \left[ -\left( \frac{\mu}{\rho} \right) \rho x \right] \]</div>
 <p>where <span class="math notranslate nohighlight">\(I_0\)</span> and <span class="math notranslate nohighlight">\(I_x\)</span> are the incident and transmitted intensities, respectively, <span class="math notranslate nohighlight">\(\rho\)</span> is the density, and <span class="math notranslate nohighlight">\(x\)</span> is the distance traveled through the absorbing medium.
 You have collected the values of <span class="math notranslate nohighlight">\(I_0\)</span> and <span class="math notranslate nohighlight">\(I_x\)</span>, you’ve been told <span class="math notranslate nohighlight">\(x\)</span>, and you can look up tabulated values of <span class="math notranslate nohighlight">\(\rho\)</span>.
-The individual points will have noise, so it’s best to compute a line of best fit and then extract the mass absorption coefficient <span class="math notranslate nohighlight">\(\mu/\rho\)</span>.</p>
+The individual points will have noise, so it’s best to compute a <strong>line of best fit</strong> and then extract the mass absorption coefficient <span class="math notranslate nohighlight">\(\mu/\rho\)</span>.</p>
 <p>Here are some more hints:</p>
 <ul class="simple">
 <li><p>You should probably manually create NumPy arrays for your values with the syntax: <code class="docutils literal notranslate"><span class="pre">x=np.array(list_of_values)</span></code> and similarly for <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
 <li><p>⭐ To take the <strong>natural logarithm</strong> of an array, use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.log.html"><code class="docutils literal notranslate"><span class="pre">np.log(arr)</span></code></a>.</p></li>
-<li><p>⭐ To calculate a <strong>line of best fit</strong> in Python, you can use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit()</span></code></a> command as follows:</p></li>
+<li><p>⭐ To calculate a <strong>line of best fit</strong> in Python, you can use the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html"><code class="docutils literal notranslate"><span class="pre">np.polyfit(x,</span> <span class="pre">y,</span> <span class="pre">degree)</span></code></a> command as follows:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> hold your values and <code class="docutils literal notranslate"><span class="pre">1</span></code> specifies a degree 1 polynomial (line).
 The resulting coefficients are stored in the <code class="docutils literal notranslate"><span class="pre">c</span></code> array in <em>decreasing order of</em> <span class="math notranslate nohighlight">\(x\)</span>;
-that is, <span class="math notranslate nohighlight">\(c_0 x^n + c_1 x^{n-1} + \cdots + c_{n-1} x + c_n \)</span> for a degree <span class="math notranslate nohighlight">\(n\)</span> polynomial fit.</p>
+that is, <span class="math notranslate nohighlight">\(c = [c_0, c_1, \dots, c_n]\)</span> where <span class="math notranslate nohighlight">\(c_0 x^n + c_1 x^{n-1} + \cdots + c_{n-1} x + c_n \)</span> for a degree <span class="math notranslate nohighlight">\(n\)</span> polynomial fit.</p>
 <ul class="simple">
 <li><p>⭐ Just as <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> is for curves, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.scatter.html"><code class="docutils literal notranslate"><span class="pre">ax.scatter(x,</span> <span class="pre">y)</span></code></a> can be used for individual points.</p></li>
 </ul>
@@ -614,8 +617,8 @@ that is, <span class="math notranslate nohighlight">\(c_0 x^n + c_1 x^{n-1} + \c
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>This concludes the plotting exercises for Lab 1.
 Congratulations!
-We hope you’re proud of the plots that you generated and wish you luck with the lab writeup. 📝</p>
-<p>Note that the plot for Moseley’s relation, while not discussed explicitly, follows the last exercise closely.</p>
+We hope you’re proud of the plots that you generated and we wish you luck with the lab writeup. 📝</p>
+<p>Note that the plot for Moseley’s relation, while not discussed explicitly here, follows the last exercise closely.</p>
 </div>
 </div>
 

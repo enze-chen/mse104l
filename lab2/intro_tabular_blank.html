@@ -519,11 +519,11 @@ Like the previous lab, if you’re already familiar working with tabular data, y
 <p>We’ll begin by discussing a common problem faced by materials scientists: working with different file types.
 Particularly in industry, and particularly when working with collaborators, you’ll be receiving information in different formats including:</p>
 <ul class="simple">
-<li><p>Text-based files, where the information is completely unstructured.</p></li>
-<li><p>Text-based files with hierarchical structure, such as <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JSON</a></p></li>
-<li><p>Image files, with all sorts of file extensions and compression formats.</p></li>
-<li><p>PDFs, which may or may not enable optical character recognition (OCR).</p></li>
-<li><p>Binary files, with machine-readable data.</p></li>
+<li><p>Text-based files where the information is completely unstructured.</p></li>
+<li><p>Text-based files with hierarchical structure, such as <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JSON</a>.</p></li>
+<li><p>Image files with all sorts of file extensions and compression formats.</p></li>
+<li><p>PDFs which may or may not be formatted for optical character recognition (OCR).</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Binary_file">Binary files</a> with machine-readable data.</p></li>
 <li><p>Proprietary data formats that can only be opened with special software!</p></li>
 </ul>
 <p>The lack of standardization is definitely a pain and a bottleneck in data science pipelines when working with materials data.
@@ -673,9 +673,8 @@ Take a moment to see how the column names in the constructors correspond to the 
 </div>
 <div class="section" id="reading-in-a-csv-file">
 <h3>Reading in a CSV file<a class="headerlink" href="#reading-in-a-csv-file" title="Permalink to this headline">¶</a></h3>
-<p>The above methods are handy, but what if your data source is a CSV file that’s already nicely formatted for you?
-As with our first example in this notebook, it would be nice if we could directly use the structure in our data and express it in Python.
-You don’t want to be stuck typing out all those rows.</p>
+<p>What if your data source is a CSV file that’s already nicely formatted for you?
+It would be nice if we could directly use the structure in our data and express it in Python—you don’t want to be stuck typing out all those rows.</p>
 <p>To do this, we will use the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"><code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code></a> function which does exactly as the name describes.
 This function, as you can see from the documentation, has <em>a bajillion</em> input arguments that we don’t have time to cover today, so we’ll describe just a few here:</p>
 <ul class="simple">
@@ -794,7 +793,8 @@ We’ll also rename the column names to be:</p>
 <p><a class="reference external" href="#Contents">Back to top</a></p>
 <p>We got our data into a DataFrame! Now we can have some fun. 😄</p>
 <p>The first thing you might be interested in is the dimensions of your data (DataFrame).
-We can access that using the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html"><code class="docutils literal notranslate"><span class="pre">df.shape</span></code></a> attribute, which returns (rows, columns).</p>
+We can access that using the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html"><code class="docutils literal notranslate"><span class="pre">df.shape</span></code></a> attribute, which returns (rows, columns).
+This is often a helpful sanity check.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">shape</span>
@@ -808,7 +808,7 @@ We can access that using the <a class="reference external" href="https://pandas.
 </div>
 </div>
 <p>We can also get statistics of the rows/columns of the DataFrame by using methods like <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.min.html"><code class="docutils literal notranslate"><span class="pre">df.min()</span></code></a>, <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.max.html"><code class="docutils literal notranslate"><span class="pre">df.max()</span></code></a>, and <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html"><code class="docutils literal notranslate"><span class="pre">df.mean()</span></code></a>.
-For these methods, the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter specifies if we compute along the columns (<code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or rows (<code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
+For these methods, the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter specifies if we compute along the columns (<code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or rows (<code class="docutils literal notranslate"><span class="pre">axis=1</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_sine</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>   <span class="c1"># default is axis=0, compute along columns.</span>
@@ -851,7 +851,7 @@ Length: 1001, dtype: float64
 <div class="section" id="indexing-and-slicing-a-dataframe">
 <h3>Indexing and slicing a DataFrame<a class="headerlink" href="#indexing-and-slicing-a-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>There are many ways to <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/indexing.html">index into a DataFrame</a> and slice it to get subsets of your data.
-If we want to get the data in a <em>single</em>, all we have to do is write the column name as a string!
+If we want to get the data in a <em>single</em> column, all we have to do is write the column name as a string!
 For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -885,7 +885,7 @@ The general syntax is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_column_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">operation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;old_column_name&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>See the example below where we use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.cos.html"><code class="docutils literal notranslate"><span class="pre">np.cos()</span></code></a> to compute the cosine of the <code class="docutils literal notranslate"><span class="pre">x</span></code> values.</p>
+<p>See the example below where we use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.cos.html"><code class="docutils literal notranslate"><span class="pre">np.cos()</span></code></a> to compute the cosine of the <code class="docutils literal notranslate"><span class="pre">x</span></code> values in our previous DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1270,11 +1270,10 @@ The general syntax is:</p>
 </div>
 <div class="section" id="saving-a-dataframe">
 <h3>Saving a DataFrame<a class="headerlink" href="#saving-a-dataframe" title="Permalink to this headline">¶</a></h3>
-<p>There are many ways to save the data, in text, binary, etc., but the easiest way for purely numerical data is probably as a text (CSV) file using <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html"><code class="docutils literal notranslate"><span class="pre">df.to_csv()</span></code></a>.
+<p>There are many ways to save the data, in text, binary, etc., but the easiest way for purely numerical data is probably as a text (CSV) file using <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html"><code class="docutils literal notranslate"><span class="pre">df.to_csv(filename)</span></code></a>.
 Some things to be aware of:</p>
 <ul class="simple">
-<li><p>The only required argument is the name of the file.</p></li>
-<li><p>pandas likes to save the <em>index</em> (row labels) by default, but that looks a little weird if you later open the CSV in a program like Excel, so we typically like to have <code class="docutils literal notranslate"><span class="pre">index=False</span></code>.</p></li>
+<li><p>pandas likes to save the <em>index</em> (row labels) by default, but that looks a little weird if you later open the CSV in a program like Excel, so we typically like to have <code class="docutils literal notranslate"><span class="pre">index=False</span></code> as another input argument.</p></li>
 <li><p>Note that this is a method attached to a DataFrame object, not the pandas package! That is, it’s <code class="docutils literal notranslate"><span class="pre">df.to_csv()</span></code>, <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">pd.to_csv(df)</span></code>.</p></li>
 </ul>
 <p>After you run the following cell, you should see the new TXT file appear in your JupyterHub folder.</p>
