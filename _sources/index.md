@@ -43,9 +43,9 @@ however, please be sure to write your own code, generate your own plots, and com
 ## Usage  
 
 These notebooks are meant to be optional and **self-guided**, where we've included ample instructions and links for your reference.
-Try your best to work it out with your labmates/friends, but definitely don't fret over debugging as we want you to focus on learning the MSE knowledge.
+Try your best to work it out with your peers, but definitely don't fret over it—we want you to focus on learning the science and you can always use a different tool to analyze your data.
 
-That being said, before jumping into the lab exercises, we've created some tutorials that we hope you find helpful.
+That being said, before jumping into the lab exercises, we've created some **tutorials** that we hope you find helpful.
 
 - If this is your first time using Jupyter Book/Hub (probably most of you):
 	- We _strongly recommend_ you look at {doc}`lab0/jbook_usage`.
