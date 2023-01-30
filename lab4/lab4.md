@@ -8,7 +8,7 @@ Since the SEM images are not particularly interesting or high quality, we don't 
 
 The primary objectives of these notebooks are:
 - Apply more Matplotlib commands to fine-tune your plots.
-- Run a basic machine learning algorithm ($k$-means) for image segmentation.
+- Run a basic machine learning algorithm ($k$-means) for image segmentation (**not** a part of your lab report).
 
 ## Associated notebooks 
 
